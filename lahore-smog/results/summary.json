@@ -1,0 +1,17 @@
+{
+  "date_from": "2025-10-18",
+  "date_to": "2026-10-17",
+  "days_with_data": 364,
+  "sensors_used": 77,
+  "reference_monitors_used": 0,
+  "rows_raw": 18660,
+  "rows_after_cleaning": 15739,
+  "median_daily_pm25": 66.7,
+  "mean_daily_pm25": 103.8,
+  "mean_vs_who_annual_x": 20.8,
+  "pct_days_above_who_24h": 100.0,
+  "pct_days_above_who_it1_75": 46.2,
+  "worst_day": "2025-10-29",
+  "worst_day_pm25": 328.0,
+  "worst_day_vs_who_24h_x": 21.9
+}

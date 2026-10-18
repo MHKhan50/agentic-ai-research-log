@@ -5,7 +5,8 @@ Each folder has its own research question, code, tests, results from my own run,
 
 | Date | Topic | Folder | Research question |
 |---|---|---|---|
-| Oct 2026 | ReAct paper follow-up | [`react-roman-urdu/`](react-roman-urdu/) | Does a ~3B local model keep ReAct tool-use accuracy on Roman Urdu vs English? |
+| Oct 2026 | ReAct paper follow-up | [`react-roman-urdu/`](react-roman-urdu/) | Does a ~3B local model keep ReAct tool-use accuracy on Roman Urdu vs English, and how stable is it? |
+| Oct 2026 | Air quality, Pakistan | [`lahore-smog/`](lahore-smog/) | On what share of days did Lahore's PM2.5 exceed the WHO 24-hour guideline in the last year? |
 
 Research gaps I am tracking: [gap-bank.md](gap-bank.md)
 
