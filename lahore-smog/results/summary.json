@@ -13,5 +13,13 @@
   "pct_days_above_who_it1_75": 46.2,
   "worst_day": "2025-10-29",
   "worst_day_pm25": 328.0,
-  "worst_day_vs_who_24h_x": 21.9
+  "worst_day_vs_who_24h_x": 21.9,
+  "cleanest_day": "2026-03-16",
+  "cleanest_day_pm25": 18.4,
+  "median_sensors_per_day": 46,
+  "providers": [
+    "AirGradient",
+    "Clarity",
+    "Hawanama"
+  ]
 }

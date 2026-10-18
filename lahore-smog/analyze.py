@@ -55,6 +55,7 @@ def exceedance(daily: pd.Series, threshold: float) -> float:
 
 def summarise(city: pd.DataFrame, clean_df: pd.DataFrame, raw: pd.DataFrame) -> Dict[str, object]:
     worst = city.loc[city["pm25"].idxmax()]
+    cleanest = city.loc[city["pm25"].idxmin()]
     return {
         "date_from": city["date"].min().date().isoformat(),
         "date_to": city["date"].max().date().isoformat(),
@@ -71,6 +72,10 @@ def summarise(city: pd.DataFrame, clean_df: pd.DataFrame, raw: pd.DataFrame) -> 
         "worst_day": worst["date"].date().isoformat(),
         "worst_day_pm25": round(float(worst["pm25"]), 1),
         "worst_day_vs_who_24h_x": round(float(worst["pm25"]) / WHO_24H, 1),
+        "cleanest_day": cleanest["date"].date().isoformat(),
+        "cleanest_day_pm25": round(float(cleanest["pm25"]), 1),
+        "median_sensors_per_day": int(city["n_sensors"].median()),
+        "providers": sorted(clean_df["provider"].dropna().unique().tolist()) if "provider" in clean_df else [],
     }
 
 
@@ -108,16 +113,19 @@ def plot_daily(city: pd.DataFrame, out: Path) -> None:
 
 
 def plot_monthly(month_df: pd.DataFrame, out: Path) -> None:
-    fig, ax = plt.subplots(figsize=(9, 4.2), dpi=150)
-    bars = ax.bar(month_df["month"], month_df["pct_above_who"], color=BLUE, width=0.7)
-    for bar, v in zip(bars, month_df["pct_above_who"]):
+    """Monthly median PM2.5 against the WHO line, labelled with the share of days above 75 µg/m³."""
+    fig, ax = plt.subplots(figsize=(9, 4.4), dpi=150)
+    bars = ax.bar(month_df["month"], month_df["median_pm25"], color=BLUE, width=0.7, label="Monthly median PM2.5")
+    for bar, v in zip(bars, month_df["pct_above_75"]):
         ax.annotate(f"{v:.0f}%", (bar.get_x() + bar.get_width() / 2, bar.get_height()),
                     ha="center", va="bottom", fontsize=8, color=MUTED, xytext=(0, 2), textcoords="offset points")
-    ax.set_ylim(0, 110)
-    ax.set_ylabel("Days above WHO guideline (%)")
-    ax.set_title("Share of days above 15 µg/m³, by month", loc="left", fontsize=11, color=INK)
+    ax.axhline(WHO_24H, color=ORANGE, linewidth=1.6, linestyle="--", label=f"WHO 24-hour guideline ({WHO_24H:g} µg/m³)")
+    ax.set_ylim(0, max(month_df["median_pm25"].max() * 1.15, 30))
+    ax.set_ylabel("PM2.5 (µg/m³)")
+    ax.set_title("Monthly median PM2.5 (labels: share of days above 75 µg/m³)", loc="left", fontsize=11, color=INK)
     ax.tick_params(axis="x", rotation=45)
     _style(ax)
+    ax.legend(frameon=False, loc="upper right", fontsize=9)
     fig.tight_layout()
     fig.savefig(out)
     plt.close(fig)
@@ -136,7 +144,7 @@ def main() -> None:
     month_df.to_csv(res / "monthly.csv", index=False)
     city.to_csv(res / "city_daily_pm25.csv", index=False)
     plot_daily(city, res / "daily_pm25.png")
-    plot_monthly(month_df, res / "monthly_exceedance.png")
+    plot_monthly(month_df, res / "monthly_median.png")
 
     print(json.dumps(summary, indent=2))
     print("\n" + month_df.to_string(index=False))

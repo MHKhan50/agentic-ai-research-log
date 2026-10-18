@@ -32,7 +32,7 @@ python analyze.py                          # writes results/
 4. **Winter is extreme, but summer is not clean.** Monthly medians reached about 220 µg/m³ in October to December, while the cleanest months (April to August, 41-49 µg/m³) were still around three times the 24-hour guideline.
 
 ## Results
-Period: 18 Oct 2025 to 17 Oct 2026 · Days with data: 364 · Sensors found: 84 · Sensors used: 77 (reference monitors: 0) · Rows: 18,660 raw, 15,739 after cleaning
+Period: 18 Oct 2025 to 17 Oct 2026 · Days with data: 364 · Sensors found: 84 · Sensors used: 77 (reference monitors: 0) · Rows: 18,660 raw, 15,739 after cleaning · Median sensors per day: 46 · Providers: AirGradient, Clarity, Hawanama
 
 | Measure | Value |
 |---|---|
@@ -41,6 +41,7 @@ Period: 18 Oct 2025 to 17 Oct 2026 · Days with data: 364 · Sensors found: 84 �
 | Median daily PM2.5 | 66.7 µg/m³ |
 | Mean daily PM2.5 vs WHO annual guideline (5 µg/m³) | 103.8 µg/m³, 20.8 × |
 | Worst day | 29 Oct 2025 (328 µg/m³, 21.9 × the 24-hour guideline) |
+| Cleanest day | 16 Mar 2026 (18.4 µg/m³, still above the guideline) |
 
 **By month** (median of daily city values; `results/monthly.csv`):
 
@@ -61,7 +62,7 @@ Period: 18 Oct 2025 to 17 Oct 2026 · Days with data: 364 · Sensors found: 84 �
 | 2026-10 (to 17th) | 17 | 77.5 | 100% | 52.9% |
 
 ![daily](results/daily_pm25.png)
-![monthly](results/monthly_exceedance.png)
+![monthly](results/monthly_median.png)
 
 ## My observations
 - What surprised me most: across the whole year (364 days), Lahore's air did not fall within the WHO safe limit of 15 µg/m³ on a single day.
