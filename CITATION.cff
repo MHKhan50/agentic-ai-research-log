@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this code or these results, please cite them as below."
+title: "Research Log: reproducible experiments on LLM agents, air quality and AI in public services"
+authors:
+  - family-names: Hussain
+    given-names: Muzammal
+version: 0.1.0
+date-released: 2026-10-18
+license: MIT
+repository-code: "https://github.com/MHKhan50/agentic-ai-research-log"
+url: "https://masmatixinnovations.co.uk/insights/"
+keywords:
+  - LLM agents
+  - ReAct
+  - Roman Urdu
+  - local LLMs
+  - air quality
+  - PM2.5
+  - Pakistan
+  - AI accountability
+abstract: >-
+  Small, reproducible experiments run on a laptop: a ReAct agent with a 3B
+  local model on English and Roman Urdu questions, including a name-swap
+  robustness check; one year of PM2.5 data for Lahore and six Pakistani cities
+  against the WHO guideline; and a base-rate model of AI road-safety camera
+  flags in the UK. Code is MIT-licensed; third-party data keeps its original
+  licence.
