@@ -32,7 +32,8 @@ python analyze_cities.py      # writes results/
 2. **Faisalabad was worse than Lahore**: yearly mean 119.6 µg/m³ (24 × the WHO annual guideline), no clean day at all, and the single worst day in the study (407 µg/m³ on 14 Jan 2026, 27 × the 24-hour guideline).
 3. **Peshawar ranked third** (91.5 µg/m³, 18 ×), ahead of Islamabad and Karachi, despite getting far less public attention than Lahore.
 4. **Monitoring is very uneven.** All six cities had data on 364 days, but a typical day had 46 sensors in Lahore and only 7 in Quetta and 9 in Peshawar. Only one of 223 sensors used is a reference-grade monitor (in Islamabad).
-5. **Reproducible:** Lahore's numbers match the separate [`lahore-smog/`](../lahore-smog/) run exactly (mean 103.8, 46.2% of days above 75).
+5. **Winter is what separates the cities.** From May to August the six cities' monthly medians sat close together (22-45 µg/m³). From November to January they spread from 43 (Quetta) to 242 µg/m³ (Faisalabad), a winter-to-summer ratio of 1.9 in Quetta but 4.5-5.5 in the Punjab cities and Peshawar. Out of 78 city-months, only one had a median at or below 15 µg/m³: Quetta in May 2026 (14.4).
+6. **Reproducible:** Lahore's numbers match the separate [`lahore-smog/`](../lahore-smog/) run exactly (mean 103.8, 46.2% of days above 75).
 
 ## Data availability
 Window: 18 Oct 2025 to 18 Oct 2026, 25 km around each city centre.
@@ -60,6 +61,8 @@ Ranked by yearly mean (mean of daily city values).
 
 ![yearly mean](results/yearly_mean_by_city.png)
 ![monthly](results/monthly_by_city.png)
+
+Winter vs summer: `results/season_contrast.csv`.
 
 ## My observations
 - What surprised me most: Faisalabad came out more polluted than Lahore, with the worst single day in the study (407 µg/m³), and Peshawar quietly ranked third even though the media mostly ignores it.

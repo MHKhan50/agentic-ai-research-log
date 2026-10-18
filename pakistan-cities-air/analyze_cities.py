@@ -102,12 +102,18 @@ def _style(ax: plt.Axes) -> None:
 
 def plot_monthly(monthly: pd.DataFrame, cities: List[str], out: Path) -> None:
     fig, ax = plt.subplots(figsize=(9.5, 5.2), dpi=150)
+    ends = []
     for city in cities:
         sub = monthly[monthly["city"] == city]
         ax.plot(sub["month"], sub["median_pm25"], color=COLORS[city], linewidth=2, marker="o", markersize=4, label=city)
-        last = sub.iloc[-1]
-        ax.annotate(city, (last["month"], last["median_pm25"]), xytext=(6, 0), textcoords="offset points",
-                    va="center", fontsize=9, color=INK)
+        ends.append([float(sub["median_pm25"].iloc[-1]), city, sub["month"].iloc[-1]])
+    # direct end labels, nudged apart so they never overlap
+    gap = 0.055 * float(monthly["median_pm25"].max())
+    ends.sort()
+    for i in range(1, len(ends)):
+        ends[i][0] = max(ends[i][0], ends[i - 1][0] + gap)
+    for y, city, month in ends:
+        ax.annotate(city, (month, y), xytext=(8, 0), textcoords="offset points", va="center", fontsize=9, color=INK)
     ax.axhline(WHO_24H, color=ORANGE_LINE, linewidth=1.4, linestyle="--", label=f"WHO 24-hour guideline ({WHO_24H:g})")
     ax.set_ylim(bottom=0)
     ax.set_ylabel("Monthly median PM2.5 (µg/m³)")
@@ -171,6 +177,12 @@ def main() -> None:
     summ_df.to_csv(res / "city_summary.csv", index=False)
     monthly = pd.concat(monthly_rows, ignore_index=True).round(1)
     monthly.to_csv(res / "monthly_by_city.csv", index=False)
+    winter = monthly[monthly["month"].str[5:].isin(["11", "12", "01"])].groupby("city")["median_pm25"].mean()
+    summer = monthly[monthly["month"].str[5:].isin(["05", "06", "07", "08"])].groupby("city")["median_pm25"].mean()
+    season = pd.DataFrame({"winter_nov_jan": winter, "summer_may_aug": summer})
+    season["winter_to_summer"] = season["winter_nov_jan"] / season["summer_may_aug"]
+    season.round(1).reset_index().to_csv(res / "season_contrast.csv", index=False)
+    print("\nWINTER vs SUMMER (mean of monthly medians)\n" + season.round(1).to_string())
     included = [c for c in CITIES if c in set(summ_df["city"])]
     plot_monthly(monthly, included, res / "monthly_by_city.png")
     plot_ranking(summ_df, res / "yearly_mean_by_city.png")
