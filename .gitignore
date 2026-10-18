@@ -1,0 +1,17 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Secrets (OpenAQ key etc.) - never commit
+.env
+*.env
+
+# macOS
+.DS_Store
+
+# Large / raw local data
+*.wav
+*.m4a
+*.mp3

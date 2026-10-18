@@ -1,0 +1,14 @@
+[
+  {"id": "q01", "hops": 1, "en": "How many sessions does Ayesha Malik still have left?", "roman_urdu": "Ayesha Malik ke kitne sessions abhi baqi hain?", "gold": {"type": "number", "value": 6}},
+  {"id": "q02", "hops": 1, "en": "By how many points has Bilal Ahmed's pain score dropped?", "roman_urdu": "Bilal Ahmed ka pain score kitne points kam hua hai?", "gold": {"type": "number", "value": 3}},
+  {"id": "q03", "hops": 2, "en": "Who is Fatima Noor's therapist and what is their specialty?", "roman_urdu": "Fatima Noor ka therapist kaun hai aur unki specialty kya hai?", "gold": {"type": "keywords", "groups": [["hamza"], ["sports"]]}},
+  {"id": "q04", "hops": 2, "en": "How many years of experience does Usman Tariq's therapist have?", "roman_urdu": "Usman Tariq ke therapist ko kitne saal ka tajurba hai?", "gold": {"type": "number", "value": 11}},
+  {"id": "q05", "hops": 2, "en": "On which days does Zainab Iqbal's therapist work at the clinic?", "roman_urdu": "Zainab Iqbal ke therapist clinic mein kis din aate hain?", "gold": {"type": "keywords", "groups": [["friday", "jumma", "juma"], ["saturday", "hafta", "haftay", "hafte"]]}},
+  {"id": "q06", "hops": 1, "en": "What percentage of his prescribed sessions has Usman Tariq completed?", "roman_urdu": "Usman Tariq ne apne prescribed sessions ka kitna percent mukammal kar liya hai?", "gold": {"type": "number", "value": 33.33, "tol": 0.5}},
+  {"id": "q07", "hops": 3, "en": "How many sessions have all of Dr. Hamza's patients done in total?", "roman_urdu": "Dr. Hamza ke tamam patients ne mil kar kul kitne sessions kiye hain?", "gold": {"type": "number", "value": 10}},
+  {"id": "q08", "hops": 3, "en": "Which of Dr. Sana's patients has more sessions left?", "roman_urdu": "Dr. Sana ke patients mein se kis ke zyada sessions baqi hain?", "gold": {"type": "keywords", "groups": [["usman"]]}},
+  {"id": "q09", "hops": 1, "en": "How old will Hassan Raza be in 5 years?", "roman_urdu": "Hassan Raza 5 saal baad kitne saal ke honge?", "gold": {"type": "number", "value": 43}},
+  {"id": "q10", "hops": 3, "en": "What is the average current pain score of Dr. Omar's patients?", "roman_urdu": "Dr. Omar ke patients ka average current pain score kya hai?", "gold": {"type": "number", "value": 3.5, "tol": 0.05}},
+  {"id": "q11", "hops": 2, "en": "What is the age difference between Zainab Iqbal and Ayesha Malik?", "roman_urdu": "Zainab Iqbal aur Ayesha Malik ki umar mein kitna farq hai?", "gold": {"type": "number", "value": 27}},
+  {"id": "q12", "hops": 2, "en": "How many years of experience do Dr. Hamza and Dr. Omar have combined?", "roman_urdu": "Dr. Hamza aur Dr. Omar ka mila kar kitne saal ka tajurba hai?", "gold": {"type": "number", "value": 14}}
+]
