@@ -7,7 +7,7 @@ Lahore's winter smog is a recurring public-health emergency. Headlines usually q
 
 ## Data
 - **Source:** [OpenAQ](https://openaq.org) v3 API, daily aggregates (`/v3/sensors/{id}/days`) for every fixed PM2.5 sensor within 25 km of central Lahore (31.5204, 74.3587).
-- **Guideline:** WHO Global Air Quality Guidelines (2021): PM2.5 24-hour mean 15 µg/m³, annual mean 5 µg/m³. Interim target 1 for 24 hours: 75 µg/m³.
+- **Guideline:** WHO Global Air Quality Guidelines (2021): PM2.5 24-hour mean 15 µg/m³, defined as the 99th percentile of the year (about 3-4 days above it are allowed), and annual mean 5 µg/m³. Interim target 1 for 24 hours: 75 µg/m³.
 - Raw data is saved to `data/raw_daily_pm25.csv` exactly as downloaded. Data from OpenAQ; the licences of the individual data providers apply.
 
 ## Method
@@ -26,7 +26,7 @@ python analyze.py                          # writes results/
 ```
 
 ## Key findings
-1. **Not one day in the last year met the WHO 24-hour guideline.** 364 of 364 days with data were above 15 µg/m³.
+1. **Not one day in the last year met the WHO 24-hour guideline.** 364 of 364 days with data were above 15 µg/m³, far beyond the 3-4 days a year the guideline allows.
 2. **Almost half the year (46%) was above even the weakest WHO interim target** of 75 µg/m³.
 3. **The yearly mean (103.8 µg/m³) is about 21 times the WHO annual guideline** of 5 µg/m³.
 4. **Winter is extreme, but summer is not clean.** Monthly medians reached about 220 µg/m³ in October to December, while the cleanest months (April to August, 41-49 µg/m³) were still around three times the 24-hour guideline.

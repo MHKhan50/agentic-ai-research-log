@@ -1,0 +1,150 @@
+{
+  "availability": [
+    {
+      "city": "Lahore",
+      "sensors_found": 83,
+      "sensors_used": 77,
+      "reference_monitors": 0,
+      "days_with_data": 364,
+      "median_sensors_per_day": 46.0,
+      "providers": "AirGradient, Clarity, Hawanama",
+      "included": true
+    },
+    {
+      "city": "Karachi",
+      "sensors_found": 42,
+      "sensors_used": 37,
+      "reference_monitors": 0,
+      "days_with_data": 364,
+      "median_sensors_per_day": 14.0,
+      "providers": "AirGradient, Hawanama",
+      "included": true
+    },
+    {
+      "city": "Islamabad",
+      "sensors_found": 37,
+      "sensors_used": 35,
+      "reference_monitors": 1,
+      "days_with_data": 364,
+      "median_sensors_per_day": 18.0,
+      "providers": "AirGradient, AirNow, Hawanama",
+      "included": true
+    },
+    {
+      "city": "Faisalabad",
+      "sensors_found": 40,
+      "sensors_used": 36,
+      "reference_monitors": 0,
+      "days_with_data": 364,
+      "median_sensors_per_day": 20.0,
+      "providers": "AirGradient, Hawanama",
+      "included": true
+    },
+    {
+      "city": "Peshawar",
+      "sensors_found": 22,
+      "sensors_used": 22,
+      "reference_monitors": 0,
+      "days_with_data": 364,
+      "median_sensors_per_day": 9.0,
+      "providers": "AirGradient, Hawanama",
+      "included": true
+    },
+    {
+      "city": "Quetta",
+      "sensors_found": 19,
+      "sensors_used": 16,
+      "reference_monitors": 0,
+      "days_with_data": 364,
+      "median_sensors_per_day": 7.0,
+      "providers": "AirGradient, Hawanama",
+      "included": true
+    }
+  ],
+  "cities": [
+    {
+      "city": "Lahore",
+      "days": 364,
+      "mean_pm25": 103.8,
+      "median_pm25": 66.7,
+      "mean_vs_who_annual_x": 20.8,
+      "pct_days_above_15": 100.0,
+      "days_at_or_below_15": 0,
+      "pct_days_above_75": 46.2,
+      "worst_day": "2025-10-29",
+      "worst_pm25": 328.0,
+      "cleanest_day": "2026-03-16",
+      "cleanest_pm25": 18.4
+    },
+    {
+      "city": "Karachi",
+      "days": 364,
+      "mean_pm25": 47.4,
+      "median_pm25": 32.5,
+      "mean_vs_who_annual_x": 9.5,
+      "pct_days_above_15": 98.9,
+      "days_at_or_below_15": 4,
+      "pct_days_above_75": 19.5,
+      "worst_day": "2025-12-20",
+      "worst_pm25": 150.0,
+      "cleanest_day": "2026-03-29",
+      "cleanest_pm25": 7.7
+    },
+    {
+      "city": "Islamabad",
+      "days": 364,
+      "mean_pm25": 62.9,
+      "median_pm25": 41.0,
+      "mean_vs_who_annual_x": 12.6,
+      "pct_days_above_15": 98.9,
+      "days_at_or_below_15": 4,
+      "pct_days_above_75": 26.6,
+      "worst_day": "2025-12-19",
+      "worst_pm25": 226.0,
+      "cleanest_day": "2026-07-21",
+      "cleanest_pm25": 7.9
+    },
+    {
+      "city": "Faisalabad",
+      "days": 364,
+      "mean_pm25": 119.6,
+      "median_pm25": 71.4,
+      "mean_vs_who_annual_x": 23.9,
+      "pct_days_above_15": 100.0,
+      "days_at_or_below_15": 0,
+      "pct_days_above_75": 48.4,
+      "worst_day": "2026-01-14",
+      "worst_pm25": 407.0,
+      "cleanest_day": "2026-06-12",
+      "cleanest_pm25": 18.7
+    },
+    {
+      "city": "Peshawar",
+      "days": 364,
+      "mean_pm25": 91.5,
+      "median_pm25": 57.8,
+      "mean_vs_who_annual_x": 18.3,
+      "pct_days_above_15": 99.7,
+      "days_at_or_below_15": 1,
+      "pct_days_above_75": 39.8,
+      "worst_day": "2025-12-20",
+      "worst_pm25": 387.5,
+      "cleanest_day": "2026-05-21",
+      "cleanest_pm25": 14.4
+    },
+    {
+      "city": "Quetta",
+      "days": 364,
+      "mean_pm25": 33.6,
+      "median_pm25": 26.9,
+      "mean_vs_who_annual_x": 6.7,
+      "pct_days_above_15": 84.3,
+      "days_at_or_below_15": 57,
+      "pct_days_above_75": 5.8,
+      "worst_day": "2025-11-16",
+      "worst_pm25": 134.0,
+      "cleanest_day": "2026-05-29",
+      "cleanest_pm25": 2.3
+    }
+  ]
+}

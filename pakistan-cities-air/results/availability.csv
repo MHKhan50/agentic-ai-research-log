@@ -1,0 +1,7 @@
+city,sensors_found,sensors_used,reference_monitors,days_with_data,median_sensors_per_day,providers,included
+Lahore,83,77,0,364,46.0,"AirGradient, Clarity, Hawanama",True
+Karachi,42,37,0,364,14.0,"AirGradient, Hawanama",True
+Islamabad,37,35,1,364,18.0,"AirGradient, AirNow, Hawanama",True
+Faisalabad,40,36,0,364,20.0,"AirGradient, Hawanama",True
+Peshawar,22,22,0,364,9.0,"AirGradient, Hawanama",True
+Quetta,19,16,0,364,7.0,"AirGradient, Hawanama",True
