@@ -1,0 +1,15 @@
+{
+  "west_midlands_total_flags_2_weeks": 19145,
+  "west_midlands_seatbelt_share_of_flags": 0.9,
+  "west_midlands_flags_per_camera_site_per_day": 683.8,
+  "west_midlands_images_checked": 8024,
+  "west_midlands_accuracy_published": false,
+  "athens_share_of_reviewed_judged_valid": 0.073,
+  "athens_share_of_reviewed_rejected_as_phone_seatbelt_misreads": 0.236,
+  "prevalence_estimates": {
+    "Scotland, seatbelt (est.)": 0.03596,
+    "NSW phone, 2019": 0.0122,
+    "Scotland, phone (est.)": 0.00596,
+    "NSW phone, 2021": 0.00209
+  }
+}

@@ -1,0 +1,15 @@
+source_id,place,period,metric,value,status,source_name,source_url,published
+wm_2026,West Midlands (Ladywood + Fallings Park),2 weeks in March,seatbelt_flags,17225,AI flags (initial scans; not enforced),RAC / Highways Industry,https://www.highwaysindustry.com/ai-road-safety-cameras-west-midlands/,2026-10-13
+wm_2026,West Midlands (Ladywood + Fallings Park),2 weeks in March,phone_flags,1920,AI flags (initial scans; not enforced),RAC / Highways Industry,https://www.highwaysindustry.com/ai-road-safety-cameras-west-midlands/,2026-10-13
+wm_2026,West Midlands (Ladywood + Fallings Park),2 weeks in March,images_human_checked,8024,sample checked by operators; outcome not published,RAC / Highways Industry,https://www.highwaysindustry.com/ai-road-safety-cameras-west-midlands/,2026-10-13
+sussex_2024,Sussex,7 days in 2024,offences_detected,458,National Highways trial,Resultsense,https://www.resultsense.com/news/2026-04-15-sussex-police-ai-cameras-drivers/,2026-04-15
+athens_2026,Athens,April-May 2026,ai_citations,13000,leaked figures (approximate),CarScoops,https://www.carscoops.com/2026/06/athens-ai-traffic-cameras/,2026-06-10
+athens_2026,Athens,April-May 2026,citations_human_reviewed,5500,leaked figures,CarScoops,https://www.carscoops.com/2026/06/athens-ai-traffic-cameras/,2026-06-10
+athens_2026,Athens,April-May 2026,judged_valid,400,leaked figures,CarScoops,https://www.carscoops.com/2026/06/athens-ai-traffic-cameras/,2026-06-10
+athens_2026,Athens,April-May 2026,rejected_speeding_no_legal_basis,3800,leaked figures,CarScoops,https://www.carscoops.com/2026/06/athens-ai-traffic-cameras/,2026-06-10
+athens_2026,Athens,April-May 2026,rejected_phone_seatbelt_misread,1300,leaked figures (phone/seatbelt and similar),CarScoops,https://www.carscoops.com/2026/06/athens-ai-traffic-cameras/,2026-06-10
+scotland_2026,Scotland,daily estimate (2026 pilot announcement),daily_vehicle_journeys,4700000,Scottish Government estimate,Fleet World,https://fleetworld.co.uk/mobile-phone-and-seatbelt-detection-cameras-go-live-across-scotland/,2026-03
+scotland_2026,Scotland,daily estimate (2026 pilot announcement),drivers_not_wearing_seatbelt_daily,169000,Scottish Government estimate,Fleet World,https://fleetworld.co.uk/mobile-phone-and-seatbelt-detection-cameras-go-live-across-scotland/,2026-03
+scotland_2026,Scotland,daily estimate (2026 pilot announcement),drivers_using_handheld_phone_daily,28000,Scottish Government estimate,Fleet World,https://fleetworld.co.uk/mobile-phone-and-seatbelt-detection-cameras-go-live-across-scotland/,2026-03
+nsw,New South Wales (Australia),2019,phone_use_one_in_n_drivers,82,detection rate after camera rollout began,Kurrant,https://kurrant.com/kurrantly-news/scotland-launches-350000-ai-camera-pilot-to-detect-distracted-drivers/,2026-02-13
+nsw,New South Wales (Australia),2021,phone_use_one_in_n_drivers,478,detection rate two years later,Kurrant,https://kurrant.com/kurrantly-news/scotland-launches-350000-ai-camera-pilot-to-detect-distracted-drivers/,2026-02-13

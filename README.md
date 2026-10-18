@@ -10,11 +10,12 @@ Each folder has its own research question, code, tests, results from my own run,
 
 Research gaps I am tracking: [gap-bank.md](gap-bank.md)
 
-## Data and public health
+## Data, AI and public policy
 | Date | Topic | Folder | Research question |
 |---|---|---|---|
 | Oct 2026 | Air quality, Lahore | [`lahore-smog/`](lahore-smog/) | On what share of days did Lahore's PM2.5 exceed the WHO 24-hour guideline in the last year? |
 | Oct 2026 | Air quality, six cities | [`pakistan-cities-air/`](pakistan-cities-air/) | How do six Pakistani cities compare on PM2.5, and which lack open monitoring data? |
+| Oct 2026 | AI road-safety cameras, UK | [`uk-ai-road-cameras/`](uk-ai-road-cameras/) | How many AI phone/seatbelt camera flags could be wrong, and how much does human review matter? |
 
 ## Reproduce an experiment
 ```bash
