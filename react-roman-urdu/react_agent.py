@@ -152,14 +152,14 @@ Rules: write exactly ONE Thought and ONE Action per turn, then stop. Never write
 Observation yourself. Use only facts from Observations. The question may be in English
 or Roman Urdu; give the final answer in the same language as the question."""
 
-FEW_SHOT = """Question: How many sessions has Sara Khan done more than Ali Shah?
-Thought: I need Sara Khan's record first.
-Action: lookup_patient[Sara Khan]
-Observation: {"name": "Sara Khan", "age": 40, "therapist": "Dr. Ali", "sessions_prescribed": 8, "sessions_done": 7}
-Thought: Now I need Ali Shah's record.
-Action: lookup_patient[Ali Shah]
-Observation: {"name": "Ali Shah", "age": 29, "therapist": "Dr. Ali", "sessions_prescribed": 10, "sessions_done": 3}
-Thought: Sara has done 7 and Ali has done 3, so I subtract.
+FEW_SHOT = """Question: How many sessions has Sara Javed done more than Omer Shah?
+Thought: I need Sara Javed's record first.
+Action: lookup_patient[Sara Javed]
+Observation: {"name": "Sara Javed", "age": 40, "therapist": "Dr. Noor", "sessions_prescribed": 8, "sessions_done": 7}
+Thought: Now I need Omer Shah's record.
+Action: lookup_patient[Omer Shah]
+Observation: {"name": "Omer Shah", "age": 29, "therapist": "Dr. Noor", "sessions_prescribed": 10, "sessions_done": 3}
+Thought: Sara has done 7 and Omer has done 3, so I subtract.
 Action: calculate[7 - 3]
 Observation: 4
 Thought: The difference is 4 sessions.
@@ -291,7 +291,7 @@ if __name__ == "__main__":
     import sys
 
     model = sys.argv[1] if len(sys.argv) > 1 else "qwen2.5:3b"
-    q = sys.argv[2] if len(sys.argv) > 2 else "Ayesha Malik ke kitne sessions abhi baqi hain?"
+    q = sys.argv[2] if len(sys.argv) > 2 else "Maryam Shafiq ke kitne sessions abhi baqi hain?"
     traj = ReActAgent(OllamaChat(model), ClinicTools.from_file().registry()).run(q)
     print(traj.transcript)
     print(f"\nANSWER: {traj.answer} | steps={traj.steps} | {traj.latency_s:.1f}s")

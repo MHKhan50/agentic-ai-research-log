@@ -1,0 +1,5 @@
+method,language,Run A: original names,Run B: renamed,change_pp
+ReAct,English,0.917,0.833,-8.4
+ReAct,Roman Urdu,0.833,0.583,-25.0
+Direct (KB in prompt),English,0.75,0.667,-8.3
+Direct (KB in prompt),Roman Urdu,0.5,0.5,0.0

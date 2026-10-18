@@ -1,16 +1,16 @@
 {
   "_note": "Fictional demo clinic. No real patients. Used so the model cannot answer from memorised world knowledge and must use tools.",
   "patients": [
-    {"name": "Ayesha Malik", "age": 34, "condition": "lower back pain", "therapist": "Dr. Hamza", "sessions_prescribed": 10, "sessions_done": 4, "pain_score_start": 7, "pain_score_now": 4},
-    {"name": "Bilal Ahmed", "age": 52, "condition": "knee osteoarthritis", "therapist": "Dr. Sana", "sessions_prescribed": 12, "sessions_done": 9, "pain_score_start": 8, "pain_score_now": 5},
-    {"name": "Fatima Noor", "age": 27, "condition": "ankle sprain", "therapist": "Dr. Hamza", "sessions_prescribed": 6, "sessions_done": 6, "pain_score_start": 6, "pain_score_now": 1},
-    {"name": "Usman Tariq", "age": 45, "condition": "frozen shoulder", "therapist": "Dr. Sana", "sessions_prescribed": 15, "sessions_done": 5, "pain_score_start": 9, "pain_score_now": 7},
-    {"name": "Zainab Iqbal", "age": 61, "condition": "hip replacement rehab", "therapist": "Dr. Omar", "sessions_prescribed": 20, "sessions_done": 8, "pain_score_start": 6, "pain_score_now": 3},
-    {"name": "Hassan Raza", "age": 38, "condition": "neck pain", "therapist": "Dr. Omar", "sessions_prescribed": 8, "sessions_done": 2, "pain_score_start": 5, "pain_score_now": 4}
+    {"name": "Maryam Shafiq", "age": 34, "condition": "lower back pain", "therapist": "Dr. Urooj", "sessions_prescribed": 10, "sessions_done": 4, "pain_score_start": 7, "pain_score_now": 4},
+    {"name": "Ayan Hussain", "age": 52, "condition": "knee osteoarthritis", "therapist": "Dr. Tayaba", "sessions_prescribed": 12, "sessions_done": 9, "pain_score_start": 8, "pain_score_now": 5},
+    {"name": "Khadija Khan", "age": 27, "condition": "ankle sprain", "therapist": "Dr. Urooj", "sessions_prescribed": 6, "sessions_done": 6, "pain_score_start": 6, "pain_score_now": 1},
+    {"name": "Ali Khalid", "age": 45, "condition": "frozen shoulder", "therapist": "Dr. Tayaba", "sessions_prescribed": 15, "sessions_done": 5, "pain_score_start": 9, "pain_score_now": 7},
+    {"name": "Amna Riaz", "age": 61, "condition": "hip replacement rehab", "therapist": "Dr. Robina", "sessions_prescribed": 20, "sessions_done": 8, "pain_score_start": 6, "pain_score_now": 3},
+    {"name": "Mudassar Munier", "age": 38, "condition": "neck pain", "therapist": "Dr. Robina", "sessions_prescribed": 8, "sessions_done": 2, "pain_score_start": 5, "pain_score_now": 4}
   ],
   "therapists": [
-    {"name": "Dr. Hamza", "specialty": "sports injuries", "years_experience": 6, "clinic_days": "Monday, Wednesday", "patients": ["Ayesha Malik", "Fatima Noor"]},
-    {"name": "Dr. Sana", "specialty": "musculoskeletal", "years_experience": 11, "clinic_days": "Tuesday, Thursday", "patients": ["Bilal Ahmed", "Usman Tariq"]},
-    {"name": "Dr. Omar", "specialty": "post-surgical rehab", "years_experience": 8, "clinic_days": "Friday, Saturday", "patients": ["Zainab Iqbal", "Hassan Raza"]}
+    {"name": "Dr. Urooj", "specialty": "sports injuries", "years_experience": 6, "clinic_days": "Monday, Wednesday", "patients": ["Maryam Shafiq", "Khadija Khan"]},
+    {"name": "Dr. Tayaba", "specialty": "musculoskeletal", "years_experience": 11, "clinic_days": "Tuesday, Thursday", "patients": ["Ayan Hussain", "Ali Khalid"]},
+    {"name": "Dr. Robina", "specialty": "post-surgical rehab", "years_experience": 8, "clinic_days": "Friday, Saturday", "patients": ["Amna Riaz", "Mudassar Munier"]}
   ]
 }

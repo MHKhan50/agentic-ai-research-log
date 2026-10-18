@@ -1,49 +1,49 @@
 id,hops,language,method,correct,question,answer,steps,tool_calls,parse_errors,hit_max_steps,latency_s
-q01,1,English,ReAct,True,How many sessions does Ayesha Malik still have left?,6 sessions,3,2,0,False,4.663376082999999
-q01,1,English,Direct (KB in prompt),True,How many sessions does Ayesha Malik still have left?,6,1,0,0,False,1.6714630420000027
-q01,1,Roman Urdu,ReAct,True,Ayesha Malik ke kitne sessions abhi baqi hain?,6 sessions,3,2,0,False,2.5549542920000015
-q01,1,Roman Urdu,Direct (KB in prompt),True,Ayesha Malik ke kitne sessions abhi baqi hain?,6,1,0,0,False,0.136745083000001
-q02,1,English,ReAct,True,By how many points has Bilal Ahmed's pain score dropped?,3 points,3,2,0,False,2.107003542000001
-q02,1,English,Direct (KB in prompt),True,By how many points has Bilal Ahmed's pain score dropped?,3,1,0,0,False,0.14103979100000075
-q02,1,Roman Urdu,ReAct,True,Bilal Ahmed ka pain score kitne points kam hua hai?,3 points,3,2,0,False,2.3237418749999996
-q02,1,Roman Urdu,Direct (KB in prompt),True,Bilal Ahmed ka pain score kitne points kam hua hai?,3,1,0,0,False,0.1299466659999986
-q03,2,English,ReAct,True,Who is Fatima Noor's therapist and what is their specialty?,Dr. Hamza's specialty is sports injuries,3,2,0,False,2.592052916
-q03,2,English,Direct (KB in prompt),True,Who is Fatima Noor's therapist and what is their specialty?,Dr. Hamza is Fatima Noor's therapist and their specialty is sports injuries.,1,0,0,False,0.5419264160000026
-q03,2,Roman Urdu,ReAct,True,Fatima Noor ka therapist kaun hai aur unki specialty kya hai?,Dr. Hamza's specialty is sports injuries,4,3,0,False,3.8217887089999962
-q03,2,Roman Urdu,Direct (KB in prompt),True,Fatima Noor ka therapist kaun hai aur unki specialty kya hai?,"Dr. Hamza, specialty sports injuries.",1,0,0,False,0.30980258299999974
-q04,2,English,ReAct,False,How many years of experience does Usman Tariq's therapist have?,No information available,2,1,0,False,1.651448459000001
-q04,2,English,Direct (KB in prompt),True,How many years of experience does Usman Tariq's therapist have?,11,1,0,0,False,0.15271820800000313
-q04,2,Roman Urdu,ReAct,True,Usman Tariq ke therapist ko kitne saal ka tajurba hai?,11 years,4,3,0,False,3.5057835410000067
-q04,2,Roman Urdu,Direct (KB in prompt),False,Usman Tariq ke therapist ko kitne saal ka tajurba hai?,8,1,0,0,False,0.14289208299999956
-q05,2,English,ReAct,True,On which days does Zainab Iqbal's therapist work at the clinic?,"Friday, Saturday",3,2,0,False,2.725047250000003
-q05,2,English,Direct (KB in prompt),True,On which days does Zainab Iqbal's therapist work at the clinic?,"Friday, Saturday",1,0,0,False,0.1850741659999997
-q05,2,Roman Urdu,ReAct,False,Zainab Iqbal ke therapist clinic mein kis din aate hain?,Dr. Omar,2,1,0,False,1.8295750420000019
-q05,2,Roman Urdu,Direct (KB in prompt),True,Zainab Iqbal ke therapist clinic mein kis din aate hain?,"Dr. Omar ko Friday, Saturday mein clinic mein aata hain.",1,0,0,False,0.47142966700000244
-q06,1,English,ReAct,True,What percentage of his prescribed sessions has Usman Tariq completed?,33.33%,7,6,0,False,7.3231084999999965
-q06,1,English,Direct (KB in prompt),True,What percentage of his prescribed sessions has Usman Tariq completed?,33.33%,1,0,0,False,0.2525515000000027
-q06,1,Roman Urdu,ReAct,True,Usman Tariq ne apne prescribed sessions ka kitna percent mukammal kar liya hai?,33.33%,3,2,0,False,2.890383708999998
-q06,1,Roman Urdu,Direct (KB in prompt),False,Usman Tariq ne apne prescribed sessions ka kitna percent mukammal kar liya hai?,20.0%,1,0,0,False,0.22832774999999828
-q07,3,English,ReAct,True,How many sessions have all of Dr. Hamza's patients done in total?,10 sessions,5,4,0,False,4.087562040999998
-q07,3,English,Direct (KB in prompt),False,How many sessions have all of Dr. Hamza's patients done in total?,4,1,0,0,False,0.13309945800000378
-q07,3,Roman Urdu,ReAct,True,Dr. Hamza ke tamam patients ne mil kar kul kitne sessions kiye hain?,10 sessions,5,4,0,False,4.161291667
-q07,3,Roman Urdu,Direct (KB in prompt),True,Dr. Hamza ke tamam patients ne mil kar kul kitne sessions kiye hain?,10,1,0,0,False,0.164298500000001
-q08,3,English,ReAct,True,Which of Dr. Sana's patients has more sessions left?,Usman Tariq,6,5,0,False,5.9459677919999905
-q08,3,English,Direct (KB in prompt),True,Which of Dr. Sana's patients has more sessions left?,Usman Tariq,1,0,0,False,0.23068962500001078
-q08,3,Roman Urdu,ReAct,True,Dr. Sana ke patients mein se kis ke zyada sessions baqi hain?,Usman Tariq,7,6,0,False,6.935834999999997
-q08,3,Roman Urdu,Direct (KB in prompt),True,Dr. Sana ke patients mein se kis ke zyada sessions baqi hain?,Usman Tariq,1,0,0,False,0.23692729100000065
-q09,1,English,ReAct,True,How old will Hassan Raza be in 5 years?,43,3,2,0,False,2.2485602909999898
-q09,1,English,Direct (KB in prompt),True,How old will Hassan Raza be in 5 years?,43,1,0,0,False,0.1652153750000025
-q09,1,Roman Urdu,ReAct,True,Hassan Raza 5 saal baad kitne saal ke honge?,43,3,2,0,False,2.478271625000005
-q09,1,Roman Urdu,Direct (KB in prompt),False,Hassan Raza 5 saal baad kitne saal ke honge?,8,1,0,0,False,0.1390088750000018
-q10,3,English,ReAct,True,What is the average current pain score of Dr. Omar's patients?,3.5,5,4,0,False,4.293442166999995
-q10,3,English,Direct (KB in prompt),False,What is the average current pain score of Dr. Omar's patients?,3,1,0,0,False,0.14628779200000963
-q10,3,Roman Urdu,ReAct,False,Dr. Omar ke patients ka average current pain score kya hai?,3,4,3,0,False,3.481597708999999
-q10,3,Roman Urdu,Direct (KB in prompt),False,Dr. Omar ke patients ka average current pain score kya hai?,3,1,0,0,False,0.14107329200000152
-q11,2,English,ReAct,True,What is the age difference between Zainab Iqbal and Ayesha Malik?,27 years,5,4,0,False,3.981992500000004
-q11,2,English,Direct (KB in prompt),False,What is the age difference between Zainab Iqbal and Ayesha Malik?,20,1,0,0,False,0.1617090830000052
-q11,2,Roman Urdu,ReAct,True,Zainab Iqbal aur Ayesha Malik ki umar mein kitna farq hai?,27 years,4,3,0,False,3.216452583000006
-q11,2,Roman Urdu,Direct (KB in prompt),False,Zainab Iqbal aur Ayesha Malik ki umar mein kitna farq hai?,25,1,0,0,False,0.1627093750000057
-q12,2,English,ReAct,True,How many years of experience do Dr. Hamza and Dr. Omar have combined?,14 years,4,3,0,False,3.1696694999999977
-q12,2,English,Direct (KB in prompt),True,How many years of experience do Dr. Hamza and Dr. Omar have combined?,14,1,0,0,False,0.15887737500000298
-q12,2,Roman Urdu,ReAct,True,Dr. Hamza aur Dr. Omar ka mila kar kitne saal ka tajurba hai?,14 years,4,3,0,False,3.540160874999998
-q12,2,Roman Urdu,Direct (KB in prompt),False,Dr. Hamza aur Dr. Omar ka mila kar kitne saal ka tajurba hai?,8,1,0,0,False,0.14182483300000115
+Q01,1,English,ReAct,True,How many sessions does Maryam Shafiq still have left?,6 sessions,3,2,0,False,4.890102792
+Q01,1,English,Direct (KB in prompt),True,How many sessions does Maryam Shafiq still have left?,6,1,0,0,False,1.5778662499999996
+Q01,1,Roman Urdu,ReAct,True,Maryam Shafiq ke kitne sessions abhi baqi hain?,6 sessions,3,2,0,False,2.2964641660000007
+Q01,1,Roman Urdu,Direct (KB in prompt),True,Maryam Shafiq ke kitne sessions abhi baqi hain?,6,1,0,0,False,0.14110512499999928
+Q02,1,English,ReAct,True,By how many points has Ayan Hussain's pain score dropped?,3 points,4,3,0,False,3.0601302500000003
+Q02,1,English,Direct (KB in prompt),True,By how many points has Ayan Hussain's pain score dropped?,3,1,0,0,False,0.141799958
+Q02,1,Roman Urdu,ReAct,True,Ayan Hussain ka pain score kitne points kam hua hai?,3 points,3,2,0,False,2.528352
+Q02,1,Roman Urdu,Direct (KB in prompt),True,Ayan Hussain ka pain score kitne points kam hua hai?,3,1,0,0,False,0.1377268340000004
+Q03,2,English,ReAct,False,Who is Khadija Khan's therapist and what is their specialty?,Dr. Urooj,3,2,0,False,2.619654458000001
+Q03,2,English,Direct (KB in prompt),True,Who is Khadija Khan's therapist and what is their specialty?,Dr. Urooj is Khadija Khan's therapist and their specialty is sports injuries.,1,0,0,False,0.5265679159999976
+Q03,2,Roman Urdu,ReAct,False,Khadija Khan ka therapist kaun hai aur unki specialty kya hai?,"Dr. Urooj, Orthopedics",2,1,0,False,1.8663770839999998
+Q03,2,Roman Urdu,Direct (KB in prompt),False,Khadija Khan ka therapist kaun hai aur unki specialty kya hai?,"Dr. Urooj, musculoskeletal",1,0,0,False,0.30469291700000056
+Q04,2,English,ReAct,False,How many years of experience does Ali Khalid's therapist have?,No information available,2,1,0,False,1.4737580829999999
+Q04,2,English,Direct (KB in prompt),False,How many years of experience does Ali Khalid's therapist have?,8,1,0,0,False,0.13573741600000133
+Q04,2,Roman Urdu,ReAct,True,Ali Khalid ke therapist ko kitne saal ka tajurba hai?,11 years,4,3,0,False,3.0781792910000014
+Q04,2,Roman Urdu,Direct (KB in prompt),False,Ali Khalid ke therapist ko kitne saal ka tajurba hai?,Dr. Tayaba,1,0,0,False,0.19941783300000182
+Q05,2,English,ReAct,True,On which days does Amna Riaz's therapist work at the clinic?,Friday and Saturday,3,2,0,False,2.512147584000001
+Q05,2,English,Direct (KB in prompt),True,On which days does Amna Riaz's therapist work at the clinic?,"Friday, Saturday",1,0,0,False,0.1784517500000007
+Q05,2,Roman Urdu,ReAct,True,Amna Riaz ke therapist clinic mein kis din aate hain?,Friday and Saturday,3,2,0,False,2.6072387920000004
+Q05,2,Roman Urdu,Direct (KB in prompt),True,Amna Riaz ke therapist clinic mein kis din aate hain?,"Dr. Robina Friday, Saturday",1,0,0,False,0.26370816700000077
+Q06,1,English,ReAct,True,What percentage of his prescribed sessions has Ali Khalid completed?,33.33%,3,2,0,False,2.8340183329999995
+Q06,1,English,Direct (KB in prompt),True,What percentage of his prescribed sessions has Ali Khalid completed?,33.33%,1,0,0,False,0.24629666599999922
+Q06,1,Roman Urdu,ReAct,True,Ali Khalid ne apne prescribed sessions ka kitna percent mukammal kar liya hai?,33.33%,3,2,0,False,2.686511166999999
+Q06,1,Roman Urdu,Direct (KB in prompt),False,Ali Khalid ne apne prescribed sessions ka kitna percent mukammal kar liya hai?,20.0%,1,0,0,False,0.22118574999999652
+Q07,3,English,ReAct,True,How many sessions have all of Dr. Urooj's patients done in total?,10 sessions,5,4,0,False,4.415965542000002
+Q07,3,English,Direct (KB in prompt),False,How many sessions have all of Dr. Urooj's patients done in total?,4,1,0,0,False,0.1417120830000016
+Q07,3,Roman Urdu,ReAct,True,Dr. Urooj ke tamam patients ne mil kar kul kitne sessions kiye hain?,10 sessions,5,4,0,False,4.987140832999998
+Q07,3,Roman Urdu,Direct (KB in prompt),True,Dr. Urooj ke tamam patients ne mil kar kul kitne sessions kiye hain?,10,1,0,0,False,0.16484595900000443
+Q08,3,English,ReAct,True,Which of Dr. Tayaba's patients has more sessions left?,Ali Khalid has more sessions left,7,6,0,False,6.779406625
+Q08,3,English,Direct (KB in prompt),True,Which of Dr. Tayaba's patients has more sessions left?,Ali Khalid,1,0,0,False,0.18702104100000128
+Q08,3,Roman Urdu,ReAct,False,Dr. Tayaba ke patients mein se kis ke zyada sessions baqi hain?,4 sessions,5,4,0,False,4.874009749999999
+Q08,3,Roman Urdu,Direct (KB in prompt),True,Dr. Tayaba ke patients mein se kis ke zyada sessions baqi hain?,Ali Khalid,1,0,0,False,0.182292541999999
+Q09,1,English,ReAct,True,How old will Mudassar Munier be in 5 years?,43,3,2,0,False,2.391828290999996
+Q09,1,English,Direct (KB in prompt),True,How old will Mudassar Munier be in 5 years?,43,1,0,0,False,0.16233179099999973
+Q09,1,Roman Urdu,ReAct,False,Mudassar Munier 5 saal baad kitne saal ke honge?,33 years,3,2,0,False,2.309248375000003
+Q09,1,Roman Urdu,Direct (KB in prompt),False,Mudassar Munier 5 saal baad kitne saal ke honge?,8,1,0,0,False,0.1368915829999935
+Q10,3,English,ReAct,True,What is the average current pain score of Dr. Robina's patients?,3.5,5,4,0,False,4.289100208000008
+Q10,3,English,Direct (KB in prompt),False,What is the average current pain score of Dr. Robina's patients?,3,1,0,0,False,0.1388582499999984
+Q10,3,Roman Urdu,ReAct,False,Dr. Robina ke patients ka average current pain score kya hai?,0,5,4,0,False,4.262960250000006
+Q10,3,Roman Urdu,Direct (KB in prompt),False,Dr. Robina ke patients ka average current pain score kya hai?,3,1,0,0,False,0.1361473750000073
+Q11,2,English,ReAct,True,What is the age difference between Amna Riaz and Maryam Shafiq?,27 years,4,3,0,False,3.2171122499999996
+Q11,2,English,Direct (KB in prompt),False,What is the age difference between Amna Riaz and Maryam Shafiq?,10,1,0,0,False,0.155409750000004
+Q11,2,Roman Urdu,ReAct,True,Amna Riaz aur Maryam Shafiq ki umar mein kitna farq hai?,27 years,4,3,0,False,3.2312843329999907
+Q11,2,Roman Urdu,Direct (KB in prompt),True,Amna Riaz aur Maryam Shafiq ki umar mein kitna farq hai?,27,1,0,0,False,0.15819133299999066
+Q12,2,English,ReAct,True,How many years of experience do Dr. Urooj and Dr. Robina have combined?,14 years,4,3,0,False,3.4357800000000083
+Q12,2,English,Direct (KB in prompt),True,How many years of experience do Dr. Urooj and Dr. Robina have combined?,14,1,0,0,False,0.15787258299999962
+Q12,2,Roman Urdu,ReAct,False,Dr. Urooj aur Dr. Robina ka mila kar kitne saal ka tajurba hai?,Dr. Robina is 2 years more experienced than Dr. Urooj,4,3,0,False,3.7330793749999884
+Q12,2,Roman Urdu,Direct (KB in prompt),False,Dr. Urooj aur Dr. Robina ka mila kar kitne saal ka tajurba hai?,8,1,0,0,False,0.14853008299999715

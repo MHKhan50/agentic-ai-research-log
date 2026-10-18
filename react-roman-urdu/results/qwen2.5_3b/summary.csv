@@ -1,5 +1,5 @@
 method,language,n,n_correct,accuracy,avg_steps,parse_error_rate,max_steps_rate,median_latency_s
-Direct (KB in prompt),English,12,9,0.75,1.0,0.0,0.0,0.163
-Direct (KB in prompt),Roman Urdu,12,6,0.5,1.0,0.0,0.0,0.153
-ReAct,English,12,11,0.917,4.083,0.0,0.0,3.576
-ReAct,Roman Urdu,12,10,0.833,3.833,0.0,0.0,3.349
+Direct (KB in prompt),English,12,8,0.667,1.0,0.0,0.0,0.16
+Direct (KB in prompt),Roman Urdu,12,6,0.5,1.0,0.0,0.0,0.162
+ReAct,English,12,10,0.833,3.833,0.0,0.0,3.139
+ReAct,Roman Urdu,12,7,0.583,3.667,0.0,0.0,2.882
