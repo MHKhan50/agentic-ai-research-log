@@ -29,7 +29,7 @@ python analyze_cities.py      # writes results/
 
 ## Key findings
 1. **No city met the WHO 24-hour guideline**, which allows only 3-4 days above 15 µg/m³ a year. Even the cleanest city, Quetta, was above it on 307 of 364 days (84%).
-2. **Faisalabad was worse than Lahore**: yearly mean 119.6 µg/m³ (24 × the WHO annual guideline), no clean day at all, and the single worst day in the study (407 µg/m³ on 14 Jan 2026, 27 × the 24-hour guideline).
+2. **Faisalabad ranked worse than Lahore**: yearly mean 119.6 µg/m³ (24 × the WHO annual guideline), no clean day at all, and the single worst day in the study (407 µg/m³ on 14 Jan 2026, 27 × the 24-hour guideline).
 3. **Peshawar ranked third** (91.5 µg/m³, 18 ×), ahead of Islamabad and Karachi, despite getting far less public attention than Lahore.
 4. **Monitoring is very uneven.** All six cities had data on 364 days, but a typical day had 46 sensors in Lahore and only 7 in Quetta and 9 in Peshawar. Only one of 223 sensors used is a reference-grade monitor (in Islamabad).
 5. **Winter is what separates the cities.** From May to August the six cities' monthly medians sat close together (22-45 µg/m³). From November to January they spread from 43 (Quetta) to 242 µg/m³ (Faisalabad), a winter-to-summer ratio of 1.9 in Quetta but 4.5-5.5 in the Punjab cities and Peshawar. Out of 78 city-months, only one had a median at or below 15 µg/m³: Quetta in May 2026 (14.4).
@@ -48,7 +48,7 @@ Window: 18 Oct 2025 to 18 Oct 2026, 25 km around each city centre.
 | Quetta | 19 | 16 | 0 | 364 | 7 | yes |
 
 ## Results
-Ranked by yearly mean (mean of daily city values).
+Ranked by yearly mean (mean of daily city values). The order is identical when ranked by the median day (Faisalabad 71.4, Lahore 66.7, Peshawar 57.8, Islamabad 41.0, Karachi 32.5, Quetta 26.9 µg/m³), so the ranking is not driven by a few extreme days. The Faisalabad-Lahore gap (about 15%) is small enough that sensor differences could narrow it.
 
 | City | Yearly mean (µg/m³) | × WHO annual (5) | Days > 15 | Days ≤ 15 | Days > 75 | Worst day | Cleanest day |
 |---|---|---|---|---|---|---|---|
