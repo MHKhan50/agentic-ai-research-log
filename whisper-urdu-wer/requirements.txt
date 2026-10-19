@@ -3,3 +3,4 @@ sounddevice>=0.4.6
 numpy>=1.24,<2.1
 matplotlib>=3.8
 pytest>=8.0
+requests>=2.31
