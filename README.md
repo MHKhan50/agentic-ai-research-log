@@ -9,6 +9,7 @@ Each folder has its own research question, code, tests, results from my own run,
 | Date | Topic | Folder | Research question |
 |---|---|---|---|
 | Oct 2026 | ReAct paper follow-up | [`react-roman-urdu/`](react-roman-urdu/) | Does a ~3B local model keep ReAct tool-use accuracy on Roman Urdu vs English, and how stable is it? |
+| Oct 2026 | Urdu clinical speech-to-text | [`whisper-urdu-wer/`](whisper-urdu-wer/) | How many words does Whisper (tiny/base/small) get wrong on Urdu clinic conversations, and does it keep the clinical key terms? |
 
 Research gaps I am tracking: [gap-bank.md](gap-bank.md)
 
@@ -35,4 +36,4 @@ python -m pytest -q
 ```
 
 ## Licence and citation
-Code is released under the [MIT licence](LICENSE). Third-party data (OpenAQ and its providers, public trial figures) keeps its original licence and is credited in each folder. To cite this work, use the DOI [10.5281/zenodo.23460406](https://doi.org/10.5281/zenodo.23460406) (release v0.1.0) or see [CITATION.cff](CITATION.cff).
+Code is released under the [MIT licence](LICENSE). Third-party data (OpenAQ and its providers, public trial figures) and models (OpenAI Whisper, MIT licence) keeps its original licence and is credited in each folder. To cite this work, use the DOI [10.5281/zenodo.23460406](https://doi.org/10.5281/zenodo.23460406) (release v0.1.0) or see [CITATION.cff](CITATION.cff).

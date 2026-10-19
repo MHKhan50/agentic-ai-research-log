@@ -1,0 +1,10 @@
+model,clip,audio_seconds,transcribe_seconds,real_time_factor,ref_words,substitutions,deletions,insertions,wer,cer,term_recall,missed_terms,detected_language,detected_probability
+tiny,clip1,36.33,0.95,0.026,69,22,1,2,0.3623,0.1765,0.625,pain (dard); leg (taang); urine (peshab),hi,0.548
+tiny,clip2,36.89,1.91,0.052,66,28,2,2,0.4848,0.2208,0.25,knee (ghutna); swelling (sojan); stairs (seerhiyan); giving way (jawab de); x-ray; MRI,hi,0.79
+tiny,clip3,36.11,1.0,0.028,68,27,0,5,0.4706,0.2,0.625,shoulder (kandha); blood pressure; physiotherapy,ur,0.689
+base,clip1,36.33,1.87,0.052,69,16,0,0,0.2319,0.1086,0.625,pain (dard); leg (taang); numb (sun),hi,0.835
+base,clip2,36.89,1.79,0.049,66,15,3,1,0.2879,0.0909,0.375,knee (ghutna); stairs (seerhiyan); x-ray; MRI; ice (barf),hi,0.856
+base,clip3,36.11,1.75,0.048,68,21,1,2,0.3529,0.1364,0.375,shoulder (kandha); diabetes (sugar); blood pressure; injury (chot); physiotherapy,hi,0.773
+small,clip1,36.33,4.52,0.124,69,8,0,0,0.1159,0.0498,0.625,leg (taang); numb (sun); urine (peshab),hi,0.735
+small,clip2,36.89,4.78,0.13,66,13,3,1,0.2576,0.0779,0.5,knee (ghutna); stairs (seerhiyan); x-ray; MRI,hi,0.769
+small,clip3,36.11,4.72,0.131,68,12,0,2,0.2059,0.1045,0.5,shoulder (kandha); diabetes (sugar); blood pressure; physiotherapy,hi,0.571

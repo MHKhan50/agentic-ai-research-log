@@ -1,0 +1,6 @@
+# Generated locally, not committed
+read_aloud.html
+kaggle_dataset/
+# Own voice recordings stay on this Mac (root .gitignore also ignores audio)
+data/audio/*
+!data/audio/.gitkeep

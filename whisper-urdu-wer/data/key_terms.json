@@ -1,0 +1,32 @@
+{
+  "clip1": {
+    "back (kamar)": ["کمر"],
+    "pain (dard)": ["درد"],
+    "leg (taang)": ["ٹانگ"],
+    "numb (sun)": ["سن", "سُن"],
+    "urine (peshab)": ["پیشاب"],
+    "fever (bukhar)": ["بخار"],
+    "weight (wazan)": ["وزن"],
+    "tablet (goli)": ["گولی"]
+  },
+  "clip2": {
+    "knee (ghutna)": ["گھٹنا", "گھٹنے"],
+    "swelling (sojan)": ["سوجن"],
+    "stairs (seerhiyan)": ["سیڑھیاں", "سیڑھیوں"],
+    "locking (lock)": ["لاک", "lock"],
+    "giving way (jawab de)": ["جواب دے"],
+    "x-ray": ["ایکسرے", "ایکس رے", "x-ray", "xray", "x ray"],
+    "MRI": ["ایم آر آئی", "mri", "m r i"],
+    "ice (barf)": ["برف"]
+  },
+  "clip3": {
+    "shoulder (kandha)": ["کندھے", "کندھا"],
+    "arm (bazu)": ["بازو"],
+    "diabetes (sugar)": ["شوگر", "sugar"],
+    "blood pressure": ["بلڈ پریشر", "blood pressure", "بی پی"],
+    "medicine (dawai)": ["دوائی", "دوا"],
+    "injury (chot)": ["چوٹ"],
+    "exercise (warzish)": ["ورزش"],
+    "physiotherapy": ["فزیوتھراپی", "فزیو تھراپی", "physiotherapy", "فزیو"]
+  }
+}
