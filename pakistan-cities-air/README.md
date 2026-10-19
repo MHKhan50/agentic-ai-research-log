@@ -9,6 +9,7 @@ National headlines focus on Lahore's winter smog. This compares the main cities 
 - **Source:** [OpenAQ](https://openaq.org) v3 API, daily PM2.5 aggregates for every fixed sensor within 25 km of each city centre. Same 365-day window for all cities.
 - **Guideline:** WHO Global Air Quality Guidelines (2021): PM2.5 24-hour mean 15 µg/m³, defined as the 99th percentile of the year (about 3-4 days above it are allowed), and annual mean 5 µg/m³. Interim target 1 (24-hour): 75 µg/m³.
 - Raw data is saved per city in `data/`. Data from OpenAQ; the licences of the individual data providers apply.
+- **Kaggle:** [dataset](https://www.kaggle.com/datasets/muzammalhussain11/pakistan-six-cities-daily-pm2-5-2025-2026) and [starter notebook](https://www.kaggle.com/code/muzammalhussain11/six-pakistani-cities-pm2-5-starter).
 
 ## Method
 1. **Clean** each city the same way: drop negative values, values above 1000 µg/m³, days with less than 75% hourly coverage, and duplicate sensor-days.
