@@ -32,28 +32,41 @@ python run_wer.py --models medium # optional, larger model
 If `data/audio/clip1.wav` (or `.m4a`) is missing, the script opens a reading sheet and records it: Enter to start, Enter to stop. Whisper models download on first use (tiny ~75 MB, base ~145 MB, small ~480 MB).
 
 ## Results
-_From my run on a MacBook M4 (16 GB). To be filled from `results/summary.md`._
+From my run on a MacBook M4 (16 GB), 3 clips, 203 reference words, 24 key terms.
 
 | Model | WER | CER (no spaces) | Key terms recovered | Real-time factor | Auto-detected as Urdu |
 |---|---|---|---|---|---|
-| tiny | - | - | - | - | - |
-| base | - | - | - | - | - |
-| small | - | - | - | - | - |
+| tiny | 43.8% | 19.9% | 50% | 0.04 | 33% |
+| base | 29.1% | 11.2% | 46% | 0.05 | 0% |
+| small | 19.2% | 7.7% | 54% | 0.13 | 0% |
 
 ![WER by model](results/wer_by_model.png)
 
-Per-clip numbers: [`results/results.csv`](results/results.csv). Every word error with its reference and hypothesis: [`results/word_errors.csv`](results/word_errors.csv). Raw transcripts: [`results/transcripts/`](results/transcripts/).
+**Main finding:** a bigger model more than halved the word error rate (43.8% to 19.2%), but clinical key-term recall stayed flat at about 50% (46% to 54%). Model size helped everyday Urdu, not the clinical words.
+
+What the transcripts show (small model, from [`results/word_errors.csv`](results/word_errors.csv)):
+- **Most errors are spelling, not hearing.** CER is far below WER (7.7% vs 19.2%), so most wrong words are one or two letters off. The aspirated *do-chashmi he* (ھ) is often dropped: گھٹنا → گٹنا, کندھے → کندے, چڑھتے → چڑتے (6 of 33 substitutions are only a missing ھ). Retroflex letters are also confused: ڈاکٹر → دکٹر, سیڑھیاں → سیڈیاں, ٹانگ → طانگ.
+- **English medical words are the weakest.** No model wrote X-ray or MRI correctly (MRI became مرائی or امرائی). Physiotherapy became فیزیو تیاریپی.
+- **"Pain" turned into a Persian word.** In clips 2 and 3 the small model wrote درد (pain) as دارد three times. "Pain" was only on the key-term list for clip 1, so the key-term score did not catch this: a fixed term list misses errors on words it does not include.
+- **Language ID:** left to guess, base and small labelled every clip as Hindi. Forcing `language="ur"` is required, or the output may come out in Devanagari.
+- **Speed:** small transcribed 36 seconds of audio in about 4.7 seconds, roughly 8 times faster than real time, on CPU.
+
+Per-clip numbers: [`results/results.csv`](results/results.csv). Raw transcripts: [`results/transcripts/`](results/transcripts/).
 
 ## My observations
-_To be added after the run._
+- Moving from tiny to small cut WER by more than half, yet clinical key terms stayed around 50%. Clinical words and English terms spoken inside Urdu are rare in general training data, so the model often hears the sound but writes an unfamiliar spelling.
+- For MeetPhysio I would choose **small**. Base recovered fewer key terms than tiny (46% vs 50%), while small was best on every measure and, at a real-time factor of 0.13, is still fast enough for live use. Even small missed every X-ray and MRI, so model choice alone will not fix English medical terms.
+- I listened back to clip 3 and confirmed that I said "مشکل" where the script had "تکلیف". The model was right there, so part of the measured error comes from my reading, not from Whisper.
 
 ## Limitations
 - One speaker, three clips, read speech in a quiet room. Real consultations have two voices, interruptions, background noise and regional accents. These numbers are a smoke test, not a benchmark.
-- The reference scripts were written before recording; small deviations while reading count as errors.
-- Key-term matching accepts listed spellings only; a correct but unlisted spelling counts as a miss.
-- Urdu vs Hindi script: if Whisper writes Devanagari, every word counts as wrong even when the sound was right. Language ID is reported to catch this.
+- The reference scripts were written before recording. Confirmed reading deviation: "مشکل" for "تکلیف" in clip 3 (counted as an error for every model). A few other differences ("لیتے" for "لیتی", an extra "بھی") appear in both base and small and may also be my reading; they were not checked.
+- Digits vs words are not unified: small wrote "6" where the reference has "چھ", which counts as an error.
+- Key-term recall checks whether a term appears at least once in the clip, using listed spellings only. A correct but unlisted spelling counts as a miss, and a term that is right once but wrong elsewhere counts as found.
+- Urdu vs Hindi script: if Whisper writes Devanagari, every word counts as wrong even when the sound was right. Here the language was forced to Urdu, so this did not happen.
 
 ## Next steps
-- Add a second speaker and background noise (clinic fan, traffic) to measure robustness.
-- Compare with `medium` and a Whisper model fine-tuned on Urdu.
+- **Fix the clinical words cheaply first:** pass a short medical vocabulary as Whisper's `initial_prompt` and measure whether key-term recall rises, without retraining.
+- Score terms per occurrence (not just presence) and add a sound-alike match (e.g. ignoring a missing ھ) to separate "heard but misspelled" from "not heard".
+- Add a second speaker and background noise (clinic fan, traffic); compare with `medium` and an Urdu fine-tuned Whisper.
 - Feed the transcripts into the local LLM note-drafting step and check whether transcript errors change the red-flag section of the note.

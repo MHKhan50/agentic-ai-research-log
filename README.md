@@ -26,6 +26,7 @@ Plain-language write-ups of each experiment:
 - [Lahore did not have a single clean-air day in the past year](https://masmatixinnovations.co.uk/insights/lahore-smog.html)
 - [Six Pakistani cities, one year of air](https://masmatixinnovations.co.uk/insights/pakistan-cities-air.html)
 - [AI road cameras: how many flags are wrong?](https://masmatixinnovations.co.uk/insights/uk-ai-road-cameras.html)
+- [Whisper halved its errors on Urdu clinic speech, but not on the medical words](https://masmatixinnovations.co.uk/insights/whisper-urdu-clinic.html)
 
 ## Reproduce an experiment
 ```bash
