@@ -30,6 +30,7 @@ Plain-language write-ups of each experiment:
 - [AI road cameras: how many flags are wrong?](https://masmatixinnovations.co.uk/insights/uk-ai-road-cameras.html)
 - [Whisper halved its errors on Urdu clinic speech, but not on the medical words](https://masmatixinnovations.co.uk/insights/whisper-urdu-clinic.html)
 - [The validator said yes. The refund was still wrong.](https://masmatixinnovations.co.uk/insights/tool-call-self-correction.html)
+- [In Roman Urdu, a small AI wrote notes about the wrong body part](https://masmatixinnovations.co.uk/insights/clinical-note-hallucination.html)
 
 ## Reproduce an experiment
 ```bash

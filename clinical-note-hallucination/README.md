@@ -25,26 +25,43 @@ python summarise.py        # writes results/summary.csv and the chart
 ```
 
 ## Results
-From my run on a MacBook M4 (16 GB).
+From my run on a MacBook M4 (16 GB), `qwen2.5:3b`, one run at temperature 0. 4 notes per language, 42 listed facts per language.
 
-| Language | Notes | Listed facts missing | Critical facts missing | Sentences reviewed | Unsupported sentences | Major |
-|---|---|---|---|---|---|---|
-| English | 4 | _ / _ | _ | _ | _ | _ |
-| Roman Urdu | 4 | _ / _ | _ | _ | _ | _ |
+| Language | Listed facts missing | Critical facts missing | Sentences reviewed | Unsupported (my labels) | Major |
+|---|---|---|---|---|---|
+| English | 2 / 42 | 0 | 14 | 3 | 1 |
+| Roman Urdu | 13 / 42 | 7 | 12 | 4 | 2 |
 
 ![Omissions and hallucinations by language](results/omissions_hallucinations.png)
 
+**Main finding:** from the same consultations, the Roman Urdu notes left out 13 of 42 listed facts against 2 of 42 in English, including 7 critical ones (the red-flag answers about numbness, urine, tingling and dizziness, the injured side, and the knee giving way). The English notes kept every critical fact.
+
+**Reading the full notes shows more than the labels capture.** In 3 of the 4 Roman Urdu notes the body part is wrong (from [`results/notes.jsonl`](results/notes.jsonl)):
+- **C1:** lower back pain ("kamar ke nichle hisse") became "pain in the **knees**", with exercises "for the knees". The same note says both "does not take any medications" and "takes Ibuprofen 400 mg".
+- **C2:** a swollen right knee ("daayan ghutna") became a "**groin strain**" with "**no swelling**".
+- **C4:** neck pain ("gardan") became "**shoulder** pain"; "chakkar nahi" (no dizziness) became "no circular motion", and the note added "a 45-year-old male" with "no known allergies", none of which was said.
+- **C3:** "10 mein se 5" (pain 5 out of 10) became night pain "starting around 10 PM and lasting up to 5 hours".
+
+The English notes were close to the transcripts. The one major error there was in the Plan: "crutches if needed" became "use crutches to avoid putting weight on the injured knee".
+
+**What the checker missed.** Only flagged and Plan sentences were reviewed (26 of 129). Most Roman Urdu errors sat in Subjective, Objective and Assessment, so the labelled count (4) understates them. The invented "10 PM / 5 hours" passed the number check because 10 and 5 appear in the transcript. Of 26 reviewed sentences, the checker flagged only 1; the other confirmed errors were found by reviewing Plan sentences.
+
+Files: [`results/summary.csv`](results/summary.csv), [`results/omissions.csv`](results/omissions.csv), [`results/review.csv`](results/review.csv) (my labels).
+
 ## My notes
-_To be added after labelling._
+- The most dangerous result was the wrong body part in the Roman Urdu notes: lower back became knees, knee became groin, and neck became shoulder. In a live clinic this would lead to the wrong examination and the wrong physiotherapy treatment.
+- The checker missed "10 PM / 5 hours" because it only checks whether numbers and words appear in the transcript, not what they mean. A better check would read the whole note, including Subjective and Assessment, for example an LLM-as-a-judge with clinician review, as the paper suggests. A judge model can also hallucinate, so it would need its own test.
+- For a small local model, reading Roman Urdu directly was unreliable here. One option for MeetPhysio is to translate the Roman Urdu transcript into English first and then draft the note. This is a hypothesis: the translation step could make the same mistakes ("chakkar" as "circular motion"), so it needs its own measurement.
 
 ## Limitations
 - 8 notes from 4 consultations I wrote and one model at temperature 0. A pilot, not a benchmark.
 - Omission checks are keyword based: a fact written with unexpected words counts as missing, and a fact stated wrongly (for example a denied symptom written as present) still counts as present. The negation flag is there to catch the second case.
-- Only flagged and Plan sentences are labelled, so unsupported sentences elsewhere without a number, drug or denied symptom can be missed.
+- Only flagged and Plan sentences were labelled (26 of 129). This missed most Roman Urdu errors, which were in Subjective, Objective and Assessment; the body-part errors above come from reading the full notes, not from the labels.
 - I labelled the sentences myself; the paper used two clinicians per note and a senior reviewer.
 - Transcripts are clean text. Real notes would start from speech-to-text, which adds its own errors (see [`whisper-urdu-wer/`](../whisper-urdu-wer/)).
 
 ## Next steps
-- Label every sentence for a subset to measure what the checker misses.
+- Label every sentence of all 8 notes to get a complete hallucination count.
+- Test translate-then-draft against direct drafting on the same Roman Urdu consultations.
 - Compare `llama3.1:8b`, and test the paper's best prompt ideas (a template and a revision step) on the same notes.
 - Feed Whisper transcripts instead of clean text and measure how transcript errors change the note.
