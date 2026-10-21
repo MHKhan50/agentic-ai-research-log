@@ -1,0 +1,3 @@
+policy,tool_failure_rate,n_tasks,success_rate,invalid_action_rate,mean_tool_calls,mean_failed_calls,mean_gate_interventions,mean_repairs,unsafe_close_attempts_per_task,budget_exhausted_rate
+guarded_retry,0.1,8,1.0,0.0,5.125,0.125,0.5,0.125,0.0,0.0
+unguarded,0.1,8,0.625,0.09433962264150944,6.625,1.125,0.0,0.0,0.25,0.375

@@ -1,0 +1,17 @@
+{
+  "benchmark": "ToolGuard synthetic ticket workflow",
+  "version": "0.1.0",
+  "python_version": "3.9.6",
+  "seed": 7,
+  "task_count": 120,
+  "noise_rate": 0.12,
+  "tool_failure_rates": [
+    0.0,
+    0.1,
+    0.25
+  ],
+  "max_tool_calls_per_episode": 8,
+  "max_retries_after_initial_attempt": 2,
+  "data_type": "synthetic; no real customer data",
+  "note": "Simulator results do not measure LLM reasoning or real-world service performance."
+}

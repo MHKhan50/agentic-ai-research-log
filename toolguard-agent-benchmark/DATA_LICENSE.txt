@@ -1,0 +1,5 @@
+The generated synthetic task dataset in data/tasks.csv is dedicated to the public domain under CC0 1.0 Universal, to the extent permitted by law.
+
+CC0 1.0 legal text: https://creativecommons.org/publicdomain/zero/1.0/
+
+The dataset is synthetic and contains no real customer records. The code that generates and evaluates it is licensed separately under the MIT License in LICENSE.

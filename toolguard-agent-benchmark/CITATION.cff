@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this benchmark, cite the versioned repository or archived release you actually accessed. Replace the placeholder repository URL before publication."
+title: "ToolGuard: Budgeted Reliability Benchmark for Tool-Using Agents"
+version: 0.1.0
+date-released: 2026-10-21
+authors:
+  - name: "MHKhan50"
+license: MIT
+keywords:
+  - agentic AI
+  - tool use
+  - reliability evaluation
+  - reproducibility
+  - synthetic benchmark

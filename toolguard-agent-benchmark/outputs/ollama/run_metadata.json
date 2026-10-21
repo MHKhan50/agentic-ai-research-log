@@ -1,0 +1,12 @@
+{
+  "benchmark": "ToolGuard optional local Ollama experiment",
+  "model": "qwen2.5:3b",
+  "endpoint": "http://localhost:11434/api/chat",
+  "seed": 7,
+  "task_count": 8,
+  "tool_failure_rate": 0.1,
+  "max_tool_calls": 8,
+  "max_model_decisions": 12,
+  "retries_after_initial_attempt": 2,
+  "note": "Model outputs may vary by model build; do not treat a small sample as conclusive."
+}

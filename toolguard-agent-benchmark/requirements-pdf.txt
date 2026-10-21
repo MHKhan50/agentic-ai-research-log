@@ -1,0 +1,2 @@
+# Optional: only needed to rebuild docs/article_draft.pdf from Markdown.
+reportlab>=3.6,<5

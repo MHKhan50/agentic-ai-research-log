@@ -1,0 +1,2 @@
+# Core simulator, tests, CSV outputs, and SVG plots use only Python's standard library.
+# No pip dependencies are required for the default experiment.
