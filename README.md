@@ -28,6 +28,7 @@ Plain-language write-ups of each experiment:
 - [Six Pakistani cities, one year of air](https://masmatixinnovations.co.uk/insights/pakistan-cities-air.html)
 - [AI road cameras: how many flags are wrong?](https://masmatixinnovations.co.uk/insights/uk-ai-road-cameras.html)
 - [Whisper halved its errors on Urdu clinic speech, but not on the medical words](https://masmatixinnovations.co.uk/insights/whisper-urdu-clinic.html)
+- [The validator said yes. The refund was still wrong.](https://masmatixinnovations.co.uk/insights/tool-call-self-correction.html)
 
 ## Reproduce an experiment
 ```bash
