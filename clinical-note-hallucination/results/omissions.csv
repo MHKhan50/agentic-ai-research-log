@@ -1,0 +1,85 @@
+note_id,language,fact,description,critical,missing
+C1-en,English,duration,pain for 3 weeks,False,False
+C1-en,English,cause,started after lifting a heavy box,False,False
+C1-en,English,severity,pain 6/10,False,False
+C1-en,English,morning,worse in the morning,False,False
+C1-en,English,no_numbness,no numbness (red flag negative),True,False
+C1-en,English,no_urinary,no urinary problems (red flag negative),True,False
+C1-en,English,no_fever_weight,no fever or weight loss,True,False
+C1-en,English,medication,ibuprofen 400 mg twice daily,True,False
+C1-en,English,neuro_normal,leg strength and reflexes normal,False,False
+C1-en,English,impression,muscle strain,False,False
+C1-en,English,review,review in 2 weeks,False,False
+C1-ru,Roman Urdu,duration,pain for 3 weeks,False,False
+C1-ru,Roman Urdu,cause,started after lifting a heavy box,False,True
+C1-ru,Roman Urdu,severity,pain 6/10,False,True
+C1-ru,Roman Urdu,morning,worse in the morning,False,False
+C1-ru,Roman Urdu,no_numbness,no numbness (red flag negative),True,True
+C1-ru,Roman Urdu,no_urinary,no urinary problems (red flag negative),True,True
+C1-ru,Roman Urdu,no_fever_weight,no fever or weight loss,True,False
+C1-ru,Roman Urdu,medication,ibuprofen 400 mg twice daily,True,False
+C1-ru,Roman Urdu,neuro_normal,leg strength and reflexes normal,False,False
+C1-ru,Roman Urdu,impression,muscle strain,False,False
+C1-ru,Roman Urdu,review,review in 2 weeks,False,False
+C2-en,English,side,right knee,True,False
+C2-en,English,mechanism,twisted playing football,False,False
+C2-en,English,duration,5 days ago,False,False
+C2-en,English,swelling,swelling,False,False
+C2-en,English,severity,pain 7/10 walking,False,False
+C2-en,English,giving_way,gave way on stairs,True,False
+C2-en,English,no_locking,no locking,False,True
+C2-en,English,medication,paracetamol 1 g up to 4 times daily,True,False
+C2-en,English,referral,referred for MRI,True,False
+C2-en,English,review,review in 1 week,False,False
+C2-ru,Roman Urdu,side,right knee,True,True
+C2-ru,Roman Urdu,mechanism,twisted playing football,False,False
+C2-ru,Roman Urdu,duration,5 days ago,False,False
+C2-ru,Roman Urdu,swelling,swelling,False,False
+C2-ru,Roman Urdu,severity,pain 7/10 walking,False,False
+C2-ru,Roman Urdu,giving_way,gave way on stairs,True,True
+C2-ru,Roman Urdu,no_locking,no locking,False,True
+C2-ru,Roman Urdu,medication,paracetamol 1 g up to 4 times daily,True,False
+C2-ru,Roman Urdu,referral,referred for MRI,True,False
+C2-ru,Roman Urdu,review,review in 1 week,False,False
+C3-en,English,side,left shoulder,True,False
+C3-en,English,duration,4 months,False,False
+C3-en,English,no_injury,no injury,False,True
+C3-en,English,diabetes,type 2 diabetes,True,False
+C3-en,English,hypertension,high blood pressure,True,False
+C3-en,English,metformin,metformin 500 mg twice daily,True,False
+C3-en,English,amlodipine,amlodipine 5 mg once daily,True,False
+C3-en,English,night_pain,night pain 5/10,False,False
+C3-en,English,impression,possible frozen shoulder,False,False
+C3-en,English,gp_letter,letter to GP about steroid injection,False,False
+C3-en,English,review,review in 3 weeks,False,False
+C3-ru,Roman Urdu,side,left shoulder,True,True
+C3-ru,Roman Urdu,duration,4 months,False,False
+C3-ru,Roman Urdu,no_injury,no injury,False,True
+C3-ru,Roman Urdu,diabetes,type 2 diabetes,True,False
+C3-ru,Roman Urdu,hypertension,high blood pressure,True,False
+C3-ru,Roman Urdu,metformin,metformin 500 mg twice daily,True,False
+C3-ru,Roman Urdu,amlodipine,amlodipine 5 mg once daily,True,False
+C3-ru,Roman Urdu,night_pain,night pain 5/10,False,False
+C3-ru,Roman Urdu,impression,possible frozen shoulder,False,False
+C3-ru,Roman Urdu,gp_letter,letter to GP about steroid injection,False,False
+C3-ru,Roman Urdu,review,review in 3 weeks,False,False
+C4-en,English,work,computer work 9 hours a day,False,False
+C4-en,English,duration,2 months,False,False
+C4-en,English,radiation,spreads to right shoulder,False,False
+C4-en,English,no_tingling,no tingling in hands,True,False
+C4-en,English,headache,mild evening headaches,False,False
+C4-en,English,no_dizziness,no dizziness,True,False
+C4-en,English,neuro_normal,arm strength and sensation normal,False,False
+C4-en,English,impression,posture-related neck pain,False,False
+C4-en,English,breaks,break every 30 minutes,False,False
+C4-en,English,review,review in 4 weeks,False,False
+C4-ru,Roman Urdu,work,computer work 9 hours a day,False,False
+C4-ru,Roman Urdu,duration,2 months,False,True
+C4-ru,Roman Urdu,radiation,spreads to right shoulder,False,False
+C4-ru,Roman Urdu,no_tingling,no tingling in hands,True,True
+C4-ru,Roman Urdu,headache,mild evening headaches,False,True
+C4-ru,Roman Urdu,no_dizziness,no dizziness,True,True
+C4-ru,Roman Urdu,neuro_normal,arm strength and sensation normal,False,False
+C4-ru,Roman Urdu,impression,posture-related neck pain,False,False
+C4-ru,Roman Urdu,breaks,break every 30 minutes,False,False
+C4-ru,Roman Urdu,review,review in 4 weeks,False,False

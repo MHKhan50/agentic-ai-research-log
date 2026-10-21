@@ -1,0 +1,92 @@
+[
+  {
+    "id": "C1",
+    "title": "Lower back pain after lifting",
+    "en": "Physio: Hello, what brings you in today?\nPatient: I have had lower back pain for 3 weeks. It started after I lifted a heavy box at work.\nPhysio: How bad is it out of 10?\nPatient: About 6 out of 10, worse in the morning.\nPhysio: Any numbness in your legs or saddle area? Any problems passing urine?\nPatient: No numbness, and no problems with urine.\nPhysio: Any fever or weight loss?\nPatient: No.\nPhysio: Are you taking anything for it?\nPatient: Ibuprofen 400 mg, twice a day.\nPhysio: Bending forward is painful, but your leg strength and reflexes are normal. This looks like a muscle strain. I will give you exercises, keep moving, and we will review in 2 weeks.",
+    "ru": "Physio: Assalam o alaikum, aaj kya masla hai?\nPatient: Mujhe 3 hafte se kamar ke nichle hisse mein dard hai. Kaam par ek bhaari dabba uthane ke baad shuru hua.\nPhysio: Dard 10 mein se kitna hai?\nPatient: Taqreeban 6, subah zyada hota hai.\nPhysio: Taangon mein ya neeche ke hisse mein sunn-pan? Peshab mein koi masla?\nPatient: Koi sunn-pan nahi, aur peshab mein bhi koi masla nahi.\nPhysio: Bukhar ya wazan kam hona?\nPatient: Nahi.\nPhysio: Koi dawa le rahe hain?\nPatient: Ibuprofen 400 mg, din mein 2 dafa.\nPhysio: Aage jhukne mein dard hai, lekin taangon ki taqat aur reflexes normal hain. Ye muscle strain lagta hai. Main aap ko exercises dunga, chalte phirte rahein, aur 2 hafte baad dobara dekhenge.",
+    "facts": [
+      {"id": "duration", "text": "pain for 3 weeks", "pattern": "\\b3\\s*-?\\s*weeks?\\b|three weeks", "critical": false},
+      {"id": "cause", "text": "started after lifting a heavy box", "pattern": "lift", "critical": false},
+      {"id": "severity", "text": "pain 6/10", "pattern": "\\b6\\s*(/|out of)\\s*10\\b", "critical": false},
+      {"id": "morning", "text": "worse in the morning", "pattern": "morning", "critical": false},
+      {"id": "no_numbness", "text": "no numbness (red flag negative)", "pattern": "numb|saddle", "critical": true},
+      {"id": "no_urinary", "text": "no urinary problems (red flag negative)", "pattern": "urin|bladder", "critical": true},
+      {"id": "no_fever_weight", "text": "no fever or weight loss", "pattern": "fever|weight", "critical": true},
+      {"id": "medication", "text": "ibuprofen 400 mg twice daily", "pattern": "ibuprofen", "critical": true},
+      {"id": "neuro_normal", "text": "leg strength and reflexes normal", "pattern": "reflex|strength|power", "critical": false},
+      {"id": "impression", "text": "muscle strain", "pattern": "strain", "critical": false},
+      {"id": "review", "text": "review in 2 weeks", "pattern": "\\b2\\s*-?\\s*weeks?\\b|two weeks|fortnight", "critical": false}
+    ],
+    "denied": [
+      {"text": "numbness", "pattern": "numb"},
+      {"text": "urinary problems", "pattern": "urin|bladder"},
+      {"text": "fever", "pattern": "fever"},
+      {"text": "weight loss", "pattern": "weight loss"}
+    ]
+  },
+  {
+    "id": "C2",
+    "title": "Twisted knee playing football",
+    "en": "Physio: What happened to your knee?\nPatient: I twisted my right knee playing football 5 days ago. It swelled up the same evening.\nPhysio: How bad is the pain out of 10?\nPatient: 7 out of 10 when I walk, about 3 at rest.\nPhysio: Does it lock or give way?\nPatient: It gave way twice on the stairs, but it does not lock.\nPhysio: Can you put weight on it?\nPatient: Yes, but I limp.\nPhysio: Are you taking anything?\nPatient: Paracetamol 1 g, up to 4 times a day.\nPhysio: The knee is swollen and tender on the inner side, and the ligament tests suggest a possible ligament injury. Because it gives way, I am referring you for an MRI. Use ice, crutches if needed, and we will review in 1 week.",
+    "ru": "Physio: Ghutne ko kya hua?\nPatient: 5 din pehle football khelte hue mera daayan ghutna mur gaya. Usi shaam sooj gaya.\nPhysio: Dard 10 mein se kitna hai?\nPatient: Chalte hue 7, aaram mein taqreeban 3.\nPhysio: Ghutna atakta hai ya jawab deta hai?\nPatient: Seerhiyon par 2 dafa jawab de gaya, lekin atakta nahi.\nPhysio: Us par wazan daal sakte hain?\nPatient: Haan, lekin langra kar chalta hun.\nPhysio: Koi dawa le rahe hain?\nPatient: Paracetamol 1 g, din mein 4 dafa tak.\nPhysio: Ghutna sooja hua hai aur andar ki taraf dard hai, aur ligament tests se lagta hai ke ligament ko chot ho sakti hai. Kyunke ghutna jawab deta hai, main aap ko MRI ke liye refer kar raha hun. Barf lagayein, zaroorat ho to crutches istemal karein, aur 1 hafte baad dobara dekhenge.",
+    "facts": [
+      {"id": "side", "text": "right knee", "pattern": "right", "critical": true},
+      {"id": "mechanism", "text": "twisted playing football", "pattern": "football|twist", "critical": false},
+      {"id": "duration", "text": "5 days ago", "pattern": "\\b5\\s*-?\\s*days?\\b|five days", "critical": false},
+      {"id": "swelling", "text": "swelling", "pattern": "swell|swollen|effusion", "critical": false},
+      {"id": "severity", "text": "pain 7/10 walking", "pattern": "\\b7\\s*(/|out of)\\s*10\\b", "critical": false},
+      {"id": "giving_way", "text": "gave way on stairs", "pattern": "giv(e|es|ing) way|gave way|instabil", "critical": true},
+      {"id": "no_locking", "text": "no locking", "pattern": "lock", "critical": false},
+      {"id": "medication", "text": "paracetamol 1 g up to 4 times daily", "pattern": "paracetamol|acetaminophen", "critical": true},
+      {"id": "referral", "text": "referred for MRI", "pattern": "\\bmri\\b", "critical": true},
+      {"id": "review", "text": "review in 1 week", "pattern": "\\b1\\s*-?\\s*week\\b|one week|a week", "critical": false}
+    ],
+    "denied": [
+      {"text": "locking", "pattern": "lock"}
+    ]
+  },
+  {
+    "id": "C3",
+    "title": "Stiff shoulder with diabetes",
+    "en": "Physio: Tell me about your shoulder.\nPatient: My left shoulder has been stiff and painful for 4 months. I cannot lift my arm above my head.\nPhysio: Did you injure it?\nPatient: No injury.\nPhysio: Any other health problems?\nPatient: I have type 2 diabetes and high blood pressure. I take metformin 500 mg twice a day and amlodipine 5 mg once a day.\nPhysio: Is it painful at night?\nPatient: Yes, it wakes me up, about 5 out of 10.\nPhysio: Both active and passive movement are reduced, especially turning the arm outwards. With your diabetes, this could be a frozen shoulder. We will start gentle stretching, and I will write to your GP about a possible steroid injection. We will review in 3 weeks.",
+    "ru": "Physio: Kandhe ke baare mein bataiye.\nPatient: Mera baayan kandha 4 maheene se akra hua hai aur dard karta hai. Main baazu sar se ooper nahi utha sakta.\nPhysio: Koi chot lagi thi?\nPatient: Koi chot nahi.\nPhysio: Koi aur bimari?\nPatient: Mujhe type 2 sugar aur high blood pressure hai. Metformin 500 mg din mein 2 dafa aur amlodipine 5 mg din mein 1 dafa leta hun.\nPhysio: Raat ko dard hota hai?\nPatient: Haan, neend se jaga deta hai, taqreeban 10 mein se 5.\nPhysio: Aap khud hilayein ya main hilaun, dono mein harkat kam hai, khaas kar baazu ko bahar ki taraf ghumane mein. Sugar ki wajah se ye frozen shoulder ho sakta hai. Hum halki stretching shuru karenge, aur main aap ke GP ko steroid injection ke baare mein likhunga. 3 hafte baad dobara dekhenge.",
+    "facts": [
+      {"id": "side", "text": "left shoulder", "pattern": "left", "critical": true},
+      {"id": "duration", "text": "4 months", "pattern": "\\b4\\s*-?\\s*months?\\b|four months", "critical": false},
+      {"id": "no_injury", "text": "no injury", "pattern": "injur|trauma", "critical": false},
+      {"id": "diabetes", "text": "type 2 diabetes", "pattern": "diabet|\\bt2dm\\b", "critical": true},
+      {"id": "hypertension", "text": "high blood pressure", "pattern": "blood pressure|hypertens", "critical": true},
+      {"id": "metformin", "text": "metformin 500 mg twice daily", "pattern": "metformin", "critical": true},
+      {"id": "amlodipine", "text": "amlodipine 5 mg once daily", "pattern": "amlodipine", "critical": true},
+      {"id": "night_pain", "text": "night pain 5/10", "pattern": "night", "critical": false},
+      {"id": "impression", "text": "possible frozen shoulder", "pattern": "frozen|adhesive capsulitis", "critical": false},
+      {"id": "gp_letter", "text": "letter to GP about steroid injection", "pattern": "steroid|injection", "critical": false},
+      {"id": "review", "text": "review in 3 weeks", "pattern": "\\b3\\s*-?\\s*weeks?\\b|three weeks", "critical": false}
+    ],
+    "denied": [
+      {"text": "injury", "pattern": "injur|trauma"}
+    ]
+  },
+  {
+    "id": "C4",
+    "title": "Neck pain from desk work",
+    "en": "Physio: What seems to be the problem?\nPatient: I work at a computer for 9 hours a day and have had neck pain for 2 months.\nPhysio: Does the pain spread anywhere?\nPatient: Sometimes to my right shoulder, but there is no tingling in my hands.\nPhysio: Any headaches or dizziness?\nPatient: Mild headaches in the evening, but no dizziness.\nPhysio: Are you taking any medication?\nPatient: No medication.\nPhysio: Turning your neck to the left is slightly reduced, and your arm strength and sensation are normal. This looks like posture-related neck pain. Change your desk setup, take a break every 30 minutes and do these exercises. We will review in 4 weeks.",
+    "ru": "Physio: Kya masla hai?\nPatient: Main din mein 9 ghante computer par kaam karta hun aur 2 maheene se gardan mein dard hai.\nPhysio: Dard kahin phailta hai?\nPatient: Kabhi kabhi daayen kandhe tak, lekin haathon mein jhunjhunahat nahi hoti.\nPhysio: Sar dard ya chakkar?\nPatient: Shaam ko halka sar dard, lekin chakkar nahi aate.\nPhysio: Koi dawa le rahe hain?\nPatient: Koi dawa nahi.\nPhysio: Gardan baayen taraf ghumane mein thori kam harkat hai, aur baazuon ki taqat aur sensation normal hai. Ye posture ki wajah se gardan ka dard lagta hai. Desk ka setup badlein, har 30 minute baad break lein aur ye exercises karein. 4 hafte baad dobara dekhenge.",
+    "facts": [
+      {"id": "work", "text": "computer work 9 hours a day", "pattern": "computer|desk|screen", "critical": false},
+      {"id": "duration", "text": "2 months", "pattern": "\\b2\\s*-?\\s*months?\\b|two months", "critical": false},
+      {"id": "radiation", "text": "spreads to right shoulder", "pattern": "shoulder", "critical": false},
+      {"id": "no_tingling", "text": "no tingling in hands", "pattern": "tingl|pins and needles|paraesthes|paresthes", "critical": true},
+      {"id": "headache", "text": "mild evening headaches", "pattern": "headache", "critical": false},
+      {"id": "no_dizziness", "text": "no dizziness", "pattern": "dizz", "critical": true},
+      {"id": "neuro_normal", "text": "arm strength and sensation normal", "pattern": "strength|sensation|power", "critical": false},
+      {"id": "impression", "text": "posture-related neck pain", "pattern": "postur", "critical": false},
+      {"id": "breaks", "text": "break every 30 minutes", "pattern": "\\b30\\s*-?\\s*min", "critical": false},
+      {"id": "review", "text": "review in 4 weeks", "pattern": "\\b4\\s*-?\\s*weeks?\\b|four weeks", "critical": false}
+    ],
+    "denied": [
+      {"text": "tingling", "pattern": "tingl|pins and needles"},
+      {"text": "dizziness", "pattern": "dizz"}
+    ]
+  }
+]
