@@ -23,17 +23,37 @@ python summarise.py        # writes results/summary.csv and results/self_correct
 ```
 
 ## Results
-From my run on a MacBook M4 (16 GB). Counts are out of 8 tasks per language.
+From my run on a MacBook M4 (16 GB), `qwen2.5:3b`, one run at temperature 0. Counts are out of 8 tasks per language.
 
 | Model | Language | Schema valid, first try | Schema valid, after feedback | Fully correct, first try | Fully correct, after feedback | Valid but wrong value |
 |---|---|---|---|---|---|---|
-| qwen2.5:3b | English | _ / 8 | _ / 8 | _ / 8 | _ / 8 | _ |
-| qwen2.5:3b | Roman Urdu | _ / 8 | _ / 8 | _ / 8 | _ / 8 | _ |
+| qwen2.5:3b | English | 8 / 8 | 8 / 8 | 7 / 8 | 7 / 8 | 1 |
+| qwen2.5:3b | Roman Urdu | 8 / 8 | 8 / 8 | 5 / 8 | 5 / 8 | 3 |
 
 ![Fully correct tool calls, first try vs after validator feedback](results/self_correction.png)
 
+**Main finding:** every one of the 16 calls passed the schema validator on the first try, so the self-correction loop never ran. Yet 4 calls (25%) carried a wrong value, 3 of them in Roman Urdu. In this pilot, all of the errors were the kind a schema validator cannot see.
+
+The four wrong calls (from [`results/attempts.jsonl`](results/attempts.jsonl)):
+
+| Task | Language | Request said | Model wrote |
+|---|---|---|---|
+| T01 book_appointment | Roman Urdu | "dopahar dhai baje" (14:30) | `"time": "14:00"` |
+| T05 refund_payment | English | "forty-five pounds fifty" (45.50) | `"amount": 45` |
+| T05 refund_payment | Roman Urdu | "paintalees pound pachaas pence" (45.50) | `"amount": 100` |
+| T07 search_patients | Roman Urdu | "Glasgow mein" | `"city": ""` |
+
+- **Invented value:** in the Roman Urdu refund, 100 appears nowhere in the request. The model did not misread a number; it produced a new one.
+- **Fractions get dropped:** "dhai" (two and a half) became 2 o'clock, and "fifty" pence was lost in English too, so this is not only a Roman Urdu problem.
+- **An empty string is still a string:** the missing city passed the validator because the schema only asked for a string.
+- Output format was not the problem: all 16 replies were bare JSON with no code fences.
+
+Summary table: [`results/summary.csv`](results/summary.csv).
+
 ## My notes
-_To be added after the run._
+- The most dangerous error was T05 in Roman Urdu, where the model wrote a refund of 100 that was never asked for. A wrong refund is a billing error; if the same failure happened in a tool that records a medication dose, it could harm a patient.
+- My guess is that number words like "dhai" and "paintalees" are rare in the model's training data, so it handles them less reliably than digits. I have not tested this yet; English also lost the 50 pence, so fractions may be hard in both languages.
+- I would add two safety steps on top of the validator: stricter schema rules (no empty strings, allowed ranges for numbers) and a confirmation step that reads the call back to the user before it runs, for example "Refund £45.50 for INV-1029, is that right?". The schema rules would catch the empty city; only the confirmation step would catch the invented 100.
 
 ## Earlier pilot
 `results/pilot_2_tasks.json` is a first pilot with 2 English tasks (`qwen2.5:3b` and `llama3.1:8b`). All 4 calls passed on the first attempt, so the retry loop was never used, and that checker only looked at key names and types, not values. The tasks here were made harder so that the loop is actually exercised, and values are checked against the truth.
@@ -43,8 +63,11 @@ _To be added after the run._
 - Temperature 0 gives one deterministic answer per task; it does not show how stable the model is under sampling.
 - The tasks and Roman Urdu wording were written by me; other spellings of Roman Urdu could give different results.
 - The value check is an exact match after normalising case and punctuation, so a correct paraphrase of a free-text field would count as wrong.
+- Because no call failed the schema, this run says nothing about how well feedback fixes errors when it does run. It only shows that, here, the errors were not schema errors.
 
 ## Next steps
 - Grow to 50+ tasks with several Roman Urdu spellings, and run 5 seeds at a non-zero temperature.
 - Compare with `llama3.1:8b` and with Ollama's JSON mode (`format: json`).
+- Tighten the schema (no empty strings, sensible number ranges) and re-run to see which errors it now catches.
 - Test a confirmation step ("read the call back to the user") for errors that the schema cannot catch.
+- Test number words directly: the same requests with digits ("2:30", "45.50") vs words ("dhai", "paintalees"), to check whether the words cause the errors.
