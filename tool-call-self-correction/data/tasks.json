@@ -1,0 +1,118 @@
+[
+  {
+    "task_id": "T01",
+    "tool": "book_appointment",
+    "schema": {
+      "patient_id": {"type": "int"},
+      "date": {"type": "str", "format": "date"},
+      "time": {"type": "str", "format": "time"},
+      "urgent": {"type": "bool"}
+    },
+    "expected": {"patient_id": 4417, "date": "2026-11-03", "time": "14:30", "urgent": false},
+    "request": {
+      "en": "Book an appointment for patient number 4417 on 3 November 2026 at half past two in the afternoon. It is not urgent.",
+      "ru": "Patient number 4417 ki appointment 3 November 2026 ko dopahar dhai baje book karo. Urgent nahi hai."
+    }
+  },
+  {
+    "task_id": "T02",
+    "tool": "record_vitals",
+    "schema": {
+      "patient_id": {"type": "int"},
+      "systolic": {"type": "int"},
+      "diastolic": {"type": "int"},
+      "pulse": {"type": "int"}
+    },
+    "expected": {"patient_id": 2093, "systolic": 128, "diastolic": 84, "pulse": 72},
+    "request": {
+      "en": "Save vitals for patient 2093: blood pressure 128 over 84, pulse seventy-two.",
+      "ru": "Patient 2093 ke vitals save karo: BP 128/84, pulse bahattar."
+    }
+  },
+  {
+    "task_id": "T03",
+    "tool": "record_pain_score",
+    "schema": {
+      "patient_id": {"type": "int"},
+      "score": {"type": "int", "min": 0, "max": 10},
+      "body_part": {"type": "str", "enum": ["knee", "shoulder", "lower_back", "neck"]}
+    },
+    "expected": {"patient_id": 3150, "score": 7, "body_part": "lower_back"},
+    "request": {
+      "en": "Patient 3150 says their lower back pain is seven out of ten.",
+      "ru": "Patient 3150 kehta hai kamar ke nichle hisse ka dard das mein se saat hai."
+    }
+  },
+  {
+    "task_id": "T04",
+    "tool": "set_reminder",
+    "schema": {
+      "patient_id": {"type": "int"},
+      "message": {"type": "str"},
+      "every_days": {"type": "int"},
+      "sms": {"type": "bool"}
+    },
+    "expected": {"patient_id": 812, "message": "Do the knee exercises", "every_days": 2, "sms": true},
+    "request": {
+      "en": "Remind patient 812 every two days by SMS with the message: Do the knee exercises",
+      "ru": "Patient 812 ko har do din baad SMS par ye message bhejo: Do the knee exercises"
+    }
+  },
+  {
+    "task_id": "T05",
+    "tool": "refund_payment",
+    "schema": {
+      "invoice_id": {"type": "str"},
+      "amount": {"type": "float"},
+      "currency": {"type": "str", "enum": ["GBP", "PKR", "USD"]}
+    },
+    "expected": {"invoice_id": "INV-1029", "amount": 45.5, "currency": "GBP"},
+    "request": {
+      "en": "Refund forty-five pounds fifty for invoice INV-1029.",
+      "ru": "Invoice INV-1029 ke paintalees pound pachaas pence wapas kar do."
+    }
+  },
+  {
+    "task_id": "T06",
+    "tool": "cancel_appointment",
+    "schema": {
+      "appointment_id": {"type": "int"},
+      "reason": {"type": "str", "enum": ["patient_request", "clinician_unavailable", "other"]},
+      "notify_patient": {"type": "bool"}
+    },
+    "expected": {"appointment_id": 55821, "reason": "clinician_unavailable", "notify_patient": true},
+    "request": {
+      "en": "Cancel appointment 55821 because the physio is off sick, and let the patient know.",
+      "ru": "Appointment 55821 cancel karo kyunke physio beemar hai, aur patient ko bata do."
+    }
+  },
+  {
+    "task_id": "T07",
+    "tool": "search_patients",
+    "schema": {
+      "last_name": {"type": "str"},
+      "city": {"type": "str"},
+      "max_results": {"type": "int"}
+    },
+    "expected": {"last_name": "Akhtar", "city": "Glasgow", "max_results": 5},
+    "request": {
+      "en": "Find up to five patients with the surname Akhtar in Glasgow.",
+      "ru": "Glasgow mein Akhtar surname wale zyada se zyada paanch patients dhoondo."
+    }
+  },
+  {
+    "task_id": "T08",
+    "tool": "log_exercise",
+    "schema": {
+      "patient_id": {"type": "int"},
+      "exercise": {"type": "str", "enum": ["squat", "bridge", "lunge", "plank"]},
+      "sets": {"type": "int"},
+      "reps": {"type": "int"}
+    },
+    "expected": {"patient_id": 1288, "exercise": "bridge", "sets": 3, "reps": 12},
+    "request": {
+      "en": "Log for patient 1288: three sets of twelve bridges.",
+      "ru": "Patient 1288 ke liye likho: bridge ke teen sets, har set mein barah reps."
+    }
+  }
+]

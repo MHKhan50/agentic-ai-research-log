@@ -1,0 +1,46 @@
+[
+  {
+    "task_id": "REC_001",
+    "model": "qwen2.5:3b",
+    "success": true,
+    "attempts_taken": 1,
+    "final_output": {
+      "user_id": 9982,
+      "include_history": true
+    }
+  },
+  {
+    "task_id": "REC_002",
+    "model": "qwen2.5:3b",
+    "success": true,
+    "attempts_taken": 1,
+    "final_output": {
+      "amount": 450.5,
+      "currency": "USD",
+      "target_account": "ACC-8899",
+      "description": "Invoice #102"
+    }
+  },
+  {
+    "task_id": "REC_001",
+    "model": "llama3.1:8b",
+    "success": true,
+    "attempts_taken": 1,
+    "final_output": {
+      "user_id": 9982,
+      "include_history": true
+    }
+  },
+  {
+    "task_id": "REC_002",
+    "model": "llama3.1:8b",
+    "success": true,
+    "attempts_taken": 1,
+    "final_output": {
+      "amount": 450.5,
+      "currency": "USD",
+      "target_account": "ACC-8899",
+      "description": "Invoice #102"
+    }
+  }
+]

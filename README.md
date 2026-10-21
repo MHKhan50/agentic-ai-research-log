@@ -10,6 +10,7 @@ Each folder has its own research question, code, tests, results from my own run,
 |---|---|---|---|
 | Oct 2026 | ReAct paper follow-up | [`react-roman-urdu/`](react-roman-urdu/) | Does a ~3B local model keep ReAct tool-use accuracy on Roman Urdu vs English, and how stable is it? |
 | Oct 2026 | Urdu clinical speech-to-text | [`whisper-urdu-wer/`](whisper-urdu-wer/) | How many words does Whisper (tiny/base/small) get wrong on Urdu clinic conversations, and does it keep the clinical key terms? |
+| Oct 2026 | Tool-call self-correction | [`tool-call-self-correction/`](tool-call-self-correction/) | Does schema-validator feedback fix a 3B local model's clinic tool calls, in English and Roman Urdu, and which errors does it miss? |
 
 Research gaps I am tracking: [gap-bank.md](gap-bank.md)
 
