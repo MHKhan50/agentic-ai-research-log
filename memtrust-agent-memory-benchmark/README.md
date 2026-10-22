@@ -44,6 +44,12 @@ Charts: [`attack_success_rate.svg`](outputs/attack_success_rate.svg), [`benign_t
 - The price of that rule is real inside the simulator: about 8% of correct clean memories also have only one source, so benign success drops to about 92%.
 - An attacker who can fake a second source, or raise trust scores, is not modelled.
 
+## My notes
+
+1. **Why the trust filter rose from 8.6% to 17.1%.** The simulator gives about one in four planted memories a high trust score (0.72 to 0.95), whatever the injection rate. By chance, only 12 of the 81 planted memories at 10% got a high score (15%), against 48 of 199 at 25% (24%). So most of the rise comes from sampling with small numbers, not from the rate itself. This is why the next version needs confidence intervals.
+2. **What the corroboration rule would cost in a clinic.** It also dropped about 8% of correct memories that had only one source. In a clinic, that could be a real symptom or an old history item the patient mentioned once and nothing else in the record repeats, so the clinician could miss an important detail.
+3. **First test on qwen2.5:3b.** Give the model a short clinic record with one planted memory, in English and Roman Urdu, and check two things: whether it follows the planted memory, and whether it maps key Roman Urdu terms (for example *sunn-pan* for numbness, *chakkar* for dizziness) to the right clinical terms.
+
 ## Limitations
 
 - No LLM, no embeddings, no memory writes over time, no adaptive attacker.
