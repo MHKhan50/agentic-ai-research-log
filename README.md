@@ -34,7 +34,7 @@ Plain-language write-ups of each experiment:
 - [The validator said yes. The refund was still wrong.](https://masmatixinnovations.co.uk/insights/tool-call-self-correction.html)
 - [In Roman Urdu, a small AI wrote notes about the wrong body part](https://masmatixinnovations.co.uk/insights/clinical-note-hallucination.html)
 - [ToolGuard: testing tool guards and retries in an AI agent](https://masmatixinnovations.co.uk/insights/toolguard-agent-benchmark.html)
-- [MemTrust-Lite: testing trust filters for AI agent memory](https://masmatixinnovations.co.uk/insights/memtrust-agent-memory-security.html)
+- [A planted memory fooled a simple AI agent 74% of the time. A trust filter cut it to 9%.](https://masmatixinnovations.co.uk/insights/memtrust-agent-memory-security.html)
 
 ## Reproduce an experiment
 ```bash

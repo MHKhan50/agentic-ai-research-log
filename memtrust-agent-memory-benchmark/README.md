@@ -4,7 +4,7 @@
 
 **Why it matters:** agents that keep long-term memory can later act on a memory that was planted by an attacker. Recent benchmarks study this with large models ([AgentPoison](https://arxiv.org/abs/2407.12784), [MemSecBench](https://arxiv.org/abs/2607.27080), [MemForm](https://arxiv.org/abs/2610.14431)). This folder is a small, fully transparent first step: it isolates the retrieval rule itself, before any LLM is involved.
 
-**Article:** [MemTrust-Lite: testing trust filters for AI agent memory](https://masmatixinnovations.co.uk/insights/memtrust-agent-memory-security.html)
+**Article:** [A planted memory fooled a simple AI agent 74% of the time. A trust filter cut it to 9%.](https://masmatixinnovations.co.uk/insights/memtrust-agent-memory-security.html)
 
 > **Scope:** this is a synthetic simulator. No LLM is called. The numbers below describe the simulator's assumptions, not real attack rates on real agents.
 
