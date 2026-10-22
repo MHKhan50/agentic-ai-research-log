@@ -1,94 +1,81 @@
-# MemTrust-Lite: a reproducible synthetic benchmark for agent-memory trust
+# MemTrust-Lite: provenance and corroboration filters for agent memory
 
-**Research question:** In a controlled agent-memory simulator, how do provenance filtering and independent corroboration trade off memory-poisoning resistance against benign task utility?
+**Research question:** In a controlled agent-memory simulator, how much do a provenance (trust) filter and an independent-corroboration rule reduce poisoned-memory selection, and how much benign task success do they cost?
 
-**Why this topic:** UK research interest is evidenced by Lancaster University's currently advertised AI Agent Security PhD positions, Newcastle University's Intelligent Systems group (agentic AI, security, trustworthiness), and the University of Glasgow's 2026 agentic-AI research programme. Recent preprints also study memory poisoning and memory formation. These signals establish active research attention; they do not prove that every subtopic is “hot” or guarantee novelty.
+**Why it matters:** agents that keep long-term memory can later act on a memory that was planted by an attacker. Recent benchmarks study this with large models ([AgentPoison](https://arxiv.org/abs/2407.12784), [MemSecBench](https://arxiv.org/abs/2607.27080), [MemForm](https://arxiv.org/abs/2610.14431)). This folder is a small, fully transparent first step: it isolates the retrieval rule itself, before any LLM is involved.
 
-## What this is
+**Article:** [MemTrust-Lite: testing trust filters for AI agent memory](https://masmatixinnovations.co.uk/insights/memtrust-agent-memory-security.html)
 
-A small, transparent, standard-library-only Python benchmark. It creates synthetic memory records, compares three retrieval policies, writes CSV metrics, and draws SVG graphs. It is designed for teaching, dissertation prototyping, and reproducibility practice on a Mac without cloud spend or model downloads.
+> **Scope:** this is a synthetic simulator. No LLM is called. The numbers below describe the simulator's assumptions, not real attack rates on real agents.
 
-**Important limitation:** this is a synthetic simulator, not an evaluation of Qwen, Llama, or a deployed agent. Its output measures the simulator's assumptions, not real-world attack rates. Do not present the generated percentages as evidence about real LLM systems.
+## Setup
 
-## Run on macOS (Python 3.9+)
+Each scenario holds two clean memories and, with a set probability, one injected (poisoned) memory. Every memory has a relevance score, a trust score and a count of corroborating sources. Three retrieval policies pick one memory:
 
-From the extracted project folder, run this one command:
+| Policy | Rule |
+|---|---|
+| `baseline_relevance` | highest relevance, ignore provenance |
+| `provenance_filter` | trust >= 0.70, then highest relevance |
+| `provenance_plus_corroboration` | trust >= 0.70 and at least 2 corroborating sources |
+
+- 3 seeds (7, 13, 29) x 3 injection settings (0%, 10%, 25%) x 250 tasks = **2,250 scenarios**, each run under all 3 policies = **6,750 episodes**.
+- Injected memories are labels only. Nothing is executed.
+- Python 3.9+, standard library only.
+
+## Results (from `outputs/summary.csv`)
+
+| Injection | Policy | Attack success (poisoned episodes) | Benign success | Overall success |
+|---|---|---|---|---|
+| 10% | relevance only | 74.1% (60/81) | 100.0% | 92.0% |
+| 10% | provenance filter | 8.6% (7/81) | 100.0% | 99.1% |
+| 10% | provenance + corroboration | 0.0% (0/81) | 91.5% | 91.6% |
+| 25% | relevance only | 70.9% (141/199) | 100.0% | 81.2% |
+| 25% | provenance filter | 17.1% (34/199) | 100.0% | 95.5% |
+| 25% | provenance + corroboration | 0.0% (0/199) | 92.4% | 92.8% |
+
+At 0% injection, attack success is undefined (no poisoned episodes); benign success is 100%, 100% and 91.6%.
+
+Charts: [`attack_success_rate.svg`](outputs/attack_success_rate.svg), [`benign_task_success.svg`](outputs/benign_task_success.svg), [`overall_task_success.svg`](outputs/overall_task_success.svg). Per-seed numbers: [`seed_summary.csv`](outputs/seed_summary.csv).
+
+## What this does and does not show
+
+- A trust threshold alone removed most poisoned selections at no benign cost in this simulator.
+- The 0% attack success of the corroboration rule is **built in**: every injected memory is given exactly one corroborating source, so a rule that needs two can never pick it. The result restates the assumption; it is not evidence that corroboration stops real attacks.
+- The price of that rule is real inside the simulator: about 8% of correct clean memories also have only one source, so benign success drops to about 92%.
+- An attacker who can fake a second source, or raise trust scores, is not modelled.
+
+## Limitations
+
+- No LLM, no embeddings, no memory writes over time, no adaptive attacker.
+- Score distributions and the 0.70 threshold are hand-chosen; results will move if they change.
+- Rates are reported without confidence intervals; with 81 poisoned episodes at 10%, the provenance-filter rate is uncertain by several points.
+
+## Next step
+
+Let a local model (qwen2.5:3b, then llama3.1:8b) answer clinic questions with the same memories in its context, in English and Roman Urdu, and count how often it follows the injected memory. This turns the simulator into a measurement and links it to the tool-call and SOAP-note experiments in this log (gap G8 in [gap-bank.md](../gap-bank.md)).
+
+## Run
 
 ```bash
-python3 run_all.py
+python3 run_all.py                         # writes data/ and outputs/
+python3 -m unittest discover -s tests -v   # 5 tests
 ```
 
-Then run tests (second command):
+## Files
 
-```bash
-python3 -m unittest discover -s tests -v
-```
+| Path | Content |
+|---|---|
+| `src/memtrust.py` | scenario generator, policies, metrics, SVG charts |
+| `data/scenarios.csv` | 2,250 synthetic scenarios |
+| `outputs/results.csv` | one row per scenario and policy (6,750) |
+| `outputs/summary.csv`, `outputs/seed_summary.csv` | aggregated metrics |
+| `docs/data_dictionary.md` | column definitions |
+| `notebooks/starter.ipynb` | quick look at the CSVs (also used on Kaggle) |
 
-No `pip install`, network access, model download, or API key is required. The default run generates 2,250 scenarios and evaluates three policies per scenario (6,750 policy episodes) using fixed seeds.
+## Licence
 
-## Policies
+Code: MIT (see the repository [LICENSE](../LICENSE)). Synthetic data: CC BY 4.0 (see [DATA_LICENSE.md](DATA_LICENSE.md)).
 
-1. `baseline_relevance`: retrieve the highest-relevance memory regardless of provenance.
-2. `provenance_filter`: require a trust score of at least 0.70.
-3. `provenance_plus_corroboration`: require trust >= 0.70 and at least two corroborating sources.
+## References
 
-Injected entries are represented only as labels and scores. The simulator does not execute malicious instructions, access files, call tools, or expose secrets.
-
-## Output files
-
-- `data/scenarios.csv` — scenario-level synthetic input data.
-- `outputs/results.csv` — one row per scenario-policy evaluation.
-- `outputs/summary.csv` — aggregate metrics by poisoning rate and policy.
-- `outputs/attack_success_rate.svg` — attack success conditional on a poisoned memory being present.
-- `outputs/benign_task_success.svg` — task success on clean-only scenarios.
-- `outputs/overall_task_success.svg` — task success across all scenarios.
-- `kaggle_upload/` — prepared CSVs, data licence, description, and references for manual Kaggle upload.
-
-## Metrics
-
-- **Attack success rate on poisoned episodes:** poisoned-memory selections divided by scenarios in which a poisoned memory was injected.
-- **Unsafe-action rate overall:** poisoned-memory selections divided by all episodes.
-- **Benign task success:** selection of the expected clean primary memory among scenarios without injected poison.
-- **Overall task success:** selection of the expected clean primary memory across all scenarios.
-- **Abstention rate:** no eligible memory passed a policy's filter.
-- **Mean candidates considered:** number of eligible memories after filtering; a simple simulator count, not wall-clock latency or compute cost.
-
-At poisoning rate 0%, attack success is `NA` because no poisoned episodes exist in that condition.
-
-## Research contribution and limitations
-
-This project offers an accessible ablation of two lightweight controls—provenance thresholding and corroboration—using transparent synthetic inputs. It is not a new state-of-the-art security method and does not establish a real-world research gap on its own. A stronger dissertation extension would validate the policy logic against a published memory-poisoning benchmark, pre-register threat assumptions, run multiple LLM backends, and report confidence intervals and benign utility costs. Preserve model/version, prompt, configuration, and dataset versions when adding LLM experiments.
-
-## Suggested use by level
-
-- **Undergraduate:** reproduce the simulator, test one policy threshold, explain metrics and limitations.
-- **Taught Master's / MRes:** add threshold sweeps, confidence intervals, threat-model variants, and an ablation study.
-- **PhD:** compare memory architectures, study memory formation and temporal provenance, then evaluate on a published benchmark with a documented agent harness.
-
-## References and research context
-
-See [`references/REFERENCES.md`](references/REFERENCES.md). University pages are cited as evidence of current research directions, not as endorsements of this package. No affiliation or endorsement is implied.
-
-## Reproducibility
-
-- Python: 3.9 or newer.
-- Random seeds: 7, 13, 29.
-- Tasks per seed and poisoning-rate condition: 250.
-- Poisoning-rate settings: 0%, 10%, 25% (injection is sampled probabilistically, so realised rates can differ slightly).
-- Dependencies: Python standard library only.
-- Code licence: MIT; dataset licence: CC BY 4.0.
-
-## Publication checklist
-
-1. Run the script and tests on your Mac; inspect the CSVs and SVGs.
-2. Keep the synthetic-only limitation prominent in any article or post.
-3. Upload the individual files from `kaggle_upload/` only after reviewing them; do not claim the dataset is on Kaggle until the upload is confirmed.
-4. Push the project to the research-log GitHub repository using explicit paths from the correct repository folder.
-5. Publish a separate website article with the generated plots and a link to the exact repository commit.
-6. If appropriate, deposit a versioned archive on Zenodo or OSF and cite the DOI only after it is minted.
-7. After the website page is live, use the official [Google Search Console URL Inspection guide](https://support.google.com/webmasters/answer/9012289) to inspect the page and request indexing if available. This is a request, not a guarantee; indexing is not certification.
-8. For a citable archive/DOI, consider [Zenodo](https://zenodo.org/) or [OSF](https://osf.io/) when the version is stable; do not claim a DOI until one is actually minted.
-
-## Safety
-
-All data are synthetic. Do not add real personal records, confidential logs, credentials, or production agent memories to this package.
+See [references/REFERENCES.md](references/REFERENCES.md).
