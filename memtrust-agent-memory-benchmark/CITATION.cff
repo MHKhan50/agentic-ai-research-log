@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the repository and include the commit hash you used."
+title: "MemTrust-Lite: Synthetic Agent-Memory Trust Benchmark"
+version: 1.0.0
+authors:
+  - name: "MHKhan50"
+year: 2026
+license: MIT
+url: "https://github.com/MHKhan50/agentic-ai-research-log"

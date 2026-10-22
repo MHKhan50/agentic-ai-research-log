@@ -1,0 +1,14 @@
+{
+  "project": "MemTrust-Lite",
+  "version": "1.0.0",
+  "run_date": "2026-10-22",
+  "python_requirement": "3.9+",
+  "dependencies": "Python standard library only",
+  "synthetic_scenarios": 2250,
+  "policy_episodes": 6750,
+  "seeds": [7, 13, 29],
+  "tasks_per_seed_rate_condition": 250,
+  "nominal_poisoning_rates": [0.0, 0.1, 0.25],
+  "llm_calls": 0,
+  "note": "Simulator outputs describe synthetic assumptions only; not a real-LLM evaluation."
+}
