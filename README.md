@@ -14,6 +14,7 @@ Each folder has its own research question, code, tests, results from my own run,
 | Oct 2026 | Validation gates and retries | [`toolguard-agent-benchmark/`](toolguard-agent-benchmark/) | How do a validation gate and bounded retries change task success and tool-call cost as tool failures increase? |
 | Oct 2026 | Clinical note hallucinations | [`clinical-note-hallucination/`](clinical-note-hallucination/) | How many key facts does a 3B local model leave out of physiotherapy SOAP notes, how many sentences does it add without support, and is Roman Urdu worse? |
 | Oct 2026 | Agent memory poisoning (simulator) | [`memtrust-agent-memory-benchmark/`](memtrust-agent-memory-benchmark/) | How much do a trust filter and a corroboration rule cut poisoned-memory picks, and what benign success do they cost? |
+| Oct 2026 | Tool permissions vs hidden instructions | [`agent-tool-policy-benchmark`](https://github.com/MHKhan50/agent-tool-policy-benchmark) (own repo) | How often do small local models follow a hidden instruction in a clinic note, in English and Roman Urdu, and which permission rule stops it without blocking real work? |
 
 Research gaps I am tracking: [gap-bank.md](gap-bank.md)
 
@@ -35,6 +36,7 @@ Plain-language write-ups of each experiment:
 - [In Roman Urdu, a small AI wrote notes about the wrong body part](https://masmatixinnovations.co.uk/insights/clinical-note-hallucination.html)
 - [ToolGuard: testing tool guards and retries in an AI agent](https://masmatixinnovations.co.uk/insights/toolguard-agent-benchmark.html)
 - [A planted memory fooled a simple AI agent 74% of the time. A trust filter cut it to 9%.](https://masmatixinnovations.co.uk/insights/memtrust-agent-memory-security.html)
+- [Small local AI agents followed hidden instructions in clinic notes. Checking the tool's arguments stopped them.](https://masmatixinnovations.co.uk/insights/agent-tool-policy-clinic.html)
 
 ## Reproduce an experiment
 ```bash
