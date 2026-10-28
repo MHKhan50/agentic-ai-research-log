@@ -35,6 +35,7 @@ Plain-language write-ups of each experiment:
 - [Whisper halved its errors on Urdu clinic speech, but not on the medical words](https://masmatixinnovations.co.uk/insights/whisper-urdu-clinic.html)
 - [The validator said yes. The refund was still wrong.](https://masmatixinnovations.co.uk/insights/tool-call-self-correction.html)
 - [In Roman Urdu, a small AI wrote notes about the wrong body part](https://masmatixinnovations.co.uk/insights/clinical-note-hallucination.html)
+- [Translating Roman Urdu first did not make a local AI's clinic notes safer](https://masmatixinnovations.co.uk/insights/translate-then-draft-roman-urdu.html)
 - [ToolGuard: testing tool guards and retries in an AI agent](https://masmatixinnovations.co.uk/insights/toolguard-agent-benchmark.html)
 - [A planted memory fooled a simple AI agent 74% of the time. A trust filter cut it to 9%.](https://masmatixinnovations.co.uk/insights/memtrust-agent-memory-security.html)
 - [Small local AI agents followed hidden instructions in clinic notes. Checking the tool's arguments stopped them.](https://masmatixinnovations.co.uk/insights/agent-tool-policy-clinic.html)
