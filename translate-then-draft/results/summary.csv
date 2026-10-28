@@ -1,0 +1,7 @@
+model,condition,notes,facts_listed,facts_missing,critical_missing,facts_missing_in_translation,main_region_missing,notes_with_other_regions,mean_seconds
+llama3.1:8b,en-direct,4,42,0,0,,0,0,11.2
+llama3.1:8b,ru-direct,4,42,4,3,,1,1,13.4
+llama3.1:8b,ru-translate,4,42,6,5,9,0,1,24.8
+qwen2.5:3b,en-direct,4,42,2,0,,0,0,6.2
+qwen2.5:3b,ru-direct,4,42,13,7,,3,3,6.8
+qwen2.5:3b,ru-translate,4,42,13,7,27,3,3,12.8
