@@ -1,0 +1,5 @@
+model,language,notes,facts_missing,facts_listed,missing_pct,ci_low,ci_high,critical_missing,notes_wrong_or_missing_region,notes_with_side,side_missing,wrong_side,gate_flags,mean_seconds
+llama3.1:8b,English,20,1,168,0.6,0.0,1.8,0,0,14,0,0,0,11.6
+llama3.1:8b,Roman Urdu,20,16,168,9.5,5.6,13.9,8,6,14,13,2,17,14.6
+qwen2.5:3b,English,20,6,168,3.6,1.2,6.2,0,3,14,0,0,3,5.2
+qwen2.5:3b,Roman Urdu,20,50,168,29.8,24.0,35.4,26,11,14,14,0,20,6.4

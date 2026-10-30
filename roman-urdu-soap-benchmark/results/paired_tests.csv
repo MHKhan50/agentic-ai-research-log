@@ -1,0 +1,5 @@
+model,scope,pairs,missing_only_ru,missing_only_en,mcnemar_p
+llama3.1:8b,all facts,168,16,1,0.0003
+llama3.1:8b,critical facts,68,8,0,0.0078
+qwen2.5:3b,all facts,168,47,3,0.0
+qwen2.5:3b,critical facts,68,26,0,0.0

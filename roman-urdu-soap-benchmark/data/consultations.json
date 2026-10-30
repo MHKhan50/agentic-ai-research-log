@@ -1,0 +1,918 @@
+[
+ {
+  "id": "C5",
+  "title": "Ankle sprain playing football",
+  "main_region": "ankle/foot",
+  "side": "right",
+  "en": "Physio: Hello, what happened?\nPatient: I twisted my right ankle playing football 2 days ago.\nPhysio: Is it swollen? Can you walk on it?\nPatient: It is swollen on the outside, but I can walk on it, slowly.\nPhysio: Any pain when I press on the bone here?\nPatient: No, no pain on the bone.\nPhysio: Are you taking anything?\nPatient: Paracetamol 1 g, three times a day.\nPhysio: This looks like a ligament sprain. No X-ray is needed. Rest, ice and raise it, start the exercises, and we will review in 1 week.",
+  "ru": "Physio: Assalam o alaikum, kya hua?\nPatient: 2 din pehle football khelte hue mera daayan takhna mur gaya.\nPhysio: Sooja hua hai? Us par chal sakte hain?\nPatient: Bahar ki taraf soojan hai, lekin aahista aahista chal leta hoon.\nPhysio: Yahan haddi par dabane se dard hota hai?\nPatient: Nahi, haddi par koi dard nahi.\nPhysio: Koi dawa le rahe hain?\nPatient: Paracetamol 1 g, din mein 3 dafa.\nPhysio: Ye ligament ki moch lagti hai. X-ray ki zaroorat nahi. Aaram karein, barf lagayein aur pair ooncha rakhein, exercises shuru karein, aur 1 hafte baad dobara dekhenge.",
+  "facts": [
+   {
+    "id": "duration",
+    "text": "2 days",
+    "pattern": "\\b2\\s*-?\\s*days?\\b|two days",
+    "critical": false
+   },
+   {
+    "id": "cause",
+    "text": "football",
+    "pattern": "football|soccer",
+    "critical": false
+   },
+   {
+    "id": "swelling",
+    "text": "swollen on the outside",
+    "pattern": "swell|swollen",
+    "critical": false
+   },
+   {
+    "id": "weight_bearing",
+    "text": "can walk on it",
+    "pattern": "walk|weight",
+    "critical": true
+   },
+   {
+    "id": "no_bone_pain",
+    "text": "no bone tenderness",
+    "pattern": "bone",
+    "critical": true
+   },
+   {
+    "id": "medication",
+    "text": "paracetamol 1 g three times a day",
+    "pattern": "paracetamol|acetaminophen",
+    "critical": true
+   },
+   {
+    "id": "impression",
+    "text": "ligament sprain",
+    "pattern": "sprain",
+    "critical": false
+   },
+   {
+    "id": "no_xray",
+    "text": "no X-ray needed",
+    "pattern": "x-?ray|radiograph",
+    "critical": false
+   },
+   {
+    "id": "review",
+    "text": "review in 1 week",
+    "pattern": "\\b1\\s*-?\\s*weeks?\\b|one week|7 days",
+    "critical": false
+   }
+  ]
+ },
+ {
+  "id": "C6",
+  "title": "Hip arthritis",
+  "main_region": "hip/groin",
+  "side": "left",
+  "en": "Physio: Hello, how can I help?\nPatient: My left hip has been stiff and painful for about 1 year.\nPhysio: When is it worst?\nPatient: In the morning, the stiffness lasts about 20 minutes. I can only walk for 15 minutes before it hurts.\nPhysio: Any pain at night, or any fall?\nPatient: No pain at night, and I have not fallen.\nPhysio: Any other health problems or medicines?\nPatient: High blood pressure. I take amlodipine 5 mg once a day.\nPhysio: Movement of the hip is reduced. This looks like osteoarthritis. We will start strengthening exercises and review in 4 weeks.",
+  "ru": "Physio: Assalam o alaikum, bataiye kya masla hai?\nPatient: Taqreeban 1 saal se mera baayan koolha akra hua aur dard karta hai.\nPhysio: Sab se zyada kab hota hai?\nPatient: Subah, akraahat taqreeban 20 minute rehti hai. Main sirf 15 minute chal sakti hoon phir dard hota hai.\nPhysio: Raat ko dard, ya kabhi gir gayi hon?\nPatient: Raat ko dard nahi, aur main giri bhi nahi.\nPhysio: Koi aur bimari ya dawa?\nPatient: Blood pressure hai. Amlodipine 5 mg din mein ek dafa leti hoon.\nPhysio: Koolhe ki harkat kam hai. Ye osteoarthritis lagta hai. Hum taqat wali exercises shuru karenge aur 4 hafte baad dobara dekhenge.",
+  "facts": [
+   {
+    "id": "duration",
+    "text": "1 year",
+    "pattern": "\\b1\\s*-?\\s*years?\\b|one year|12 months",
+    "critical": false
+   },
+   {
+    "id": "morning_stiffness",
+    "text": "morning stiffness 20 minutes",
+    "pattern": "\\b20\\s*min",
+    "critical": false
+   },
+   {
+    "id": "walking",
+    "text": "walks 15 minutes",
+    "pattern": "\\b15\\s*min",
+    "critical": false
+   },
+   {
+    "id": "no_night_pain",
+    "text": "no night pain",
+    "pattern": "night",
+    "critical": true
+   },
+   {
+    "id": "no_fall",
+    "text": "no fall",
+    "pattern": "fall|fell",
+    "critical": true
+   },
+   {
+    "id": "bp",
+    "text": "high blood pressure",
+    "pattern": "blood pressure|hypertension",
+    "critical": false
+   },
+   {
+    "id": "medication",
+    "text": "amlodipine 5 mg",
+    "pattern": "amlodipine",
+    "critical": true
+   },
+   {
+    "id": "impression",
+    "text": "osteoarthritis",
+    "pattern": "osteoarthritis|\\boa\\b|arthritis",
+    "critical": false
+   },
+   {
+    "id": "review",
+    "text": "review in 4 weeks",
+    "pattern": "\\b4\\s*-?\\s*weeks?\\b|four weeks?",
+    "critical": false
+   }
+  ]
+ },
+ {
+  "id": "C7",
+  "title": "Tennis elbow in a painter",
+  "main_region": "elbow",
+  "side": "right",
+  "en": "Physio: Hello, what brings you in?\nPatient: Pain on the outside of my right elbow for 6 weeks. I am a painter.\nPhysio: What makes it worse?\nPatient: Gripping the brush and lifting the paint tin. About 4 out of 10.\nPhysio: Any numbness or tingling in your fingers?\nPatient: No numbness or tingling.\nPhysio: Gripping against my hand is painful, and the outer elbow is tender. This is tennis elbow. Use a brace at work, do these exercises, and come back in 3 weeks.",
+  "ru": "Physio: Assalam o alaikum, kya masla hai?\nPatient: 6 hafte se meri daayen kohni ke bahar wale hisse mein dard hai. Main painter hoon.\nPhysio: Kis cheez se barhta hai?\nPatient: Brush pakarne aur paint ka dabba uthane se. Taqreeban 10 mein se 4.\nPhysio: Ungliyon mein sunn-pan ya jhunjhunahat?\nPatient: Koi sunn-pan ya jhunjhunahat nahi.\nPhysio: Mere haath ke khilaf pakarne mein dard hai, aur kohni ka bahar wala hissa dukhta hai. Ye tennis elbow hai. Kaam par brace pehnein, ye exercises karein, aur 3 hafte baad aayein.",
+  "facts": [
+   {
+    "id": "duration",
+    "text": "6 weeks",
+    "pattern": "\\b6\\s*-?\\s*weeks?\\b|six weeks?",
+    "critical": false
+   },
+   {
+    "id": "job",
+    "text": "painter",
+    "pattern": "paint",
+    "critical": false
+   },
+   {
+    "id": "trigger",
+    "text": "gripping and lifting",
+    "pattern": "grip",
+    "critical": false
+   },
+   {
+    "id": "severity",
+    "text": "4/10",
+    "pattern": "\\b4\\s*(/|out of)\\s*10\\b",
+    "critical": false
+   },
+   {
+    "id": "no_numbness",
+    "text": "no numbness or tingling in fingers",
+    "pattern": "numb|tingl",
+    "critical": true
+   },
+   {
+    "id": "impression",
+    "text": "tennis elbow",
+    "pattern": "tennis elbow|lateral epicondyl",
+    "critical": false
+   },
+   {
+    "id": "brace",
+    "text": "brace at work",
+    "pattern": "brace|strap|support",
+    "critical": false
+   },
+   {
+    "id": "review",
+    "text": "review in 3 weeks",
+    "pattern": "\\b3\\s*-?\\s*weeks?\\b|three weeks?",
+    "critical": false
+   }
+  ]
+ },
+ {
+  "id": "C8",
+  "title": "Fall on the hand, possible scaphoid fracture",
+  "main_region": "wrist/hand",
+  "side": "left",
+  "en": "Physio: Hello, what happened?\nPatient: I fell on my outstretched left hand yesterday. My wrist is swollen.\nPhysio: Where exactly does it hurt?\nPatient: Here, at the base of the thumb.\nPhysio: I can feel tenderness in the anatomical snuffbox. Do you take any blood thinners?\nPatient: Yes, warfarin.\nPhysio: This could be a scaphoid fracture. Please go for an X-ray today. Keep the wrist in this splint until then.",
+  "ru": "Physio: Assalam o alaikum, kya hua?\nPatient: Kal main apne phaile hue baayen haath ke bal gir gaya. Meri kalai sooj gayi hai.\nPhysio: Bilkul kahan dard hota hai?\nPatient: Yahan, angoothe ki jarr mein.\nPhysio: Anatomical snuffbox mein dabane se dard hai. Khoon patla karne ki koi dawa lete hain?\nPatient: Ji, warfarin.\nPhysio: Ye scaphoid ki haddi ka fracture ho sakta hai. Aaj hi X-ray karwayein. Tab tak kalai is splint mein rakhein.",
+  "facts": [
+   {
+    "id": "mechanism",
+    "text": "fall on outstretched hand",
+    "pattern": "fall|fell|foosh",
+    "critical": false
+   },
+   {
+    "id": "timing",
+    "text": "yesterday",
+    "pattern": "yesterday|1 day|one day|24 hours",
+    "critical": false
+   },
+   {
+    "id": "swelling",
+    "text": "wrist swollen",
+    "pattern": "swell|swollen",
+    "critical": false
+   },
+   {
+    "id": "site",
+    "text": "base of the thumb / snuffbox",
+    "pattern": "snuffbox|thumb",
+    "critical": true
+   },
+   {
+    "id": "anticoagulant",
+    "text": "takes warfarin",
+    "pattern": "warfarin",
+    "critical": true
+   },
+   {
+    "id": "impression",
+    "text": "possible scaphoid fracture",
+    "pattern": "scaphoid",
+    "critical": true
+   },
+   {
+    "id": "xray_today",
+    "text": "X-ray today",
+    "pattern": "x-?ray|radiograph",
+    "critical": true
+   },
+   {
+    "id": "splint",
+    "text": "splint",
+    "pattern": "splint",
+    "critical": false
+   }
+  ]
+ },
+ {
+  "id": "C9",
+  "title": "Heel pain in a teacher with diabetes",
+  "main_region": "ankle/foot",
+  "side": "right",
+  "en": "Physio: Hello, how can I help?\nPatient: Pain under my right heel for 2 months. The first steps in the morning are the worst, about 7 out of 10.\nPhysio: What is your job?\nPatient: I am a teacher, I stand all day.\nPhysio: Any other health problems?\nPatient: I have diabetes, I take metformin 500 mg twice a day.\nPhysio: Any numbness in your feet?\nPatient: No numbness.\nPhysio: The inside of the heel is tender. This is plantar fasciitis. Do calf stretches, use soft insoles, and we will review in 6 weeks.",
+  "ru": "Physio: Assalam o alaikum, bataiye?\nPatient: 2 mahine se meri daayen aedi ke neeche dard hai. Subah pehle qadam sab se bure hote hain, taqreeban 10 mein se 7.\nPhysio: Aap kya kaam karti hain?\nPatient: Main teacher hoon, saara din khari rehti hoon.\nPhysio: Koi aur bimari?\nPatient: Mujhe sugar hai, metformin 500 mg din mein 2 dafa leti hoon.\nPhysio: Pairon mein sunn-pan?\nPatient: Koi sunn-pan nahi.\nPhysio: Aedi ka andar wala hissa dukhta hai. Ye plantar fasciitis hai. Pindli ki stretching karein, naram insoles istemal karein, aur 6 hafte baad dobara dekhenge.",
+  "facts": [
+   {
+    "id": "duration",
+    "text": "2 months",
+    "pattern": "\\b2\\s*-?\\s*months?\\b|two months",
+    "critical": false
+   },
+   {
+    "id": "morning",
+    "text": "first steps in the morning worst",
+    "pattern": "morning|first step",
+    "critical": false
+   },
+   {
+    "id": "severity",
+    "text": "7/10",
+    "pattern": "\\b7\\s*(/|out of)\\s*10\\b",
+    "critical": false
+   },
+   {
+    "id": "job",
+    "text": "teacher, standing",
+    "pattern": "teach|stand",
+    "critical": false
+   },
+   {
+    "id": "diabetes",
+    "text": "diabetes",
+    "pattern": "diabet",
+    "critical": true
+   },
+   {
+    "id": "medication",
+    "text": "metformin 500 mg",
+    "pattern": "metformin",
+    "critical": true
+   },
+   {
+    "id": "no_numbness",
+    "text": "no numbness in feet",
+    "pattern": "numb",
+    "critical": true
+   },
+   {
+    "id": "impression",
+    "text": "plantar fasciitis",
+    "pattern": "plantar fasci",
+    "critical": false
+   },
+   {
+    "id": "review",
+    "text": "review in 6 weeks",
+    "pattern": "\\b6\\s*-?\\s*weeks?\\b|six weeks?",
+    "critical": false
+   }
+  ]
+ },
+ {
+  "id": "C10",
+  "title": "Neck pain with arm tingling",
+  "main_region": "neck",
+  "side": "left",
+  "en": "Physio: Hello, what is the problem?\nPatient: Neck pain for 3 weeks, and tingling down my left arm into the thumb.\nPhysio: Any weakness in the arm, or problems with balance or walking?\nPatient: No weakness, and my balance and walking are fine.\nPhysio: Are you taking anything?\nPatient: Naproxen 500 mg twice a day.\nPhysio: Turning your head to the left brings on the tingling. This looks like irritation of a nerve root in the neck. Do these exercises, and come back in 2 weeks. If your arm becomes weak, come back straight away.",
+  "ru": "Physio: Assalam o alaikum, kya masla hai?\nPatient: 3 hafte se gardan mein dard hai, aur baayen baazu mein angoothe tak jhunjhunahat hoti hai.\nPhysio: Baazu mein kamzori, ya chalne aur tawazun mein koi masla?\nPatient: Koi kamzori nahi, aur chalna aur tawazun theek hai.\nPhysio: Koi dawa le rahe hain?\nPatient: Naproxen 500 mg din mein 2 dafa.\nPhysio: Sar baayen taraf ghumane se jhunjhunahat hoti hai. Ye gardan mein nerve root ki irritation lagti hai. Ye exercises karein, aur 2 hafte baad aayein. Agar baazu kamzor ho jaye to foran wapas aayein.",
+  "facts": [
+   {
+    "id": "duration",
+    "text": "3 weeks",
+    "pattern": "\\b3\\s*-?\\s*weeks?\\b|three weeks?",
+    "critical": false
+   },
+   {
+    "id": "tingling",
+    "text": "tingling down the arm to the thumb",
+    "pattern": "tingl|paraesthes|pins",
+    "critical": false
+   },
+   {
+    "id": "no_weakness",
+    "text": "no weakness",
+    "pattern": "weak",
+    "critical": true
+   },
+   {
+    "id": "no_balance",
+    "text": "balance and walking normal",
+    "pattern": "balance|gait|walk",
+    "critical": true
+   },
+   {
+    "id": "medication",
+    "text": "naproxen 500 mg",
+    "pattern": "naproxen",
+    "critical": true
+   },
+   {
+    "id": "impression",
+    "text": "nerve root irritation",
+    "pattern": "nerve root|radicul",
+    "critical": false
+   },
+   {
+    "id": "review",
+    "text": "review in 2 weeks",
+    "pattern": "\\b2\\s*-?\\s*weeks?\\b|two weeks?",
+    "critical": false
+   },
+   {
+    "id": "safety_net",
+    "text": "come back if the arm becomes weak",
+    "pattern": "if .{0,40}weak|weak.{0,40}(return|come back|immediately|urgent)",
+    "critical": true
+   }
+  ]
+ },
+ {
+  "id": "C11",
+  "title": "Back pain with saddle numbness (emergency)",
+  "main_region": "back",
+  "side": null,
+  "en": "Physio: Hello, what is wrong?\nPatient: Bad lower back pain for 2 days, going down both legs.\nPhysio: Any numbness between your legs, in the saddle area?\nPatient: Yes, since this morning it feels numb there.\nPhysio: Any change in passing urine?\nPatient: Yes, I am finding it hard to pass urine.\nPhysio: These are signs of cauda equina syndrome. This is an emergency. You need to go to A&E now.",
+  "ru": "Physio: Assalam o alaikum, kya hua?\nPatient: 2 din se kamar ke nichle hisse mein shadeed dard hai, dono taangon mein ja raha hai.\nPhysio: Taangon ke darmiyan, saddle wale hisse mein sunn-pan?\nPatient: Ji, aaj subah se wahan sunn lagta hai.\nPhysio: Peshab mein koi tabdeeli?\nPatient: Ji, peshab karne mein mushkil ho rahi hai.\nPhysio: Ye cauda equina syndrome ki alamat hain. Ye emergency hai. Aap ko abhi A&E jana hoga.",
+  "facts": [
+   {
+    "id": "duration",
+    "text": "2 days",
+    "pattern": "\\b2\\s*-?\\s*days?\\b|two days",
+    "critical": false
+   },
+   {
+    "id": "both_legs",
+    "text": "pain down both legs",
+    "pattern": "both legs|bilateral",
+    "critical": false
+   },
+   {
+    "id": "saddle_numbness",
+    "text": "saddle numbness present",
+    "pattern": "saddle|perineal|numb",
+    "critical": true
+   },
+   {
+    "id": "urinary",
+    "text": "difficulty passing urine",
+    "pattern": "urin|bladder|retention",
+    "critical": true
+   },
+   {
+    "id": "impression",
+    "text": "suspected cauda equina syndrome",
+    "pattern": "cauda equina",
+    "critical": true
+   },
+   {
+    "id": "emergency",
+    "text": "go to A&E now",
+    "pattern": "a&e|a & e|emergency|hospital",
+    "critical": true
+   }
+  ]
+ },
+ {
+  "id": "C12",
+  "title": "Twisted knee with a pop",
+  "main_region": "knee",
+  "side": "right",
+  "en": "Physio: Hello, what happened?\nPatient: I twisted my right knee playing basketball 1 week ago. I heard a pop.\nPhysio: Did it swell?\nPatient: Yes, it swelled within 1 hour.\nPhysio: Does it give way?\nPatient: Yes, it gives way when I turn.\nPhysio: The knee moves forward too much when I test it. This may be an ACL tear. I will refer you to the orthopaedic clinic for an MRI. Use crutches for now.",
+  "ru": "Physio: Assalam o alaikum, kya hua?\nPatient: 1 hafta pehle basketball khelte hue mera daayan ghutna mur gaya. Patakh ki awaaz aayi.\nPhysio: Sooja tha?\nPatient: Ji, 1 ghante ke andar sooj gaya.\nPhysio: Ghutna jawab de jata hai?\nPatient: Ji, mudte waqt jawab de jata hai.\nPhysio: Test karne par ghutna zyada aage jata hai. Ye ACL tear ho sakta hai. Main aap ko MRI ke liye orthopaedic clinic refer karunga. Abhi baisakhiyan istemal karein.",
+  "facts": [
+   {
+    "id": "timing",
+    "text": "1 week ago",
+    "pattern": "\\b1\\s*-?\\s*weeks?\\b|one week|7 days|a week",
+    "critical": false
+   },
+   {
+    "id": "sport",
+    "text": "basketball",
+    "pattern": "basketball",
+    "critical": false
+   },
+   {
+    "id": "pop",
+    "text": "heard a pop",
+    "pattern": "pop",
+    "critical": true
+   },
+   {
+    "id": "swelling",
+    "text": "swelled within 1 hour",
+    "pattern": "swell|swollen|effusion",
+    "critical": false
+   },
+   {
+    "id": "giving_way",
+    "text": "gives way when turning",
+    "pattern": "giv\\w* way|instab|buckl",
+    "critical": true
+   },
+   {
+    "id": "impression",
+    "text": "possible ACL tear",
+    "pattern": "\\bacl\\b|anterior cruciate",
+    "critical": true
+   },
+   {
+    "id": "referral",
+    "text": "orthopaedic referral for MRI",
+    "pattern": "\\bmri\\b|orthop",
+    "critical": true
+   },
+   {
+    "id": "crutches",
+    "text": "crutches",
+    "pattern": "crutch",
+    "critical": false
+   }
+  ]
+ },
+ {
+  "id": "C13",
+  "title": "Shoulder after a fall in an older man",
+  "main_region": "shoulder",
+  "side": "left",
+  "en": "Physio: Hello, how can I help?\nPatient: I fell 3 weeks ago and landed on my left shoulder. I cannot lift my arm above shoulder height.\nPhysio: Does it hurt at night?\nPatient: Yes, it wakes me up.\nPhysio: Any medicines?\nPatient: Aspirin 75 mg once a day.\nPhysio: You can lift the arm when I help, but you cannot hold it up yourself. This may be a rotator cuff tear. I will refer you for an ultrasound scan.",
+  "ru": "Physio: Assalam o alaikum, bataiye?\nPatient: 3 hafte pehle main gira aur baayen kandhe ke bal laga. Main apna baazu kandhe se ooncha nahi utha sakta.\nPhysio: Raat ko dard hota hai?\nPatient: Ji, neend se jaga deta hai.\nPhysio: Koi dawa?\nPatient: Aspirin 75 mg din mein ek dafa.\nPhysio: Meri madad se baazu uth jata hai, lekin aap khud upar nahi rakh sakte. Ye rotator cuff tear ho sakta hai. Main aap ko ultrasound scan ke liye refer karunga.",
+  "facts": [
+   {
+    "id": "timing",
+    "text": "3 weeks ago",
+    "pattern": "\\b3\\s*-?\\s*weeks?\\b|three weeks?",
+    "critical": false
+   },
+   {
+    "id": "mechanism",
+    "text": "fell onto the shoulder",
+    "pattern": "fall|fell",
+    "critical": false
+   },
+   {
+    "id": "cannot_lift",
+    "text": "cannot lift arm above shoulder height",
+    "pattern": "lift|raise|elevat|abduct",
+    "critical": true
+   },
+   {
+    "id": "night_pain",
+    "text": "night pain wakes him",
+    "pattern": "night",
+    "critical": true
+   },
+   {
+    "id": "medication",
+    "text": "aspirin 75 mg",
+    "pattern": "aspirin",
+    "critical": true
+   },
+   {
+    "id": "impression",
+    "text": "possible rotator cuff tear",
+    "pattern": "rotator cuff",
+    "critical": false
+   },
+   {
+    "id": "referral",
+    "text": "ultrasound referral",
+    "pattern": "ultrasound|scan",
+    "critical": true
+   }
+  ]
+ },
+ {
+  "id": "C14",
+  "title": "Calf swelling after knee replacement",
+  "main_region": "knee",
+  "side": "left",
+  "en": "Physio: Hello, how is the knee?\nPatient: My left knee replacement was 2 weeks ago. Since yesterday my left calf is swollen and painful.\nPhysio: Any chest pain or shortness of breath?\nPatient: No chest pain and no shortness of breath.\nPhysio: The calf is warm and tender. This could be a blood clot, a DVT. Please go to the hospital today to be checked. We will stop the exercises until then.",
+  "ru": "Physio: Assalam o alaikum, ghutna kaisa hai?\nPatient: Mere baayen ghutne ki replacement 2 hafte pehle hui thi. Kal se meri baayen pindli sooji hui hai aur dard karti hai.\nPhysio: Seene mein dard ya saans phoolna?\nPatient: Seene mein koi dard nahi aur saans bhi nahi phoolti.\nPhysio: Pindli garam hai aur dabane se dukhti hai. Ye khoon ka lothra, DVT, ho sakta hai. Aaj hi hospital ja kar check karwayein. Tab tak exercises rok dete hain.",
+  "facts": [
+   {
+    "id": "surgery",
+    "text": "knee replacement 2 weeks ago",
+    "pattern": "replacement|arthroplasty|tkr",
+    "critical": false
+   },
+   {
+    "id": "calf",
+    "text": "calf swollen and painful",
+    "pattern": "calf",
+    "critical": true
+   },
+   {
+    "id": "no_chest",
+    "text": "no chest pain or breathlessness",
+    "pattern": "chest|breath",
+    "critical": true
+   },
+   {
+    "id": "impression",
+    "text": "possible DVT",
+    "pattern": "\\bdvt\\b|deep vein|clot|thromb",
+    "critical": true
+   },
+   {
+    "id": "hospital_today",
+    "text": "hospital today",
+    "pattern": "hospital|a&e|emergency|today|same day|urgent",
+    "critical": true
+   },
+   {
+    "id": "stop_exercise",
+    "text": "stop exercises",
+    "pattern": "stop|hold|pause",
+    "critical": false
+   }
+  ]
+ },
+ {
+  "id": "C15",
+  "title": "Pelvic girdle pain in pregnancy",
+  "main_region": "hip/groin",
+  "side": null,
+  "en": "Physio: Hello, what is the problem?\nPatient: I am 28 weeks pregnant and I have pain at the front of my pelvis.\nPhysio: What makes it worse?\nPatient: Stairs and turning over in bed.\nPhysio: Any bleeding or tightening of the tummy?\nPatient: No bleeding and no tightening.\nPhysio: This is pelvic girdle pain. I will give you a support belt and some exercises. We will review in 2 weeks.",
+  "ru": "Physio: Assalam o alaikum, kya masla hai?\nPatient: Main 28 hafte ki hamla hoon aur mere pelvis ke aage wale hisse mein dard hai.\nPhysio: Kis cheez se barhta hai?\nPatient: Seedhiyan chadhne aur bistar par karwat lene se.\nPhysio: Koi khoon aana ya pait mein khinchao?\nPatient: Koi khoon nahi aur koi khinchao nahi.\nPhysio: Ye pelvic girdle pain hai. Main aap ko support belt aur kuch exercises dungi. 2 hafte baad dobara dekhenge.",
+  "facts": [
+   {
+    "id": "pregnancy",
+    "text": "28 weeks pregnant",
+    "pattern": "pregnan|\\b28\\s*weeks",
+    "critical": true
+   },
+   {
+    "id": "site",
+    "text": "front of pelvis",
+    "pattern": "pelvi|symphys|pubic",
+    "critical": false
+   },
+   {
+    "id": "stairs",
+    "text": "worse on stairs and turning in bed",
+    "pattern": "stair|turn",
+    "critical": false
+   },
+   {
+    "id": "no_bleeding",
+    "text": "no bleeding",
+    "pattern": "bleed",
+    "critical": true
+   },
+   {
+    "id": "no_tightening",
+    "text": "no tightening",
+    "pattern": "tighten|contraction",
+    "critical": true
+   },
+   {
+    "id": "impression",
+    "text": "pelvic girdle pain",
+    "pattern": "pelvic girdle|pgp|spd",
+    "critical": false
+   },
+   {
+    "id": "belt",
+    "text": "support belt",
+    "pattern": "belt|support",
+    "critical": false
+   },
+   {
+    "id": "review",
+    "text": "review in 2 weeks",
+    "pattern": "\\b2\\s*-?\\s*weeks?\\b|two weeks?",
+    "critical": false
+   }
+  ]
+ },
+ {
+  "id": "C16",
+  "title": "Back pain with weight loss and cancer history",
+  "main_region": "back",
+  "side": null,
+  "en": "Physio: Hello, how can I help?\nPatient: Pain in my upper back for 2 months. It wakes me at night.\nPhysio: Any weight loss?\nPatient: Yes, I have lost 6 kg without trying.\nPhysio: Any past illnesses?\nPatient: I had prostate cancer 4 years ago.\nPhysio: Night pain, weight loss and a past cancer are warning signs. I am referring you urgently to your GP today for tests. Please do not start exercises yet.",
+  "ru": "Physio: Assalam o alaikum, bataiye?\nPatient: 2 mahine se kamar ke ooper wale hisse mein dard hai. Raat ko neend se jaga deta hai.\nPhysio: Wazan kam hua hai?\nPatient: Ji, baghair koshish ke 6 kilo kam ho gaya hai.\nPhysio: Pehle koi bimari?\nPatient: 4 saal pehle mujhe prostate cancer tha.\nPhysio: Raat ka dard, wazan kam hona aur purana cancer khatre ki alamat hain. Main aap ko aaj hi urgent apne GP ke paas tests ke liye refer kar raha hoon. Abhi exercises shuru na karein.",
+  "facts": [
+   {
+    "id": "duration",
+    "text": "2 months",
+    "pattern": "\\b2\\s*-?\\s*months?\\b|two months",
+    "critical": false
+   },
+   {
+    "id": "night_pain",
+    "text": "night pain",
+    "pattern": "night",
+    "critical": true
+   },
+   {
+    "id": "weight_loss",
+    "text": "lost 6 kg unintentionally",
+    "pattern": "weight|\\b6\\s*kg",
+    "critical": true
+   },
+   {
+    "id": "cancer",
+    "text": "prostate cancer 4 years ago",
+    "pattern": "cancer|prostate|malignan",
+    "critical": true
+   },
+   {
+    "id": "urgent_gp",
+    "text": "urgent GP referral today",
+    "pattern": "\\bgp\\b|urgent|doctor|physician",
+    "critical": true
+   },
+   {
+    "id": "no_exercise",
+    "text": "do not start exercises",
+    "pattern": "exercis",
+    "critical": false
+   }
+  ]
+ },
+ {
+  "id": "C17",
+  "title": "Achilles pain in a runner after antibiotics",
+  "main_region": "ankle/foot",
+  "side": "left",
+  "en": "Physio: Hello, what is the problem?\nPatient: Pain in my left Achilles tendon for 5 weeks. I run 30 km a week.\nPhysio: When is it worst?\nPatient: Stiff in the morning, then about 3 out of 10 when running.\nPhysio: Did you feel a sudden snap?\nPatient: No snap.\nPhysio: Have you taken any antibiotics recently?\nPatient: Yes, ciprofloxacin last month.\nPhysio: This is Achilles tendinopathy. That antibiotic can affect tendons, so tell your GP. Reduce running by half and do heel raise exercises. Review in 4 weeks.",
+  "ru": "Physio: Assalam o alaikum, kya masla hai?\nPatient: 5 hafte se mere baayen Achilles tendon mein dard hai. Main hafte mein 30 km daurta hoon.\nPhysio: Sab se zyada kab hota hai?\nPatient: Subah akraahat, phir daurte waqt taqreeban 10 mein se 3.\nPhysio: Achanak koi tootne ka jhatka mehsoos hua?\nPatient: Nahi, koi jhatka nahi.\nPhysio: Haal hi mein koi antibiotic li hai?\nPatient: Ji, pichle mahine ciprofloxacin.\nPhysio: Ye Achilles tendinopathy hai. Wo antibiotic tendon par asar kar sakti hai, is liye apne GP ko batayein. Daurna aadha kar dein aur aedi uthane wali exercises karein. 4 hafte baad dekhenge.",
+  "facts": [
+   {
+    "id": "duration",
+    "text": "5 weeks",
+    "pattern": "\\b5\\s*-?\\s*weeks?\\b|five weeks?",
+    "critical": false
+   },
+   {
+    "id": "running",
+    "text": "runs 30 km a week",
+    "pattern": "\\b30\\s*km|run",
+    "critical": false
+   },
+   {
+    "id": "morning",
+    "text": "morning stiffness",
+    "pattern": "morning|stiff",
+    "critical": false
+   },
+   {
+    "id": "severity",
+    "text": "3/10",
+    "pattern": "\\b3\\s*(/|out of)\\s*10\\b",
+    "critical": false
+   },
+   {
+    "id": "no_snap",
+    "text": "no sudden snap",
+    "pattern": "snap|ruptur",
+    "critical": true
+   },
+   {
+    "id": "antibiotic",
+    "text": "ciprofloxacin last month",
+    "pattern": "ciprofloxacin|antibiotic|fluoroquinolone",
+    "critical": true
+   },
+   {
+    "id": "impression",
+    "text": "Achilles tendinopathy",
+    "pattern": "tendinopathy|tendinitis|tendonitis",
+    "critical": false
+   },
+   {
+    "id": "tell_gp",
+    "text": "tell the GP about the antibiotic",
+    "pattern": "\\bgp\\b|doctor",
+    "critical": true
+   },
+   {
+    "id": "review",
+    "text": "review in 4 weeks",
+    "pattern": "\\b4\\s*-?\\s*weeks?\\b|four weeks?",
+    "critical": false
+   }
+  ]
+ },
+ {
+  "id": "C18",
+  "title": "Carpal tunnel symptoms",
+  "main_region": "wrist/hand",
+  "side": "right",
+  "en": "Physio: Hello, how can I help?\nPatient: Tingling in my right thumb and first two fingers for 3 months, worse at night.\nPhysio: What is your work?\nPatient: I work on a computer all day.\nPhysio: Any health problems?\nPatient: Underactive thyroid, I take levothyroxine 100 micrograms.\nPhysio: Is there any neck pain?\nPatient: No neck pain.\nPhysio: Tapping over the wrist brings on the tingling. This is carpal tunnel syndrome. Wear a wrist splint at night. Review in 6 weeks.",
+  "ru": "Physio: Assalam o alaikum, bataiye?\nPatient: 3 mahine se mere daayen angoothe aur pehli do ungliyon mein jhunjhunahat hai, raat ko zyada.\nPhysio: Aap ka kaam kya hai?\nPatient: Saara din computer par kaam karti hoon.\nPhysio: Koi bimari?\nPatient: Thyroid kam hai, levothyroxine 100 microgram leti hoon.\nPhysio: Gardan mein koi dard?\nPatient: Gardan mein koi dard nahi.\nPhysio: Kalai par thapthapane se jhunjhunahat hoti hai. Ye carpal tunnel syndrome hai. Raat ko kalai ka splint pehnein. 6 hafte baad dekhenge.",
+  "facts": [
+   {
+    "id": "duration",
+    "text": "3 months",
+    "pattern": "\\b3\\s*-?\\s*months?\\b|three months",
+    "critical": false
+   },
+   {
+    "id": "tingling",
+    "text": "tingling thumb and first two fingers",
+    "pattern": "tingl|paraesthes|numb",
+    "critical": false
+   },
+   {
+    "id": "night",
+    "text": "worse at night",
+    "pattern": "night",
+    "critical": false
+   },
+   {
+    "id": "job",
+    "text": "computer work",
+    "pattern": "computer|keyboard|desk",
+    "critical": false
+   },
+   {
+    "id": "thyroid",
+    "text": "underactive thyroid",
+    "pattern": "thyroid",
+    "critical": true
+   },
+   {
+    "id": "medication",
+    "text": "levothyroxine",
+    "pattern": "levothyrox",
+    "critical": true
+   },
+   {
+    "id": "no_neck",
+    "text": "no neck pain",
+    "pattern": "neck",
+    "critical": true
+   },
+   {
+    "id": "impression",
+    "text": "carpal tunnel syndrome",
+    "pattern": "carpal tunnel",
+    "critical": false
+   },
+   {
+    "id": "splint",
+    "text": "night splint",
+    "pattern": "splint|brace",
+    "critical": false
+   },
+   {
+    "id": "review",
+    "text": "review in 6 weeks",
+    "pattern": "\\b6\\s*-?\\s*weeks?\\b|six weeks?",
+    "critical": false
+   }
+  ]
+ },
+ {
+  "id": "C19",
+  "title": "Sciatica down the right leg",
+  "main_region": "back",
+  "side": "right",
+  "en": "Physio: Hello, what is the problem?\nPatient: Lower back pain for 5 weeks, with pain down my right leg to the foot.\nPhysio: Any tingling?\nPatient: Yes, tingling in my right foot.\nPhysio: Any weakness, or problems with your bladder?\nPatient: No weakness and no bladder problems.\nPhysio: Are you taking anything?\nPatient: Pregabalin 75 mg twice a day, from my GP.\nPhysio: Lifting your straight right leg brings on the leg pain. This is sciatica. Keep active, do these exercises, and review in 3 weeks.",
+  "ru": "Physio: Assalam o alaikum, kya masla hai?\nPatient: 5 hafte se kamar ke nichle hisse mein dard hai, aur daayen taang mein pair tak dard jata hai.\nPhysio: Koi jhunjhunahat?\nPatient: Ji, daayen pair mein jhunjhunahat hai.\nPhysio: Koi kamzori, ya peshab ki thaili ka masla?\nPatient: Koi kamzori nahi aur peshab ka koi masla nahi.\nPhysio: Koi dawa le rahe hain?\nPatient: Pregabalin 75 mg din mein 2 dafa, GP ne di hai.\nPhysio: Seedhi daayen taang uthane se taang mein dard aata hai. Ye sciatica hai. Chalte phirte rahein, ye exercises karein, aur 3 hafte baad dekhenge.",
+  "facts": [
+   {
+    "id": "duration",
+    "text": "5 weeks",
+    "pattern": "\\b5\\s*-?\\s*weeks?\\b|five weeks?",
+    "critical": false
+   },
+   {
+    "id": "leg_pain",
+    "text": "pain down the leg to the foot",
+    "pattern": "leg|radiat",
+    "critical": false
+   },
+   {
+    "id": "tingling",
+    "text": "tingling in the foot",
+    "pattern": "tingl|paraesthes|pins",
+    "critical": false
+   },
+   {
+    "id": "no_weakness",
+    "text": "no weakness",
+    "pattern": "weak",
+    "critical": true
+   },
+   {
+    "id": "no_bladder",
+    "text": "no bladder problems",
+    "pattern": "bladder|urin",
+    "critical": true
+   },
+   {
+    "id": "medication",
+    "text": "pregabalin 75 mg",
+    "pattern": "pregabalin",
+    "critical": true
+   },
+   {
+    "id": "impression",
+    "text": "sciatica",
+    "pattern": "sciatica|radicul|nerve",
+    "critical": false
+   },
+   {
+    "id": "review",
+    "text": "review in 3 weeks",
+    "pattern": "\\b3\\s*-?\\s*weeks?\\b|three weeks?",
+    "critical": false
+   }
+  ]
+ },
+ {
+  "id": "C20",
+  "title": "Whiplash after a car accident",
+  "main_region": "neck",
+  "side": null,
+  "en": "Physio: Hello, what happened?\nPatient: A car hit my car from behind 3 days ago. Now my neck is stiff and sore.\nPhysio: Did you lose consciousness?\nPatient: No, I was awake the whole time.\nPhysio: Any numbness or tingling in your arms?\nPatient: No numbness or tingling.\nPhysio: Are you taking anything?\nPatient: Paracetamol when needed.\nPhysio: Turning is reduced in both directions, but the nerves are normal. This is a whiplash injury. Keep the neck moving gently, do the exercises, and come back in 1 week.",
+  "ru": "Physio: Assalam o alaikum, kya hua?\nPatient: 3 din pehle ek gaari ne meri gaari ko peeche se maara. Ab meri gardan akri hui aur dukhti hai.\nPhysio: Behosh hue the?\nPatient: Nahi, poora waqt hosh mein tha.\nPhysio: Baazuon mein sunn-pan ya jhunjhunahat?\nPatient: Koi sunn-pan ya jhunjhunahat nahi.\nPhysio: Koi dawa le rahe hain?\nPatient: Zaroorat par paracetamol.\nPhysio: Dono taraf ghumana kam hai, lekin nerves normal hain. Ye whiplash injury hai. Gardan ko aahista hilaate rahein, exercises karein, aur 1 hafte baad aayein.",
+  "facts": [
+   {
+    "id": "timing",
+    "text": "3 days ago",
+    "pattern": "\\b3\\s*-?\\s*days?\\b|three days",
+    "critical": false
+   },
+   {
+    "id": "mechanism",
+    "text": "rear-end car accident",
+    "pattern": "car|vehicle|collision|accident|rear",
+    "critical": false
+   },
+   {
+    "id": "no_loc",
+    "text": "no loss of consciousness",
+    "pattern": "conscious|knocked out|black",
+    "critical": true
+   },
+   {
+    "id": "no_numbness",
+    "text": "no numbness or tingling in arms",
+    "pattern": "numb|tingl",
+    "critical": true
+   },
+   {
+    "id": "medication",
+    "text": "paracetamol as needed",
+    "pattern": "paracetamol|acetaminophen",
+    "critical": true
+   },
+   {
+    "id": "impression",
+    "text": "whiplash",
+    "pattern": "whiplash",
+    "critical": false
+   },
+   {
+    "id": "review",
+    "text": "review in 1 week",
+    "pattern": "\\b1\\s*-?\\s*weeks?\\b|one week|7 days|a week",
+    "critical": false
+   }
+  ]
+ }
+]
