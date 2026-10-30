@@ -11,6 +11,6 @@ latexmk -pdf main.tex
 Or upload this folder as a zip to Overleaf (New Project, Upload Project).
 
 ## Before submission
-- A physiotherapist reads all 40 Roman Urdu notes and marks wrong region, wrong or missing side and missing red flags, to validate the automatic checks.
+- A physiotherapist reads all 40 Roman Urdu notes and 10 English notes and marks wrong region, wrong or missing side and missing red flags, to validate the automatic checks (sheet and scoring in [`../roman-urdu-soap-benchmark/clinician-review/`](../roman-urdu-soap-benchmark/clinician-review/); waiting for the review).
 - Add related work on Roman Urdu and code-mixed NLP with verified references.
 - Choose the venue and follow its format and disclosure rules.

@@ -40,6 +40,9 @@ This paper reports a controlled comparison: the same consultations, the same fac
 
 \paragraph{Checks.} For each note we record (i) listed facts whose pattern is absent, (ii) whether the main body region is named, (iii) body regions named in the note but absent from the English transcript, (iv) whether the injured side is named, and (v) whether the opposite side is named without support. A note is \emph{flagged} for clinician review if any of (ii) to (v) fails or a critical fact is missing.
 
+\paragraph{Clinician review.} To test the automatic checks, a registered physiotherapist read all 40 Roman Urdu notes and 10 English notes (5 per model, chosen at random), shuffled and coded so that the model, the input language and the automatic results were hidden. The English transcript was shown as the reference. For each note she marked a wrong or missing body region, a wrong or missing side, a missing red flag or other critical fact, and any other error. We report raw agreement and Cohen's kappa \citep{cohen1960kappa} between her labels and each check, and the precision and recall of the safety gate with her labels as the reference.
+% Clinician review results go in the Results section once the review is complete.
+
 \paragraph{Statistics.} We report the facts-missing rate with a 95\% bootstrap interval that resamples whole consultations \citep{efron1979bootstrap}, and an exact two-sided McNemar test \citep{mcnemar1947} on each fact paired across languages.
 
 \section{Results}
