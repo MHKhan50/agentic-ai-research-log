@@ -1,0 +1,13 @@
+scorer,model,lang,notes,mean_weighted_omissions
+keywords,llama3.1:8b,en,20,0.01
+keywords,llama3.1:8b,ru,20,0.44
+keywords,qwen2.5:3b,en,20,0.03
+keywords,qwen2.5:3b,ru,20,1.42
+llama3.1:8b,llama3.1:8b,en,20,0.17
+llama3.1:8b,llama3.1:8b,ru,20,0.58
+llama3.1:8b,qwen2.5:3b,en,20,0.12
+llama3.1:8b,qwen2.5:3b,ru,20,0.75
+qwen2.5:3b,llama3.1:8b,en,20,0.02
+qwen2.5:3b,llama3.1:8b,ru,20,0.35
+qwen2.5:3b,qwen2.5:3b,en,20,0.1
+qwen2.5:3b,qwen2.5:3b,ru,20,0.96

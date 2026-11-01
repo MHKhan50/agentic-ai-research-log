@@ -1,0 +1,5 @@
+judge,lang,facts,parsed,agree_pct,kappa,keyword_missing,judge_missing,judge_only,keyword_only,critical_judge_only
+llama3.1:8b,en,336,336,95.8,0.281,7,13,10,4,5
+llama3.1:8b,ru,336,336,83.3,0.484,66,70,30,26,9
+qwen2.5:3b,en,336,336,96.7,0.461,7,14,9,2,1
+qwen2.5:3b,ru,336,336,81.2,0.429,66,73,35,28,8
