@@ -38,24 +38,32 @@ Judge vs keyword checker (facts across 40 notes per language):
 
 | Judge | Notes from | Parsed | Agreement % | Kappa | Missing (keywords) | Missing (judge) | Judge only | Keywords only |
 |---|---|---|---|---|---|---|---|---|
-| qwen2.5:3b | English | _ | _ | _ | _ | _ | _ | _ |
-| qwen2.5:3b | Roman Urdu | _ | _ | _ | _ | _ | _ | _ |
-| llama3.1:8b | English | _ | _ | _ | _ | _ | _ | _ |
-| llama3.1:8b | Roman Urdu | _ | _ | _ | _ | _ | _ | _ |
+| qwen2.5:3b | English | 336 / 336 | 96.7 | 0.46 | 7 | 14 | 9 | 2 |
+| qwen2.5:3b | Roman Urdu | 336 / 336 | 81.2 | 0.43 | 66 | 73 | 35 | 28 |
+| llama3.1:8b | English | 336 / 336 | 95.8 | 0.28 | 7 | 13 | 10 | 4 |
+| llama3.1:8b | Roman Urdu | 336 / 336 | 83.3 | 0.48 | 66 | 70 | 30 | 26 |
+
+Every reply parsed. Agreement on English notes looks high only because almost nothing is missing (7 of 336 facts by keywords), so a checker that always said "present" would also agree about 98% of the time; kappa removes that. On Roman Urdu notes both judges flagged about as many facts as the keywords, but largely different ones. Critical facts the judge called missing and the keywords did not: llama3.1:8b 5 (English) and 9 (Roman Urdu), qwen2.5:3b 1 and 8.
 
 Mean weighted omissions per note (critical 1, other 0.1):
 
 | Note model | Language | Keywords | qwen2.5:3b judge | llama3.1:8b judge |
 |---|---|---|---|---|
-| qwen2.5:3b | English | _ | _ | _ |
-| qwen2.5:3b | Roman Urdu | _ | _ | _ |
-| llama3.1:8b | English | _ | _ | _ |
-| llama3.1:8b | Roman Urdu | _ | _ | _ |
+| qwen2.5:3b | English | 0.03 | 0.10 | 0.12 |
+| qwen2.5:3b | Roman Urdu | 1.42 | 0.96 | 0.75 |
+| llama3.1:8b | English | 0.01 | 0.02 | 0.17 |
+| llama3.1:8b | Roman Urdu | 0.44 | 0.35 | 0.58 |
+
+All three scorers put Roman Urdu notes well above English ones, but by how much depends on the scorer: for qwen2.5:3b notes the gap is 1.39 with keywords and 0.63 with the llama3.1:8b judge.
 
 ![Judge agreement](results/agreement.png)
 
 ## My notes
-_To be added after the run._
+I read 10 of the 144 disagreements against the notes (the 5 critical English facts where the llama3.1:8b judge said missing and the keywords present, and the first 5 Roman Urdu rows).
+- **The judge caught missing urgency.** For the possible DVT (C14) both notes say the patient should go to hospital, but neither says today or urgent. The keywords passed the fact "hospital today"; the judge called it missing, and for a suspected clot that part matters. The same happened with the X-ray in C8. But the judge also called "Inform GP about potential tendon effect of ciprofloxacin" missing in C17, which is plainly in the note.
+- **A contradiction passed as present.** In C2 the patient said the knee swelled up; the qwen2.5:3b note from Roman Urdu says "There is no swelling in the area". The keyword check found "swell" and passed it; the qwen2.5:3b judge called it missing. It is really a contradiction, not an omission, and neither method has a label for that (gap G12).
+- **The worst judge error hid two red flags.** The qwen2.5:3b note for C1 (Roman Urdu) never mentions numbness or urine, both critical red-flag answers, yet the qwen2.5:3b judge marked both present. A judge that does this would hide the very facts it is meant to protect, so a small local judge cannot replace the keyword check; at most it is a second opinion.
+- Of the 10 rows, the judge was right in 5, the keywords in 4, and one (C16, "urgent GP referral today" written as "urgent referral to GP") is borderline. Ten rows of 144 is too few to say which checker is better.
 
 ## Limitations
 - 80 notes from 20 consultations I wrote; one run.
@@ -63,3 +71,12 @@ _To be added after the run._
 - All facts of a note go in one call, unlike MED-OMIT's one fact per call.
 - No differential-diagnosis weighting; only my critical / other tiers.
 - Judges see the note and the fact list, not the transcript, so they cannot catch added facts.
+- I labelled only 10 of the 144 disagreements.
+
+## Article
+[A small local AI checked clinic notes for missing facts. It caught lost urgency, and passed two missing red flags](https://masmatixinnovations.co.uk/insights/llm-omission-judge.html)
+
+## Next steps
+- Label all 144 disagreements and a sample of rows where both checkers agree.
+- Add a third label, "contradicted", to the judge prompt (G12).
+- Ask about one fact per call, as MED-OMIT does, and compare.
