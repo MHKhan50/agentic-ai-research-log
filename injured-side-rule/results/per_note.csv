@@ -1,0 +1,161 @@
+model,condition,case,seconds,retried,cut_at_cap,marked_incomplete,facts_listed,facts_missing,critical_missing,missing_ids,main_region_present,unsupported_regions,side_expected,side_present,wrong_side,gate_flag,any_side_named,unsupported_side
+qwen2.5:3b,baseline,C1,4.9,False,False,False,11,4,2,cause; severity; no_numbness; no_urinary,False,knee,,,False,True,False,False
+qwen2.5:3b,baseline,C2,6.4,False,False,True,10,3,2,side; giving_way; no_locking,False,hip/groin,right,False,False,True,False,False
+qwen2.5:3b,baseline,C3,7.9,False,False,True,11,2,1,side; no_injury,True,,left,False,False,True,False,False
+qwen2.5:3b,baseline,C4,7.7,False,False,True,10,4,2,duration; no_tingling; headache; no_dizziness,False,elbow,,,False,True,False,False
+qwen2.5:3b,baseline,C5,7.3,False,False,True,9,2,1,duration; no_bone_pain,False,knee,right,False,False,True,False,False
+qwen2.5:3b,baseline,C6,5.2,False,False,True,9,0,0,,False,knee,left,False,False,True,False,False
+qwen2.5:3b,baseline,C7,7.1,False,False,True,8,3,1,trigger; severity; no_numbness,True,,right,False,False,True,False,False
+qwen2.5:3b,baseline,C8,5.4,False,False,True,8,3,0,mechanism; timing; swelling,True,,left,False,False,True,False,False
+qwen2.5:3b,baseline,C9,6.3,False,False,True,9,2,1,severity; no_numbness,True,,right,False,False,True,False,False
+qwen2.5:3b,baseline,C10,5.7,False,False,True,8,3,2,tingling; no_balance; safety_net,False,shoulder,left,False,False,True,False,False
+qwen2.5:3b,baseline,C11,5.3,False,False,False,6,2,1,both_legs; saddle_numbness,True,,,,False,True,False,False
+qwen2.5:3b,baseline,C12,5.9,False,False,True,8,2,1,giving_way; crutches,True,,right,False,False,True,False,False
+qwen2.5:3b,baseline,C13,5.4,False,False,True,7,1,0,mechanism,True,,left,False,False,True,False,False
+qwen2.5:3b,baseline,C14,8.2,False,False,True,6,3,2,calf; no_chest; stop_exercise,False,hip/groin,left,False,False,True,False,False
+qwen2.5:3b,baseline,C15,4.5,False,False,False,8,4,3,pregnancy; stairs; no_bleeding; no_tightening,True,,,,False,True,False,False
+qwen2.5:3b,baseline,C16,5.8,False,False,False,6,1,1,night_pain,False,,,,False,True,True,True
+qwen2.5:3b,baseline,C17,5.4,False,False,True,9,2,1,severity; tell_gp,True,,left,False,False,True,False,False
+qwen2.5:3b,baseline,C18,7.8,False,False,True,10,2,1,tingling; no_neck,True,shoulder,right,False,False,True,False,False
+qwen2.5:3b,baseline,C19,8.3,False,False,True,8,4,2,leg_pain; tingling; no_weakness; no_bladder,True,knee,right,False,False,True,False,False
+qwen2.5:3b,baseline,C20,7.5,False,False,False,7,3,2,mechanism; no_loc; no_numbness,False,shoulder,,,False,True,False,False
+qwen2.5:3b,rule,C1,6.7,False,False,False,11,5,3,cause; severity; no_numbness; no_urinary; no_fever_weight,False,shoulder,,,False,True,False,False
+qwen2.5:3b,rule,C2,7.6,False,False,False,10,5,2,side; swelling; severity; giving_way; no_locking,False,hip/groin,right,False,True,True,True,True
+qwen2.5:3b,rule,C3,7.4,False,False,False,11,1,0,no_injury,True,wrist/hand,left,True,False,True,True,False
+qwen2.5:3b,rule,C4,8.1,False,False,False,10,5,2,duration; radiation; no_tingling; headache; no_dizziness,False,,,,False,True,True,False
+qwen2.5:3b,rule,C5,8.3,False,False,False,9,3,1,no_bone_pain; impression; no_xray,False,hip/groin; knee; leg,right,True,False,True,True,False
+qwen2.5:3b,rule,C6,5.8,False,False,True,9,1,1,no_fall,False,shoulder,left,False,False,True,False,False
+qwen2.5:3b,rule,C7,5.4,False,False,False,8,1,0,severity,True,,right,True,False,False,True,False
+qwen2.5:3b,rule,C8,7.6,False,False,False,8,2,0,mechanism; timing,True,,left,True,False,False,True,False
+qwen2.5:3b,rule,C9,6.0,False,False,False,9,2,1,severity; no_numbness,True,,right,False,True,True,True,True
+qwen2.5:3b,rule,C10,4.9,False,False,False,8,3,2,tingling; no_balance; safety_net,True,elbow; shoulder,left,True,False,True,True,False
+qwen2.5:3b,rule,C11,5.9,False,False,False,6,2,1,both_legs; saddle_numbness,False,,,,False,True,False,False
+qwen2.5:3b,rule,C12,25.7,False,True,False,8,5,4,pop; giving_way; impression; referral; crutches,True,,right,True,False,True,True,False
+qwen2.5:3b,rule,C13,4.6,False,False,False,7,1,0,mechanism,True,,left,False,True,True,True,True
+qwen2.5:3b,rule,C14,8.8,False,False,True,6,3,2,calf; no_chest; stop_exercise,True,,left,False,False,True,False,False
+qwen2.5:3b,rule,C15,4.9,False,False,False,8,3,2,stairs; no_bleeding; no_tightening,True,,,,False,True,False,False
+qwen2.5:3b,rule,C16,5.7,False,False,False,6,1,1,night_pain,False,,,,False,True,True,True
+qwen2.5:3b,rule,C17,4.9,False,False,False,9,3,1,running; severity; no_snap,True,,left,True,False,True,True,False
+qwen2.5:3b,rule,C18,22.6,False,True,False,10,2,1,tingling; no_neck,True,shoulder,right,False,True,True,True,True
+qwen2.5:3b,rule,C19,5.7,False,False,False,8,3,2,tingling; no_weakness; no_bladder,True,,right,True,False,True,True,False
+qwen2.5:3b,rule,C20,6.5,False,False,False,7,3,2,mechanism; no_loc; no_numbness,False,shoulder,,,False,True,True,True
+qwen2.5:3b,rule_glossary,C1,4.1,False,False,False,11,5,3,cause; severity; no_numbness; no_urinary; no_fever_weight,False,knee,,,False,True,True,True
+qwen2.5:3b,rule_glossary,C2,6.7,False,False,False,10,3,1,swelling; giving_way; no_locking,False,hip/groin,right,True,False,True,True,False
+qwen2.5:3b,rule_glossary,C3,6.6,False,False,False,11,2,1,side; no_injury,True,wrist/hand,left,False,True,True,True,True
+qwen2.5:3b,rule_glossary,C4,6.4,False,False,False,10,4,2,duration; no_tingling; headache; no_dizziness,True,,,,False,True,True,False
+qwen2.5:3b,rule_glossary,C5,6.1,False,False,False,9,3,2,weight_bearing; no_bone_pain; no_xray,False,leg,right,True,False,True,True,False
+qwen2.5:3b,rule_glossary,C6,5.1,False,False,False,9,0,0,,False,shoulder,left,False,True,True,True,True
+qwen2.5:3b,rule_glossary,C7,5.3,False,False,False,8,2,1,severity; no_numbness,True,,right,True,False,True,True,False
+qwen2.5:3b,rule_glossary,C8,4.5,False,False,False,8,2,0,mechanism; timing,True,,left,False,True,True,True,True
+qwen2.5:3b,rule_glossary,C9,5.3,False,False,False,9,2,1,severity; no_numbness,True,,right,True,False,True,True,False
+qwen2.5:3b,rule_glossary,C10,5.2,False,False,False,8,2,1,tingling; safety_net,False,shoulder,left,False,True,True,True,True
+qwen2.5:3b,rule_glossary,C11,4.6,False,False,False,6,2,1,both_legs; saddle_numbness,False,hip/groin,,,False,True,False,False
+qwen2.5:3b,rule_glossary,C12,6.2,False,False,False,8,3,2,pop; giving_way; crutches,True,,right,True,False,True,True,False
+qwen2.5:3b,rule_glossary,C13,4.6,False,False,False,7,1,0,mechanism,True,head,left,False,True,True,True,True
+qwen2.5:3b,rule_glossary,C14,6.7,False,False,False,6,3,2,calf; no_chest; stop_exercise,False,shoulder; wrist/hand,left,False,True,True,True,True
+qwen2.5:3b,rule_glossary,C15,5.3,False,False,False,8,3,2,stairs; no_bleeding; no_tightening,True,,,,False,True,False,False
+qwen2.5:3b,rule_glossary,C16,7.3,False,False,False,6,1,1,night_pain,False,,,,False,True,True,True
+qwen2.5:3b,rule_glossary,C17,5.4,False,False,False,9,1,0,severity,True,,left,False,True,True,True,True
+qwen2.5:3b,rule_glossary,C18,7.7,False,False,False,10,2,1,tingling; no_neck,True,,right,True,True,True,True,True
+qwen2.5:3b,rule_glossary,C19,6.0,False,False,False,8,4,2,leg_pain; tingling; no_weakness; no_bladder,True,hip/groin,right,False,True,True,True,True
+qwen2.5:3b,rule_glossary,C20,6.3,False,False,False,7,2,1,mechanism; no_loc,False,shoulder,,,False,True,True,True
+qwen2.5:3b,retry,C1,4.9,False,False,False,11,4,2,cause; severity; no_numbness; no_urinary,False,knee,,,False,True,False,False
+qwen2.5:3b,retry,C2,14.6,True,False,False,10,3,2,side; giving_way; no_locking,False,hip/groin,right,False,True,True,True,True
+qwen2.5:3b,retry,C3,17.8,True,False,False,11,1,0,no_injury,True,,left,True,False,False,True,False
+qwen2.5:3b,retry,C4,17.2,True,False,False,10,4,2,duration; no_tingling; headache; no_dizziness,False,elbow,,,False,True,True,False
+qwen2.5:3b,retry,C5,16.4,True,False,False,9,2,1,duration; no_bone_pain,False,knee,right,True,False,True,True,False
+qwen2.5:3b,retry,C6,11.6,True,False,False,9,0,0,,False,knee,left,True,False,True,True,False
+qwen2.5:3b,retry,C7,15.9,True,False,False,8,3,1,trigger; severity; no_numbness,True,,right,True,False,True,True,False
+qwen2.5:3b,retry,C8,12.0,True,False,False,8,3,0,mechanism; timing; swelling,True,,left,True,False,False,True,False
+qwen2.5:3b,retry,C9,13.9,True,False,False,9,2,1,severity; no_numbness,True,,right,False,True,True,True,True
+qwen2.5:3b,retry,C10,12.7,True,False,False,8,3,2,tingling; no_balance; safety_net,False,shoulder,left,True,False,True,True,False
+qwen2.5:3b,retry,C11,5.3,False,False,False,6,2,1,both_legs; saddle_numbness,True,,,,False,True,False,False
+qwen2.5:3b,retry,C12,12.8,True,False,False,8,2,1,giving_way; crutches,True,,right,False,True,True,True,True
+qwen2.5:3b,retry,C13,11.5,True,False,False,7,1,0,mechanism,True,,left,False,True,True,True,True
+qwen2.5:3b,retry,C14,17.4,True,False,False,6,3,2,calf; no_chest; stop_exercise,False,hip/groin,left,False,True,True,True,True
+qwen2.5:3b,retry,C15,4.5,False,False,False,8,4,3,pregnancy; stairs; no_bleeding; no_tightening,True,,,,False,True,False,False
+qwen2.5:3b,retry,C16,5.8,False,False,False,6,1,1,night_pain,False,,,,False,True,True,True
+qwen2.5:3b,retry,C17,11.3,True,False,False,9,2,1,severity; tell_gp,True,,left,False,True,True,True,True
+qwen2.5:3b,retry,C18,16.1,True,False,False,10,2,1,tingling; no_neck,True,shoulder,right,False,True,True,True,True
+qwen2.5:3b,retry,C19,16.3,True,False,False,8,4,2,leg_pain; tingling; no_weakness; no_bladder,True,knee,right,False,True,True,True,True
+qwen2.5:3b,retry,C20,7.5,False,False,False,7,3,2,mechanism; no_loc; no_numbness,False,shoulder,,,False,True,False,False
+llama3.1:8b,baseline,C1,15.0,False,False,False,11,1,1,no_numbness,True,,,,False,True,False,False
+llama3.1:8b,baseline,C2,17.1,False,False,True,10,2,1,side; no_locking,False,ankle/foot,right,False,False,True,False,False
+llama3.1:8b,baseline,C3,16.8,False,False,False,11,1,1,side,True,,left,False,True,True,True,True
+llama3.1:8b,baseline,C4,17.3,False,False,False,10,0,0,,True,,,,False,False,True,False
+llama3.1:8b,baseline,C5,12.8,False,False,True,9,1,0,swelling,True,,right,False,False,True,False,False
+llama3.1:8b,baseline,C6,12.2,False,False,True,9,0,0,,False,back,left,False,False,True,False,False
+llama3.1:8b,baseline,C7,11.4,False,False,True,8,1,0,trigger,True,,right,False,False,True,False,False
+llama3.1:8b,baseline,C8,12.1,False,False,False,8,1,0,swelling,True,,left,False,True,True,True,True
+llama3.1:8b,baseline,C9,15.1,False,False,True,9,1,1,no_numbness,True,back,right,False,False,True,False,False
+llama3.1:8b,baseline,C10,18.7,False,False,False,8,1,0,tingling,True,shoulder,left,True,False,True,True,False
+llama3.1:8b,baseline,C11,14.2,False,False,False,6,0,0,,True,,,,False,False,False,False
+llama3.1:8b,baseline,C12,14.5,False,False,True,8,1,1,pop,True,,right,False,False,True,False,False
+llama3.1:8b,baseline,C13,16.4,False,False,True,7,0,0,,True,,left,False,False,True,False,False
+llama3.1:8b,baseline,C14,12.4,False,False,True,6,1,1,calf,False,hip/groin,left,False,False,True,False,False
+llama3.1:8b,baseline,C15,9.9,False,False,False,8,2,1,stairs; no_tightening,True,,,,False,True,False,False
+llama3.1:8b,baseline,C16,13.9,False,False,False,6,0,0,,True,,,,False,False,False,False
+llama3.1:8b,baseline,C17,16.2,False,False,True,9,3,1,running; severity; tell_gp,True,,left,False,False,True,False,False
+llama3.1:8b,baseline,C18,13.5,False,False,True,10,0,0,,True,,right,False,False,True,False,False
+llama3.1:8b,baseline,C19,13.6,False,False,True,8,0,0,,True,,right,False,False,True,False,False
+llama3.1:8b,baseline,C20,18.1,False,False,False,7,0,0,,True,head,,,False,True,False,False
+llama3.1:8b,rule,C1,17.2,False,False,False,11,2,1,no_numbness; neuro_normal,True,,,,False,True,False,False
+llama3.1:8b,rule,C2,12.9,False,False,False,10,2,1,giving_way; no_locking,False,leg,right,True,False,True,True,False
+llama3.1:8b,rule,C3,14.0,False,False,False,11,1,1,side,True,,left,False,True,True,True,True
+llama3.1:8b,rule,C4,10.9,False,False,False,10,0,0,,True,,,,False,False,True,False
+llama3.1:8b,rule,C5,13.3,False,False,True,9,1,0,swelling,False,leg,right,False,False,True,False,False
+llama3.1:8b,rule,C6,9.4,False,False,True,9,1,1,no_fall,False,back,left,False,False,True,False,False
+llama3.1:8b,rule,C7,8.4,False,False,False,8,1,0,trigger,True,,right,True,False,False,True,False
+llama3.1:8b,rule,C8,12.5,False,False,False,8,1,0,swelling,True,,left,False,True,True,True,True
+llama3.1:8b,rule,C9,9.2,False,False,True,9,1,1,no_numbness,True,back,right,False,False,True,False,False
+llama3.1:8b,rule,C10,12.3,False,False,True,8,1,0,tingling,True,shoulder,left,False,False,True,False,False
+llama3.1:8b,rule,C11,7.5,False,False,False,6,0,0,,True,,,,False,False,False,False
+llama3.1:8b,rule,C12,12.8,False,False,False,8,3,2,pop; swelling; giving_way,True,,right,True,False,True,True,False
+llama3.1:8b,rule,C13,7.6,False,False,False,7,0,0,,True,,left,False,True,True,True,True
+llama3.1:8b,rule,C14,7.1,False,False,False,6,1,1,calf,False,hip/groin,left,True,False,True,True,False
+llama3.1:8b,rule,C15,8.5,False,False,False,8,2,1,stairs; no_tightening,True,,,,False,True,False,False
+llama3.1:8b,rule,C16,9.8,False,False,False,6,0,0,,True,,,,False,False,False,False
+llama3.1:8b,rule,C17,10.1,False,False,False,9,1,0,severity,True,,left,True,False,False,True,False
+llama3.1:8b,rule,C18,7.6,False,False,True,10,0,0,,True,,right,False,False,True,False,False
+llama3.1:8b,rule,C19,11.6,False,False,True,8,0,0,,True,,right,False,False,True,False,False
+llama3.1:8b,rule,C20,9.8,False,False,False,7,0,0,,True,,,,False,False,False,False
+llama3.1:8b,rule_glossary,C1,15.8,False,False,False,11,1,1,no_numbness,True,,,,False,True,False,False
+llama3.1:8b,rule_glossary,C2,11.3,False,False,False,10,1,0,no_locking,True,,right,True,False,False,True,False
+llama3.1:8b,rule_glossary,C3,12.8,False,False,False,11,0,0,,True,,left,True,False,False,True,False
+llama3.1:8b,rule_glossary,C4,14.6,False,False,True,10,1,0,headache,True,,,,False,False,False,False
+llama3.1:8b,rule_glossary,C5,12.6,False,False,False,9,1,0,swelling,False,leg,right,True,False,True,True,False
+llama3.1:8b,rule_glossary,C6,9.3,False,False,False,9,1,1,no_fall,False,knee,left,True,False,True,True,False
+llama3.1:8b,rule_glossary,C7,8.9,False,False,False,8,1,0,trigger,True,,right,False,True,True,True,True
+llama3.1:8b,rule_glossary,C8,11.2,False,False,False,8,2,0,timing; swelling,True,,left,True,False,False,True,False
+llama3.1:8b,rule_glossary,C9,9.2,False,False,False,9,1,1,no_numbness,True,,right,False,True,True,True,True
+llama3.1:8b,rule_glossary,C10,10.5,False,False,False,8,1,0,tingling,True,shoulder,left,True,False,True,True,False
+llama3.1:8b,rule_glossary,C11,8.1,False,False,False,6,0,0,,True,,,,False,False,False,False
+llama3.1:8b,rule_glossary,C12,10.6,False,False,False,8,3,2,pop; swelling; giving_way,True,,right,True,False,True,True,False
+llama3.1:8b,rule_glossary,C13,7.9,False,False,False,7,0,0,,True,,left,True,False,False,True,False
+llama3.1:8b,rule_glossary,C14,8.0,False,False,False,6,1,1,calf,True,,left,True,False,True,True,False
+llama3.1:8b,rule_glossary,C15,7.5,False,False,False,8,2,1,stairs; no_tightening,True,,,,False,True,False,False
+llama3.1:8b,rule_glossary,C16,10.2,False,False,False,6,0,0,,True,,,,False,False,False,False
+llama3.1:8b,rule_glossary,C17,9.9,False,False,False,9,1,0,severity,True,,left,True,False,False,True,False
+llama3.1:8b,rule_glossary,C18,8.1,False,False,False,10,0,0,,True,,right,False,True,True,True,True
+llama3.1:8b,rule_glossary,C19,9.7,False,False,False,8,0,0,,True,,right,False,True,True,True,True
+llama3.1:8b,rule_glossary,C20,10.8,False,False,False,7,0,0,,True,,,,False,False,False,False
+llama3.1:8b,retry,C1,15.0,False,False,False,11,1,1,no_numbness,True,,,,False,True,False,False
+llama3.1:8b,retry,C2,32.4,True,False,False,10,1,0,no_locking,False,ankle/foot,right,True,False,True,True,False
+llama3.1:8b,retry,C3,16.8,False,False,False,11,1,1,side,True,,left,False,True,True,True,True
+llama3.1:8b,retry,C4,17.3,False,False,False,10,0,0,,True,,,,False,False,True,False
+llama3.1:8b,retry,C5,24.6,True,False,False,9,1,0,swelling,True,,right,True,False,False,True,False
+llama3.1:8b,retry,C6,23.7,True,False,False,9,0,0,,False,back,left,False,True,True,True,True
+llama3.1:8b,retry,C7,21.7,True,False,False,8,1,0,trigger,True,,right,True,False,False,True,False
+llama3.1:8b,retry,C8,12.1,False,False,False,8,1,0,swelling,True,,left,False,True,True,True,True
+llama3.1:8b,retry,C9,33.4,True,False,True,9,1,1,no_numbness,True,back,right,False,False,True,False,False
+llama3.1:8b,retry,C10,18.7,False,False,False,8,1,0,tingling,True,shoulder,left,True,False,True,True,False
+llama3.1:8b,retry,C11,14.2,False,False,False,6,0,0,,True,,,,False,False,False,False
+llama3.1:8b,retry,C12,30.8,True,False,False,8,1,1,pop,True,,right,True,False,True,True,False
+llama3.1:8b,retry,C13,29.4,True,False,False,7,0,0,,True,,left,True,False,False,True,False
+llama3.1:8b,retry,C14,22.9,True,False,False,6,1,1,calf,False,hip/groin,left,False,True,True,True,True
+llama3.1:8b,retry,C15,9.9,False,False,False,8,2,1,stairs; no_tightening,True,,,,False,True,False,False
+llama3.1:8b,retry,C16,13.9,False,False,False,6,0,0,,True,,,,False,False,False,False
+llama3.1:8b,retry,C17,28.5,True,False,False,9,3,1,running; severity; tell_gp,True,,left,False,True,True,True,True
+llama3.1:8b,retry,C18,28.3,True,False,False,10,0,0,,True,,right,True,False,False,True,False
+llama3.1:8b,retry,C19,27.6,True,False,False,8,0,0,,True,,right,False,True,True,True,True
+llama3.1:8b,retry,C20,18.1,False,False,False,7,0,0,,True,head,,,False,True,False,False
