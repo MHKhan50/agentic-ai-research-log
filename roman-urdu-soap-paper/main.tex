@@ -31,6 +31,13 @@ This paper reports a controlled comparison: the same consultations, the same fac
   \item a negative result for translating first, and a simple rule-based gate that routes notes to a clinician.
 \end{itemize}
 
+\section{Related work}
+\paragraph{Clinical note generation.} Drafting a visit note from a doctor and patient conversation has public English benchmarks such as ACI-BENCH \citep{yim2023acibench}, which pairs visit dialogues with notes and reports results for several systems. \citet{asgari2025framework} moved from overlap scores to clinician labels of each hallucinated or omitted sentence and graded them by harm. We follow their idea of counting omissions and harmful errors, but replace sentence labelling by a fixed list of facts per consultation, so that the same facts can be checked in both languages.
+
+\paragraph{Code-switched language.} Benchmarks such as GLUECoS \citep{khanuja2020gluecos} show that models trained mostly on one language lose accuracy on text that mixes two. Roman Urdu with English clinical terms is this kind of text, and it is also written without a fixed spelling. To our knowledge no public clinical benchmark covers it.
+
+\paragraph{Translating first.} A common way to handle a low-resource input is to translate it into English and then run the English system. \citet{artetxe2023revisiting} found that this translate-test approach can be stronger than earlier work suggested when the translation system is good. Our pilot tests the same idea with the small drafting model doing the translation itself.
+
 \section{Data and method}
 \paragraph{Consultations.} The author wrote 20 short fictional physiotherapy consultations (back, neck, shoulder, knee, hip and pelvis, ankle and foot, wrist and hand, elbow). Each exists in English and Roman Urdu with the same facts and numbers. Clinical terms that clinicians in Pakistan normally say in English (for example ligament, ACL, scaphoid) stay in English inside the Roman Urdu, as in real code-mixed speech. Several cases contain red flags on purpose: saddle numbness with urinary difficulty (suspected cauda equina syndrome), a swollen calf two weeks after knee replacement (possible deep vein thrombosis), weight loss with a history of cancer, and a possible scaphoid fracture in a patient on warfarin. No real patient data was used.
 

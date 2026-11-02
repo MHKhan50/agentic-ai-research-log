@@ -12,5 +12,5 @@ Or upload this folder as a zip to Overleaf (New Project, Upload Project).
 
 ## Before submission
 - A physiotherapist reads all 40 Roman Urdu notes and 10 English notes and marks wrong region, wrong or missing side and missing red flags, to validate the automatic checks (sheet and scoring in [`../roman-urdu-soap-benchmark/clinician-review/`](../roman-urdu-soap-benchmark/clinician-review/); waiting for the review).
-- Add related work on Roman Urdu and code-mixed NLP with verified references.
+- Related work has clinical note generation, code-switched benchmarks and translate-test, each reference checked against its ACL Anthology or arXiv page. Still to add: one or two Urdu or Roman Urdu LLM evaluation papers, checked the same way.
 - Choose the venue and follow its format and disclosure rules.
