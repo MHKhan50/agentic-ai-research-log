@@ -28,29 +28,50 @@ python entity_match.py       # first run downloads BioLORD-2023-C (about 0.4 GB)
 ```
 
 ## Results
-_To be filled from my run._
+From my run on a MacBook M4 (16 GB), BioLORD-2023-C on CPU. No model is sampled, so a rerun gives the same numbers. The cut (soft score 0.797) flags 5 of the 92 safe notes.
 
-| | Value |
-|---|---|
-| Encoder similarity, side swap (right knee vs left knee) | _ |
-| Encoder similarity, part swap (right ankle vs right knee) | _ |
-| Encoder similarity, synonym (lower back vs lumbar spine) | _ |
-| AUROC of soft score, unsafe vs safe notes | _ |
+**Encoder similarity** ([`results/probe.csv`](results/probe.csv), 1 = identical):
+
+| Pair | Kind | Cosine |
+|---|---|---|
+| right knee / left knee | side swap | 0.770 |
+| right ankle / left ankle | side swap | 0.748 |
+| left shoulder / right shoulder | side swap | 0.717 |
+| right knee / right patella | synonym | 0.767 |
+| lower back / lumbar spine | synonym | 0.596 |
+| left shoulder / left elbow | part swap | 0.586 |
+| right ankle / right knee | part swap | 0.504 |
+| lower back / neck | part swap | 0.388 |
+| knee / headache | unrelated | 0.268 |
+
+**Notes and swaps** ([`results/summary.csv`](results/summary.csv)):
 
 | Set | Notes | Soft score flagged | Code check flagged |
 |---|---|---|---|
-| Real unsafe notes | _ | _ | _ |
-| Side swaps | _ | _ | _ |
-| Part swaps | _ | _ | _ |
-| Safe notes (false flags) | _ | _ | _ |
+| Real unsafe notes | 108 | 83 | 104 |
+| of which side errors | 77 | 65 | 76 |
+| of which body-part errors | 69 | 54 | 66 |
+| Side swaps (safe English notes) | 25 | 11 | 25 |
+| Part swaps (safe English notes) | 31 | 19 | 31 |
+| Safe notes (false flags) | 92 | 5 | 4 |
+
+AUROC of the soft score on the real notes is 0.955 (mean 0.638 unsafe vs 0.961 safe). Swapping only the sides lowered the score by 0.17 on average, swapping the body part by 0.27.
 
 ![Soft score vs code check](results/soft_vs_code.png)
 
+**Main finding:** to this encoder a wrong side looks like a near-synonym. "Right knee" vs "left knee" (0.770) is as close as "right knee" vs "right patella" (0.767) and closer than "lower back" vs "lumbar spine" (0.596). The soft score did well on the real notes (AUROC 0.955) mainly because many unsafe notes also lost or changed a whole body part, but it flagged only 11 of 25 notes where nothing changed except the side.
+
 ## My notes
-_To be added after the run._
+- BioLORD gave right knee vs left knee 0.77 and the other side swaps 0.72 and 0.75. That is higher than lower back vs lumbar spine (0.596), which mean the same thing. For a physiotherapist this means a score built on these embeddings treats a wrong side almost like a synonym.
+- When I swapped only the sides in 25 safe English notes, the soft score fell below the cut in 11. A real case: in C7 (llama3.1:8b, rule + glossary) the note says left elbow for a right elbow and still scores 0.92. The code check flagged every swap, but it uses the same word lists that made the swaps, so that part is expected. For the side I would trust the code check, and use a soft score only as a second signal.
+- The soft score's 5 false flags were not synonym problems. In C3 the consultation also mentions the arm and head, so a safe note that only says "left shoulder" scored 0.72 because it left those out. The score also punishes a short but safe note.
+
+## Article
+[A medical similarity metric scores "left knee" closer to "right knee" than "lumbar spine" to "lower back"](https://masmatixinnovations.co.uk/insights/soft-anatomy-match-roman-urdu.html)
 
 ## Limitations
 - RaTEScore-style, not RaTEScore: no entity extractor model, no learned weights, anatomy entities only. A full RaTEScore run could rank notes differently.
 - The phrases come from word lists, so a body part written in an unusual way is missed by both the soft score and the code check.
 - The reference label uses the same word lists as the code check, so the code check has a built-in advantage on the real notes; the swap test does not have this problem, because the error is known by construction.
+- BioLORD-2023-C has no sentence-transformers wrapper, so it loads with mean pooling and a warning; the model owner says this is the correct behaviour. Embeddings are normalised before the cosine.
 - 20 fictional consultations, one run of notes per condition, one author labelling.

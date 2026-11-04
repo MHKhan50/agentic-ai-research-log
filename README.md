@@ -44,6 +44,7 @@ Plain-language write-ups of each experiment:
 - [In 20 clinic consultations, local AI lost red flags and the injured side when patients spoke Roman Urdu](https://masmatixinnovations.co.uk/insights/roman-urdu-soap-benchmark.html)
 - [Telling a local AI to write the injured side made it write the wrong side](https://masmatixinnovations.co.uk/insights/injured-side-rule-roman-urdu.html)
 - [Checking the injured side with code, not the AI, caught all 43 wrong sides in Roman Urdu notes](https://masmatixinnovations.co.uk/insights/side-mismatch-check-roman-urdu.html)
+- [A medical similarity metric scores "left knee" closer to "right knee" than "lumbar spine" to "lower back"](https://masmatixinnovations.co.uk/insights/soft-anatomy-match-roman-urdu.html)
 - [A small local AI checked clinic notes for missing facts. It caught lost urgency, and passed two missing red flags](https://masmatixinnovations.co.uk/insights/llm-omission-judge.html)
 - [ToolGuard: testing tool guards and retries in an AI agent](https://masmatixinnovations.co.uk/insights/toolguard-agent-benchmark.html)
 - [A planted memory fooled a simple AI agent 74% of the time. A trust filter cut it to 9%.](https://masmatixinnovations.co.uk/insights/memtrust-agent-memory-security.html)
