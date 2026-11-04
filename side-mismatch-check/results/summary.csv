@@ -1,0 +1,10 @@
+group,check,notes,flagged,unsafe,unsafe_caught,wrong_or_unsupported,wrong_caught,missing,missing_caught,safe,safe_flagged,catch_rate,false_flag_rate
+all,present,200,32,77,31,43,0,69,31,123,1,0.403,0.008
+all,side_set,200,78,77,74,43,43,69,66,123,4,0.961,0.033
+all,side_part,200,79,77,74,43,43,69,66,123,5,0.961,0.041
+en,present,40,0,0,0,0,0,0,0,40,0,,0.0
+en,side_set,40,0,0,0,0,0,0,0,40,0,,0.0
+en,side_part,40,1,0,0,0,0,0,0,40,1,,0.025
+ru,present,160,32,77,31,43,0,69,31,83,1,0.403,0.012
+ru,side_set,160,78,77,74,43,43,69,66,83,4,0.961,0.048
+ru,side_part,160,78,77,74,43,43,69,66,83,4,0.961,0.048
