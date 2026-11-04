@@ -1,0 +1,11 @@
+kind,a,b,cosine
+same,right knee,right knee,1.0
+synonym,lower back,lumbar spine,0.596
+synonym,right knee,right patella,0.767
+side swap,right knee,left knee,0.77
+side swap,left shoulder,right shoulder,0.717
+side swap,right ankle,left ankle,0.748
+part swap,right ankle,right knee,0.504
+part swap,left shoulder,left elbow,0.586
+part swap,lower back,neck,0.388
+unrelated,knee,headache,0.268

@@ -1,0 +1,2 @@
+notes,unsafe,safe,cut,auroc_soft,mean_soft_unsafe,mean_soft_safe,mean_drop_side_swap,mean_drop_part_swap
+200,108,92,0.7972,0.955,0.638,0.961,0.17,0.272

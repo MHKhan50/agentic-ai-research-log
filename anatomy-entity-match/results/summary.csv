@@ -1,0 +1,7 @@
+set,n,soft_caught,code_caught,cut
+Real unsafe notes,108,83,104,0.7972
+Real side errors,77,65,76,0.7972
+Real body-part errors,69,54,66,0.7972
+Side swaps,25,11,25,0.7972
+Part swaps,31,19,31,0.7972
+Safe notes (false flags),92,5,4,0.7972

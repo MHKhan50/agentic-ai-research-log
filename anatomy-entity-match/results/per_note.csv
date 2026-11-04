@@ -1,0 +1,201 @@
+model,lang,condition,case,side_unsafe,part_unsafe,unsafe,soft,code_flag,ref_anatomy,note_anatomy
+qwen2.5:3b,en,baseline,C1,False,False,False,1.0,False,leg; lower back,leg; lower back
+qwen2.5:3b,en,baseline,C2,False,False,False,1.0,False,right knee,right knee
+qwen2.5:3b,en,baseline,C3,False,False,False,1.0,False,arm; head; left shoulder,arm; head; left shoulder
+qwen2.5:3b,en,baseline,C4,False,False,False,0.9341,False,arm; head; neck; right shoulder; wrist,head; left arm; neck; right shoulder; wrist
+qwen2.5:3b,en,baseline,C5,False,True,True,0.8205,True,right ankle,leg; right ankle
+qwen2.5:3b,en,baseline,C6,False,False,False,1.0,False,left hip,left hip
+qwen2.5:3b,en,baseline,C7,False,False,False,1.0,False,right elbow; wrist,right elbow; wrist
+qwen2.5:3b,en,baseline,C8,False,False,False,1.0,False,left wrist,left wrist
+qwen2.5:3b,en,baseline,C9,False,False,False,1.0,False,leg; right ankle,leg; right ankle
+qwen2.5:3b,en,baseline,C10,False,False,False,1.0,False,head; left arm; neck; wrist,head; left arm; neck; wrist
+qwen2.5:3b,en,baseline,C11,False,False,False,1.0,False,leg; lower back,leg; lower back
+qwen2.5:3b,en,baseline,C12,False,True,True,0.9314,True,right knee,right knee; right leg
+qwen2.5:3b,en,baseline,C13,False,False,False,1.0,False,arm; left shoulder,arm; left shoulder
+qwen2.5:3b,en,baseline,C14,False,True,True,0.9566,False,chest; left knee; left leg,chest; left leg
+qwen2.5:3b,en,baseline,C15,False,False,False,1.0,False,hip,hip
+qwen2.5:3b,en,baseline,C16,False,False,False,1.0,False,lower back,lower back
+qwen2.5:3b,en,baseline,C17,False,False,False,1.0,False,left ankle,left ankle
+qwen2.5:3b,en,baseline,C18,False,False,False,1.0,False,neck; right wrist,neck; right wrist
+qwen2.5:3b,en,baseline,C19,False,False,False,1.0,False,lower back; right ankle; right leg,lower back; right ankle; right leg
+qwen2.5:3b,en,baseline,C20,False,False,False,1.0,False,arm; neck,arm; neck
+llama3.1:8b,en,baseline,C1,False,False,False,1.0,False,leg; lower back,leg; lower back
+llama3.1:8b,en,baseline,C2,False,False,False,1.0,False,right knee,right knee
+llama3.1:8b,en,baseline,C3,False,False,False,0.7174,False,arm; head; left shoulder,left shoulder
+llama3.1:8b,en,baseline,C4,False,False,False,0.9526,False,arm; head; neck; right shoulder; wrist,arm; head; left neck; right shoulder; wrist
+llama3.1:8b,en,baseline,C5,False,False,False,1.0,False,right ankle,right ankle
+llama3.1:8b,en,baseline,C6,False,False,False,1.0,False,left hip,left hip
+llama3.1:8b,en,baseline,C7,False,False,False,1.0,False,right elbow; wrist,right elbow; wrist
+llama3.1:8b,en,baseline,C8,False,False,False,1.0,False,left wrist,left wrist
+llama3.1:8b,en,baseline,C9,False,False,False,1.0,False,leg; right ankle,leg; right ankle
+llama3.1:8b,en,baseline,C10,False,False,False,0.9497,False,head; left arm; neck; wrist,left arm; neck; wrist
+llama3.1:8b,en,baseline,C11,False,False,False,1.0,False,leg; lower back,leg; lower back
+llama3.1:8b,en,baseline,C12,False,False,False,1.0,False,right knee,right knee
+llama3.1:8b,en,baseline,C13,False,False,False,1.0,False,arm; left shoulder,arm; left shoulder
+llama3.1:8b,en,baseline,C14,False,False,False,1.0,False,chest; left knee; left leg,chest; left knee; left leg
+llama3.1:8b,en,baseline,C15,False,False,False,1.0,False,hip,hip
+llama3.1:8b,en,baseline,C16,False,False,False,1.0,False,lower back,lower back
+llama3.1:8b,en,baseline,C17,False,False,False,1.0,False,left ankle,left ankle
+llama3.1:8b,en,baseline,C18,False,False,False,1.0,False,neck; right wrist,neck; right wrist
+llama3.1:8b,en,baseline,C19,False,False,False,1.0,False,lower back; right ankle; right leg,lower back; right ankle; right leg
+llama3.1:8b,en,baseline,C20,False,False,False,1.0,False,arm; neck,arm; neck
+qwen2.5:3b,ru,baseline,C1,False,True,True,0.6233,True,leg; lower back,knee
+qwen2.5:3b,ru,baseline,C2,True,True,True,0.3544,True,right knee,hip
+qwen2.5:3b,ru,baseline,C3,True,False,True,0.7684,True,arm; head; left shoulder,arm; shoulder
+qwen2.5:3b,ru,baseline,C4,False,True,True,0.6548,True,arm; head; neck; right shoulder; wrist,elbow; shoulder
+qwen2.5:3b,ru,baseline,C5,True,True,True,0.2834,True,right ankle,knee
+qwen2.5:3b,ru,baseline,C6,True,True,True,0.3058,True,left hip,knee
+qwen2.5:3b,ru,baseline,C7,True,False,True,0.9013,True,right elbow; wrist,elbow; wrist
+qwen2.5:3b,ru,baseline,C8,True,False,True,0.7034,True,left wrist,wrist
+qwen2.5:3b,ru,baseline,C9,True,False,True,0.7181,True,leg; right ankle,ankle
+qwen2.5:3b,ru,baseline,C10,True,True,True,0.5705,True,head; left arm; neck; wrist,arm; shoulder
+qwen2.5:3b,ru,baseline,C11,False,False,False,0.8376,False,leg; lower back,lower back
+qwen2.5:3b,ru,baseline,C12,True,False,True,0.7753,True,right knee,knee
+qwen2.5:3b,ru,baseline,C13,True,False,True,0.6934,True,arm; left shoulder,shoulder
+qwen2.5:3b,ru,baseline,C14,True,True,True,0.3709,True,chest; left knee; left leg,hip
+qwen2.5:3b,ru,baseline,C15,False,False,False,1.0,False,hip,hip
+qwen2.5:3b,ru,baseline,C16,True,True,True,0.0,True,lower back,
+qwen2.5:3b,ru,baseline,C17,True,False,True,0.7225,True,left ankle,ankle
+qwen2.5:3b,ru,baseline,C18,True,True,True,0.6199,True,neck; right wrist,shoulder; wrist
+qwen2.5:3b,ru,baseline,C19,True,True,True,0.7555,True,lower back; right ankle; right leg,ankle; knee; lower back
+qwen2.5:3b,ru,baseline,C20,False,True,True,0.6322,True,arm; neck,shoulder
+qwen2.5:3b,ru,rule,C1,False,True,True,0.368,True,leg; lower back,shoulder
+qwen2.5:3b,ru,rule,C2,True,True,True,0.3462,True,right knee,left hip
+qwen2.5:3b,ru,rule,C3,False,True,True,0.843,True,arm; head; left shoulder,head; left arm; left shoulder; left wrist
+qwen2.5:3b,ru,rule,C4,False,True,True,0.0,True,arm; head; neck; right shoulder; wrist,
+qwen2.5:3b,ru,rule,C5,False,True,True,0.6163,True,right ankle,right hip; right knee; right leg
+qwen2.5:3b,ru,rule,C6,True,True,True,0.1931,True,left hip,shoulder
+qwen2.5:3b,ru,rule,C7,False,False,False,0.9013,False,right elbow; wrist,elbow; wrist
+qwen2.5:3b,ru,rule,C8,False,False,False,1.0,False,left wrist,left wrist
+qwen2.5:3b,ru,rule,C9,True,False,True,0.6445,True,leg; right ankle,left ankle
+qwen2.5:3b,ru,rule,C10,False,True,True,0.7409,True,head; left arm; neck; wrist,elbow; left arm; left neck; left shoulder
+qwen2.5:3b,ru,rule,C11,False,True,True,0.8376,False,leg; lower back,leg
+qwen2.5:3b,ru,rule,C12,False,False,False,1.0,False,right knee,right knee
+qwen2.5:3b,ru,rule,C13,True,False,True,0.639,True,arm; left shoulder,right shoulder
+qwen2.5:3b,ru,rule,C14,True,False,True,0.5875,True,chest; left knee; left leg,knee
+qwen2.5:3b,ru,rule,C15,False,False,False,1.0,False,hip,hip
+qwen2.5:3b,ru,rule,C16,True,True,True,0.0,True,lower back,
+qwen2.5:3b,ru,rule,C17,False,False,False,1.0,False,left ankle,left ankle
+qwen2.5:3b,ru,rule,C18,True,True,True,0.5173,True,neck; right wrist,left shoulder; left wrist
+qwen2.5:3b,ru,rule,C19,False,False,False,0.9441,False,lower back; right ankle; right leg,lower back; right leg
+qwen2.5:3b,ru,rule,C20,True,True,True,0.3959,True,arm; neck,right shoulder
+qwen2.5:3b,ru,rule_glossary,C1,True,True,True,0.4439,True,leg; lower back,right knee
+qwen2.5:3b,ru,rule_glossary,C2,False,True,True,0.5352,True,right knee,right hip
+qwen2.5:3b,ru,rule_glossary,C3,True,True,True,0.573,True,arm; head; left shoulder,right wrist; shoulder
+qwen2.5:3b,ru,rule_glossary,C4,False,False,False,0.9032,False,arm; head; neck; right shoulder; wrist,arm; neck; right shoulder; right wrist
+qwen2.5:3b,ru,rule_glossary,C5,False,True,True,0.6823,True,right ankle,right leg
+qwen2.5:3b,ru,rule_glossary,C6,True,True,True,0.1788,True,left hip,right shoulder
+qwen2.5:3b,ru,rule_glossary,C7,False,False,False,1.0,False,right elbow; wrist,right elbow; wrist
+qwen2.5:3b,ru,rule_glossary,C8,True,False,True,0.766,True,left wrist,right wrist
+qwen2.5:3b,ru,rule_glossary,C9,False,False,False,0.8205,False,leg; right ankle,right ankle
+qwen2.5:3b,ru,rule_glossary,C10,True,True,True,0.482,True,head; left arm; neck; wrist,right arm; right shoulder
+qwen2.5:3b,ru,rule_glossary,C11,False,True,True,0.7605,True,leg; lower back,hip; leg
+qwen2.5:3b,ru,rule_glossary,C12,False,False,False,1.0,False,right knee,right knee
+qwen2.5:3b,ru,rule_glossary,C13,True,True,True,0.6281,True,arm; left shoulder,head; right arm; right shoulder
+qwen2.5:3b,ru,rule_glossary,C14,True,True,True,0.429,True,chest; left knee; left leg,right leg; right shoulder; right wrist
+qwen2.5:3b,ru,rule_glossary,C15,False,False,False,1.0,False,hip,hip
+qwen2.5:3b,ru,rule_glossary,C16,True,True,True,0.0,True,lower back,
+qwen2.5:3b,ru,rule_glossary,C17,True,False,True,0.7484,True,left ankle,right ankle
+qwen2.5:3b,ru,rule_glossary,C18,True,False,True,0.7332,True,neck; right wrist,right wrist
+qwen2.5:3b,ru,rule_glossary,C19,True,True,True,0.7111,True,lower back; right ankle; right leg,left ankle; left hip; left leg; left lower back
+qwen2.5:3b,ru,rule_glossary,C20,True,True,True,0.3959,True,arm; neck,right shoulder
+qwen2.5:3b,ru,retry,C1,False,True,True,0.6233,True,leg; lower back,knee
+qwen2.5:3b,ru,retry,C2,True,True,True,0.3462,True,right knee,left hip
+qwen2.5:3b,ru,retry,C3,False,False,False,0.7368,False,arm; head; left shoulder,left arm; left shoulder
+qwen2.5:3b,ru,retry,C4,False,True,True,0.6118,True,arm; head; neck; right shoulder; wrist,right elbow; right shoulder
+qwen2.5:3b,ru,retry,C5,False,True,True,0.5043,True,right ankle,right knee
+qwen2.5:3b,ru,retry,C6,False,True,True,0.5402,True,left hip,left knee
+qwen2.5:3b,ru,retry,C7,False,False,False,0.7738,False,right elbow; wrist,elbow; right wrist
+qwen2.5:3b,ru,retry,C8,False,False,False,1.0,False,left wrist,left wrist
+qwen2.5:3b,ru,retry,C9,True,False,True,0.7181,True,leg; right ankle,ankle
+qwen2.5:3b,ru,retry,C10,False,True,True,0.6051,True,head; left arm; neck; wrist,arm; left shoulder
+qwen2.5:3b,ru,retry,C11,False,False,False,0.8376,False,leg; lower back,lower back
+qwen2.5:3b,ru,retry,C12,True,False,True,0.77,True,right knee,left knee
+qwen2.5:3b,ru,retry,C13,True,False,True,0.639,True,arm; left shoulder,right shoulder
+qwen2.5:3b,ru,retry,C14,True,True,True,0.3345,True,chest; left knee; left leg,right hip
+qwen2.5:3b,ru,retry,C15,False,False,False,1.0,False,hip,hip
+qwen2.5:3b,ru,retry,C16,True,True,True,0.0,True,lower back,
+qwen2.5:3b,ru,retry,C17,True,False,True,0.7484,True,left ankle,right ankle
+qwen2.5:3b,ru,retry,C18,True,True,True,0.6304,True,neck; right wrist,left wrist; shoulder
+qwen2.5:3b,ru,retry,C19,True,True,True,0.6811,True,lower back; right ankle; right leg,ankle; left knee; left lower back
+qwen2.5:3b,ru,retry,C20,False,True,True,0.6322,True,arm; neck,shoulder
+llama3.1:8b,ru,baseline,C1,False,False,False,0.8376,False,leg; lower back,lower back
+llama3.1:8b,ru,baseline,C2,True,True,True,0.3796,True,right knee,ankle
+llama3.1:8b,ru,baseline,C3,True,False,True,0.7558,True,arm; head; left shoulder,arm; right shoulder
+llama3.1:8b,ru,baseline,C4,False,False,False,0.9436,False,arm; head; neck; right shoulder; wrist,arm; head; neck; shoulder; wrist
+llama3.1:8b,ru,baseline,C5,True,False,True,0.727,True,right ankle,ankle
+llama3.1:8b,ru,baseline,C6,True,True,True,0.3566,True,left hip,lower back
+llama3.1:8b,ru,baseline,C7,True,False,True,0.9013,True,right elbow; wrist,elbow; wrist
+llama3.1:8b,ru,baseline,C8,True,False,True,0.766,True,left wrist,right wrist
+llama3.1:8b,ru,baseline,C9,True,True,True,0.6407,True,leg; right ankle,ankle; lower back
+llama3.1:8b,ru,baseline,C10,False,True,True,0.7986,True,head; left arm; neck; wrist,left arm; neck; shoulder
+llama3.1:8b,ru,baseline,C11,False,False,False,1.0,False,leg; lower back,leg; lower back
+llama3.1:8b,ru,baseline,C12,True,False,True,0.7753,True,right knee,knee
+llama3.1:8b,ru,baseline,C13,True,False,True,0.8485,True,arm; left shoulder,arm; shoulder
+llama3.1:8b,ru,baseline,C14,True,True,True,0.6397,True,chest; left knee; left leg,chest; hip
+llama3.1:8b,ru,baseline,C15,False,False,False,1.0,False,hip,hip
+llama3.1:8b,ru,baseline,C16,False,False,False,1.0,False,lower back,lower back
+llama3.1:8b,ru,baseline,C17,True,False,True,0.7225,True,left ankle,ankle
+llama3.1:8b,ru,baseline,C18,True,False,True,0.8725,True,neck; right wrist,neck; wrist
+llama3.1:8b,ru,baseline,C19,True,False,True,0.7775,True,lower back; right ankle; right leg,leg; lower back
+llama3.1:8b,ru,baseline,C20,False,True,True,0.9318,True,arm; neck,arm; head; neck
+llama3.1:8b,ru,rule,C1,False,False,False,0.8376,False,leg; lower back,lower back
+llama3.1:8b,ru,rule,C2,False,True,True,0.8538,True,right knee,leg; right knee
+llama3.1:8b,ru,rule,C3,True,False,True,0.8716,True,arm; head; left shoulder,head; left shoulder; right arm; right shoulder
+llama3.1:8b,ru,rule,C4,False,False,False,0.9436,False,arm; head; neck; right shoulder; wrist,arm; head; neck; shoulder; wrist
+llama3.1:8b,ru,rule,C5,True,True,True,0.6321,True,right ankle,ankle; leg
+llama3.1:8b,ru,rule,C6,True,True,True,0.8083,True,left hip,left hip; lower back
+llama3.1:8b,ru,rule,C7,False,False,False,1.0,False,right elbow; wrist,right elbow; wrist
+llama3.1:8b,ru,rule,C8,True,False,True,0.766,True,left wrist,right wrist
+llama3.1:8b,ru,rule,C9,True,True,True,0.6407,True,leg; right ankle,ankle; lower back
+llama3.1:8b,ru,rule,C10,True,True,True,0.8887,True,head; left arm; neck; wrist,left arm; neck; shoulder; wrist
+llama3.1:8b,ru,rule,C11,False,False,False,1.0,False,leg; lower back,leg; lower back
+llama3.1:8b,ru,rule,C12,False,False,False,1.0,False,right knee,right knee
+llama3.1:8b,ru,rule,C13,True,False,True,0.7,True,arm; left shoulder,right arm; right shoulder
+llama3.1:8b,ru,rule,C14,False,True,True,0.8974,True,chest; left knee; left leg,chest; left hip; left leg
+llama3.1:8b,ru,rule,C15,False,False,False,0.8702,False,hip,ankle; hip
+llama3.1:8b,ru,rule,C16,False,False,False,1.0,False,lower back,lower back
+llama3.1:8b,ru,rule,C17,False,False,False,1.0,False,left ankle,left ankle
+llama3.1:8b,ru,rule,C18,True,False,True,0.8725,True,neck; right wrist,neck; wrist
+llama3.1:8b,ru,rule,C19,True,False,True,0.909,False,lower back; right ankle; right leg,ankle; lower back; right leg
+llama3.1:8b,ru,rule,C20,False,False,False,1.0,False,arm; neck,arm; neck
+llama3.1:8b,ru,rule_glossary,C1,False,False,False,1.0,False,leg; lower back,leg; lower back
+llama3.1:8b,ru,rule_glossary,C2,False,False,False,1.0,False,right knee,right knee
+llama3.1:8b,ru,rule_glossary,C3,False,False,False,0.7368,False,arm; head; left shoulder,left arm; left shoulder
+llama3.1:8b,ru,rule_glossary,C4,False,False,False,1.0,False,arm; head; neck; right shoulder; wrist,arm; head; neck; right shoulder; wrist
+llama3.1:8b,ru,rule_glossary,C5,False,True,True,0.9137,True,right ankle,right ankle; right leg
+llama3.1:8b,ru,rule_glossary,C6,False,True,True,0.5402,True,left hip,left knee
+llama3.1:8b,ru,rule_glossary,C7,True,False,True,0.9153,True,right elbow; wrist,left elbow; wrist
+llama3.1:8b,ru,rule_glossary,C8,False,False,False,1.0,False,left wrist,left wrist
+llama3.1:8b,ru,rule_glossary,C9,True,False,True,0.7241,True,leg; right ankle,left ankle; left leg
+llama3.1:8b,ru,rule_glossary,C10,False,True,True,0.828,True,head; left arm; neck; wrist,left arm; left shoulder; neck
+llama3.1:8b,ru,rule_glossary,C11,False,False,False,1.0,False,leg; lower back,leg; lower back
+llama3.1:8b,ru,rule_glossary,C12,False,False,False,1.0,False,right knee,right knee
+llama3.1:8b,ru,rule_glossary,C13,False,False,False,0.8533,False,arm; left shoulder,left arm; left shoulder
+llama3.1:8b,ru,rule_glossary,C14,False,False,False,1.0,True,chest; left knee; left leg,chest; left knee; left leg
+llama3.1:8b,ru,rule_glossary,C15,False,False,False,0.7528,True,hip,right hip
+llama3.1:8b,ru,rule_glossary,C16,False,False,False,0.8468,True,lower back,right lower back
+llama3.1:8b,ru,rule_glossary,C17,False,False,False,1.0,False,left ankle,left ankle
+llama3.1:8b,ru,rule_glossary,C18,True,False,True,0.883,True,neck; right wrist,left wrist; neck
+llama3.1:8b,ru,rule_glossary,C19,True,False,True,0.7791,True,lower back; right ankle; right leg,left leg; lower back
+llama3.1:8b,ru,rule_glossary,C20,False,False,False,1.0,True,arm; neck,arm; neck
+llama3.1:8b,ru,retry,C1,False,False,False,0.8376,False,leg; lower back,lower back
+llama3.1:8b,ru,retry,C2,False,True,True,0.5043,False,right knee,right ankle
+llama3.1:8b,ru,retry,C3,True,False,True,0.7558,True,arm; head; left shoulder,arm; right shoulder
+llama3.1:8b,ru,retry,C4,False,False,False,0.9436,False,arm; head; neck; right shoulder; wrist,arm; head; neck; shoulder; wrist
+llama3.1:8b,ru,retry,C5,False,False,False,1.0,False,right ankle,right ankle
+llama3.1:8b,ru,retry,C6,True,True,True,0.3672,True,left hip,right lower back
+llama3.1:8b,ru,retry,C7,False,False,False,1.0,False,right elbow; wrist,right elbow; wrist
+llama3.1:8b,ru,retry,C8,True,False,True,0.766,True,left wrist,right wrist
+llama3.1:8b,ru,retry,C9,True,True,True,0.7869,True,leg; right ankle,ankle; leg; lower back
+llama3.1:8b,ru,retry,C10,False,True,True,0.7986,True,head; left arm; neck; wrist,left arm; neck; shoulder
+llama3.1:8b,ru,retry,C11,False,False,False,1.0,False,leg; lower back,leg; lower back
+llama3.1:8b,ru,retry,C12,False,False,False,0.8164,False,right knee,ankle; right knee
+llama3.1:8b,ru,retry,C13,False,False,False,0.8533,False,arm; left shoulder,left arm; left shoulder
+llama3.1:8b,ru,retry,C14,True,True,True,0.6297,True,chest; left knee; left leg,chest; right hip
+llama3.1:8b,ru,retry,C15,False,False,False,1.0,False,hip,hip
+llama3.1:8b,ru,retry,C16,False,False,False,1.0,False,lower back,lower back
+llama3.1:8b,ru,retry,C17,True,False,True,0.7484,True,left ankle,right ankle
+llama3.1:8b,ru,retry,C18,False,False,False,1.0,False,neck; right wrist,neck; right wrist
+llama3.1:8b,ru,retry,C19,True,False,True,0.9426,True,lower back; right ankle; right leg,left ankle; left leg; lower back; right ankle; right leg
+llama3.1:8b,ru,retry,C20,False,True,True,0.9318,True,arm; neck,arm; head; neck
