@@ -9,6 +9,7 @@ Each folder has its own research question, code, tests, results from my own run,
 | Date | Topic | Folder | Research question |
 |---|---|---|---|
 | Oct 2026 | ReAct paper follow-up | [`react-roman-urdu/`](react-roman-urdu/) | Does a ~3B local model keep ReAct tool-use accuracy on Roman Urdu vs English, and how stable is it? |
+| Nov 2026 | Roman Urdu ReAct benchmark | [`roman-urdu-react-bench/`](roman-urdu-react-bench/) | Across 96 clinic questions, 4 local models and 2 spellings, how much less accurate is a ReAct agent in Roman Urdu than in English, which words cause it, and do a Roman Urdu example or translate-first help? |
 | Oct 2026 | Urdu clinical speech-to-text | [`whisper-urdu-wer/`](whisper-urdu-wer/) | How many words does Whisper (tiny/base/small) get wrong on Urdu clinic conversations, and does it keep the clinical key terms? |
 | Oct 2026 | Tool-call self-correction | [`tool-call-self-correction/`](tool-call-self-correction/) | Does schema-validator feedback fix a 3B local model's clinic tool calls, in English and Roman Urdu, and which errors does it miss? |
 | Oct 2026 | Validation gates and retries | [`toolguard-agent-benchmark/`](toolguard-agent-benchmark/) | How do a validation gate and bounded retries change task success and tool-call cost as tool failures increase? |
