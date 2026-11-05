@@ -198,20 +198,30 @@ class Trajectory:
 
 def react(llm: ChatModel, tools: Dict[str, Callable[[str], str]], question: str, shot: str = "en",
           max_steps: int = 8, max_parse_errors: int = 2) -> Trajectory:
+    """ReAct as a multi-turn chat: the model's steps are assistant turns, observations are user turns.
+
+    An earlier version resent the whole scratchpad inside one user message. llama3.2:3b then restarted
+    from the first step on every turn and looped until the step limit, so the protocol, not the
+    language, decided its score. Separate turns are the usual chat-model format and fair to all models.
+    """
     start = time.perf_counter()
     pad = f"Question: {question}\n"
+    messages: List[Message] = [{"role": "system", "content": SYSTEM_PROMPT},
+                               {"role": "user", "content": FEW_SHOT[shot] + pad}]
     tr = Trajectory(answer=None)
     for step in range(1, max_steps + 1):
         tr.steps = step
-        out = llm([{"role": "system", "content": SYSTEM_PROMPT},
-                   {"role": "user", "content": FEW_SHOT[shot] + pad}], stop=STOP)
+        out = llm(messages, stop=STOP)
         _, action, arg = parse_step(out)
+        messages.append({"role": "assistant", "content": out.strip()})
         pad += out.strip() + "\n"
         if action is None:
             tr.parse_errors += 1
             if tr.parse_errors > max_parse_errors:
                 break
-            pad += "Observation: Invalid format. Reply with 'Thought: ...' then 'Action: tool[input]'.\n"
+            obs_text = "Observation: Invalid format. Reply with 'Thought: ...' then 'Action: tool[input]'."
+            messages.append({"role": "user", "content": obs_text})
+            pad += obs_text + "\n"
             continue
         if action == "finish":
             tr.answer = arg
@@ -222,6 +232,7 @@ def react(llm: ChatModel, tools: Dict[str, Callable[[str], str]], question: str,
         if action == "calculate":
             tr.calc_exprs.append(arg or "")
         obs = tool(arg or "") if tool else f"Unknown action '{action}'. Use one of: {', '.join(tools)}, Finish."
+        messages.append({"role": "user", "content": f"Observation: {obs}"})
         pad += f"Observation: {obs}\n"
     else:
         tr.hit_max_steps = True

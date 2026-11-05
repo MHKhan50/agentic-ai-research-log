@@ -118,3 +118,19 @@ def test_runner_end_to_end_and_resume(tmp_path):
     res = analysis.main(path)
     assert res["calls"] == len(rows)
     assert (tmp_path / "tables.md").exists() and (tmp_path / "fig_accuracy.png").exists()
+
+
+def test_react_uses_separate_chat_turns():
+    from agent import react
+    seen = []
+    replies = iter(["Thought: look up\nAction: lookup_patient[Sara Javed]", "Thought: done\nAction: Finish[1]"])
+
+    def chat(messages, stop=None):
+        seen.append([m["role"] for m in messages])
+        return next(replies)
+
+    tools = {"lookup_patient": lambda n: '{"sessions_prescribed": 8, "sessions_done": 7}'}
+    tr = react(chat, tools, "How many sessions does Sara Javed have left?")
+    assert tr.answer == "1" and tr.lookups == 1
+    assert seen[0] == ["system", "user"]
+    assert seen[1] == ["system", "user", "assistant", "user"]
