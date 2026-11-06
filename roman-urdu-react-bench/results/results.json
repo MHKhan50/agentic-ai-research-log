@@ -1,0 +1,1601 @@
+{
+  "calls": 3838,
+  "models": [
+    "llama3.1:8b",
+    "llama3.2:3b",
+    "qwen2.5:3b",
+    "qwen2.5:7b"
+  ],
+  "accuracy": [
+    {
+      "model": "llama3.1:8b",
+      "method": "direct",
+      "form": "en",
+      "n": 96,
+      "k": 42,
+      "k_strict": 42,
+      "op_error": 0.0,
+      "skipped_lookup": 0.0,
+      "parse_error": 0.0,
+      "max_steps": 0.0,
+      "median_latency_s": 0.547,
+      "accuracy": 0.4375,
+      "accuracy_strict": 0.4375,
+      "ci95": [
+        0.34256663889153366,
+        0.5372429795440685
+      ]
+    },
+    {
+      "model": "llama3.1:8b",
+      "method": "direct",
+      "form": "ru",
+      "n": 96,
+      "k": 47,
+      "k_strict": 46,
+      "op_error": 0.0,
+      "skipped_lookup": 0.0,
+      "parse_error": 0.0,
+      "max_steps": 0.0,
+      "median_latency_s": 0.6955,
+      "accuracy": 0.4895833333333333,
+      "accuracy_strict": 0.4791666666666667,
+      "ci95": [
+        0.39192689394846364,
+        0.5880413757908035
+      ]
+    },
+    {
+      "model": "llama3.1:8b",
+      "method": "direct",
+      "form": "ru_var",
+      "n": 96,
+      "k": 35,
+      "k_strict": 35,
+      "op_error": 0.0,
+      "skipped_lookup": 0.0,
+      "parse_error": 0.0,
+      "max_steps": 0.0,
+      "median_latency_s": 0.4295,
+      "accuracy": 0.3645833333333333,
+      "accuracy_strict": 0.3645833333333333,
+      "ci95": [
+        0.2752379092607812,
+        0.46434959734968984
+      ]
+    },
+    {
+      "model": "llama3.1:8b",
+      "method": "react_en_shot",
+      "form": "en",
+      "n": 96,
+      "k": 84,
+      "k_strict": 84,
+      "op_error": 0.0,
+      "skipped_lookup": 0.0,
+      "parse_error": 0.0,
+      "max_steps": 0.052083333333333336,
+      "median_latency_s": 7.27,
+      "accuracy": 0.875,
+      "accuracy_strict": 0.875,
+      "ci95": [
+        0.7941135793103388,
+        0.9270287100760494
+      ]
+    },
+    {
+      "model": "llama3.1:8b",
+      "method": "react_en_shot",
+      "form": "ru",
+      "n": 96,
+      "k": 63,
+      "k_strict": 62,
+      "op_error": 0.010416666666666666,
+      "skipped_lookup": 0.0625,
+      "parse_error": 0.0,
+      "max_steps": 0.07291666666666667,
+      "median_latency_s": 9.7715,
+      "accuracy": 0.65625,
+      "accuracy_strict": 0.6458333333333334,
+      "ci95": [
+        0.5568784424044507,
+        0.7435975115065444
+      ]
+    },
+    {
+      "model": "llama3.1:8b",
+      "method": "react_en_shot",
+      "form": "ru_var",
+      "n": 96,
+      "k": 60,
+      "k_strict": 60,
+      "op_error": 0.020833333333333332,
+      "skipped_lookup": 0.0625,
+      "parse_error": 0.0,
+      "max_steps": 0.041666666666666664,
+      "median_latency_s": 10.309,
+      "accuracy": 0.625,
+      "accuracy_strict": 0.625,
+      "ci95": [
+        0.5251053301827543,
+        0.7152754329460417
+      ]
+    },
+    {
+      "model": "llama3.1:8b",
+      "method": "react_ru_shot",
+      "form": "ru",
+      "n": 95,
+      "k": 73,
+      "k_strict": 72,
+      "op_error": 0.042105263157894736,
+      "skipped_lookup": 0.010526315789473684,
+      "parse_error": 0.021052631578947368,
+      "max_steps": 0.0,
+      "median_latency_s": 9.77,
+      "accuracy": 0.7684210526315789,
+      "accuracy_strict": 0.7578947368421053,
+      "ci95": [
+        0.6741727429904585,
+        0.84180433548662
+      ]
+    },
+    {
+      "model": "llama3.1:8b",
+      "method": "react_ru_shot",
+      "form": "ru_var",
+      "n": 96,
+      "k": 83,
+      "k_strict": 82,
+      "op_error": 0.0,
+      "skipped_lookup": 0.0,
+      "parse_error": 0.0,
+      "max_steps": 0.010416666666666666,
+      "median_latency_s": 8.8915,
+      "accuracy": 0.8645833333333334,
+      "accuracy_strict": 0.8541666666666666,
+      "ci95": [
+        0.7819868570932831,
+        0.9191237020323721
+      ]
+    },
+    {
+      "model": "llama3.1:8b",
+      "method": "translate_react",
+      "form": "ru",
+      "n": 96,
+      "k": 73,
+      "k_strict": 71,
+      "op_error": 0.0,
+      "skipped_lookup": 0.0,
+      "parse_error": 0.010416666666666666,
+      "max_steps": 0.08333333333333333,
+      "median_latency_s": 8.781500000000001,
+      "accuracy": 0.7604166666666666,
+      "accuracy_strict": 0.7395833333333334,
+      "ci95": [
+        0.6660743118836168,
+        0.8347189446347083
+      ]
+    },
+    {
+      "model": "llama3.1:8b",
+      "method": "translate_react",
+      "form": "ru_var",
+      "n": 96,
+      "k": 72,
+      "k_strict": 72,
+      "op_error": 0.0,
+      "skipped_lookup": 0.0,
+      "parse_error": 0.010416666666666666,
+      "max_steps": 0.09375,
+      "median_latency_s": 8.337,
+      "accuracy": 0.75,
+      "accuracy_strict": 0.75,
+      "ci95": [
+        0.6549000204355595,
+        0.8258615058220327
+      ]
+    },
+    {
+      "model": "llama3.2:3b",
+      "method": "direct",
+      "form": "en",
+      "n": 96,
+      "k": 67,
+      "k_strict": 55,
+      "op_error": 0.0,
+      "skipped_lookup": 0.0,
+      "parse_error": 0.0,
+      "max_steps": 0.0,
+      "median_latency_s": 0.4405,
+      "accuracy": 0.6979166666666666,
+      "accuracy_strict": 0.5729166666666666,
+      "ci95": [
+        0.5999131207004743,
+        0.7806897542534527
+      ]
+    },
+    {
+      "model": "llama3.2:3b",
+      "method": "direct",
+      "form": "ru",
+      "n": 96,
+      "k": 68,
+      "k_strict": 67,
+      "op_error": 0.0,
+      "skipped_lookup": 0.0,
+      "parse_error": 0.0,
+      "max_steps": 0.0,
+      "median_latency_s": 0.653,
+      "accuracy": 0.7083333333333334,
+      "accuracy_strict": 0.6979166666666666,
+      "ci95": [
+        0.610799219414304,
+        0.7898353858003561
+      ]
+    },
+    {
+      "model": "llama3.2:3b",
+      "method": "direct",
+      "form": "ru_var",
+      "n": 96,
+      "k": 51,
+      "k_strict": 49,
+      "op_error": 0.0,
+      "skipped_lookup": 0.0,
+      "parse_error": 0.0,
+      "max_steps": 0.0,
+      "median_latency_s": 0.594,
+      "accuracy": 0.53125,
+      "accuracy_strict": 0.5104166666666666,
+      "ci95": [
+        0.4321542477927087,
+        0.6279409429894902
+      ]
+    },
+    {
+      "model": "llama3.2:3b",
+      "method": "react_en_shot",
+      "form": "en",
+      "n": 96,
+      "k": 75,
+      "k_strict": 75,
+      "op_error": 0.0,
+      "skipped_lookup": 0.0,
+      "parse_error": 0.0,
+      "max_steps": 0.020833333333333332,
+      "median_latency_s": 3.132,
+      "accuracy": 0.78125,
+      "accuracy_strict": 0.78125,
+      "ci95": [
+        0.6886190795275433,
+        0.8522376375122478
+      ]
+    },
+    {
+      "model": "llama3.2:3b",
+      "method": "react_en_shot",
+      "form": "ru",
+      "n": 96,
+      "k": 45,
+      "k_strict": 45,
+      "op_error": 0.125,
+      "skipped_lookup": 0.010416666666666666,
+      "parse_error": 0.052083333333333336,
+      "max_steps": 0.0625,
+      "median_latency_s": 3.329,
+      "accuracy": 0.46875,
+      "accuracy_strict": 0.46875,
+      "ci95": [
+        0.3720590570105098,
+        0.5678457522072913
+      ]
+    },
+    {
+      "model": "llama3.2:3b",
+      "method": "react_en_shot",
+      "form": "ru_var",
+      "n": 96,
+      "k": 40,
+      "k_strict": 40,
+      "op_error": 0.09375,
+      "skipped_lookup": 0.03125,
+      "parse_error": 0.08333333333333333,
+      "max_steps": 0.020833333333333332,
+      "median_latency_s": 3.424,
+      "accuracy": 0.4166666666666667,
+      "accuracy_strict": 0.4166666666666667,
+      "ci95": [
+        0.3231140125768062,
+        0.5166321453373298
+      ]
+    },
+    {
+      "model": "llama3.2:3b",
+      "method": "react_ru_shot",
+      "form": "ru",
+      "n": 96,
+      "k": 61,
+      "k_strict": 60,
+      "op_error": 0.0625,
+      "skipped_lookup": 0.020833333333333332,
+      "parse_error": 0.020833333333333332,
+      "max_steps": 0.0625,
+      "median_latency_s": 4.3870000000000005,
+      "accuracy": 0.6354166666666666,
+      "accuracy_strict": 0.625,
+      "ci95": [
+        0.5356504026503102,
+        0.7247620907392187
+      ]
+    },
+    {
+      "model": "llama3.2:3b",
+      "method": "react_ru_shot",
+      "form": "ru_var",
+      "n": 96,
+      "k": 43,
+      "k_strict": 40,
+      "op_error": 0.11458333333333333,
+      "skipped_lookup": 0.0,
+      "parse_error": 0.010416666666666666,
+      "max_steps": 0.03125,
+      "median_latency_s": 4.827999999999999,
+      "accuracy": 0.4479166666666667,
+      "accuracy_strict": 0.4166666666666667,
+      "ci95": [
+        0.35235593933641585,
+        0.5474854093599193
+      ]
+    },
+    {
+      "model": "llama3.2:3b",
+      "method": "translate_react",
+      "form": "ru",
+      "n": 96,
+      "k": 65,
+      "k_strict": 65,
+      "op_error": 0.0,
+      "skipped_lookup": 0.03125,
+      "parse_error": 0.0,
+      "max_steps": 0.0,
+      "median_latency_s": 3.689,
+      "accuracy": 0.6770833333333334,
+      "accuracy_strict": 0.6770833333333334,
+      "ci95": [
+        0.5782964352989827,
+        0.7622429791334785
+      ]
+    },
+    {
+      "model": "llama3.2:3b",
+      "method": "translate_react",
+      "form": "ru_var",
+      "n": 96,
+      "k": 55,
+      "k_strict": 55,
+      "op_error": 0.0,
+      "skipped_lookup": 0.041666666666666664,
+      "parse_error": 0.020833333333333332,
+      "max_steps": 0.03125,
+      "median_latency_s": 3.69,
+      "accuracy": 0.5729166666666666,
+      "accuracy_strict": 0.5729166666666666,
+      "ci95": [
+        0.47304132562163337,
+        0.6671807862034976
+      ]
+    },
+    {
+      "model": "qwen2.5:3b",
+      "method": "direct",
+      "form": "en",
+      "n": 96,
+      "k": 54,
+      "k_strict": 54,
+      "op_error": 0.0,
+      "skipped_lookup": 0.0,
+      "parse_error": 0.0,
+      "max_steps": 0.0,
+      "median_latency_s": 0.2115,
+      "accuracy": 0.5625,
+      "accuracy_strict": 0.5625,
+      "ci95": [
+        0.46275702045593164,
+        0.6574333611084665
+      ]
+    },
+    {
+      "model": "qwen2.5:3b",
+      "method": "direct",
+      "form": "ru",
+      "n": 96,
+      "k": 31,
+      "k_strict": 30,
+      "op_error": 0.0,
+      "skipped_lookup": 0.0,
+      "parse_error": 0.0,
+      "max_steps": 0.0,
+      "median_latency_s": 0.2125,
+      "accuracy": 0.3229166666666667,
+      "accuracy_strict": 0.3125,
+      "ci95": [
+        0.23775702086652156,
+        0.4217035647010175
+      ]
+    },
+    {
+      "model": "qwen2.5:3b",
+      "method": "direct",
+      "form": "ru_var",
+      "n": 96,
+      "k": 24,
+      "k_strict": 23,
+      "op_error": 0.0,
+      "skipped_lookup": 0.0,
+      "parse_error": 0.0,
+      "max_steps": 0.0,
+      "median_latency_s": 0.184,
+      "accuracy": 0.25,
+      "accuracy_strict": 0.23958333333333334,
+      "ci95": [
+        0.17413849417796745,
+        0.3450999795644406
+      ]
+    },
+    {
+      "model": "qwen2.5:3b",
+      "method": "react_en_shot",
+      "form": "en",
+      "n": 96,
+      "k": 88,
+      "k_strict": 88,
+      "op_error": 0.0,
+      "skipped_lookup": 0.041666666666666664,
+      "parse_error": 0.0,
+      "max_steps": 0.0,
+      "median_latency_s": 3.4265,
+      "accuracy": 0.9166666666666666,
+      "accuracy_strict": 0.9166666666666666,
+      "ci95": [
+        0.8440993218899774,
+        0.9571698885393426
+      ]
+    },
+    {
+      "model": "qwen2.5:3b",
+      "method": "react_en_shot",
+      "form": "ru",
+      "n": 95,
+      "k": 55,
+      "k_strict": 55,
+      "op_error": 0.08421052631578947,
+      "skipped_lookup": 0.08421052631578947,
+      "parse_error": 0.010526315789473684,
+      "max_steps": 0.0,
+      "median_latency_s": 3.496,
+      "accuracy": 0.5789473684210527,
+      "accuracy_strict": 0.5789473684210527,
+      "ci95": [
+        0.4784945348956803,
+        0.673263429362284
+      ]
+    },
+    {
+      "model": "qwen2.5:3b",
+      "method": "react_en_shot",
+      "form": "ru_var",
+      "n": 96,
+      "k": 35,
+      "k_strict": 35,
+      "op_error": 0.10416666666666667,
+      "skipped_lookup": 0.08333333333333333,
+      "parse_error": 0.041666666666666664,
+      "max_steps": 0.03125,
+      "median_latency_s": 3.548,
+      "accuracy": 0.3645833333333333,
+      "accuracy_strict": 0.3645833333333333,
+      "ci95": [
+        0.2752379092607812,
+        0.46434959734968984
+      ]
+    },
+    {
+      "model": "qwen2.5:3b",
+      "method": "react_ru_shot",
+      "form": "ru",
+      "n": 96,
+      "k": 52,
+      "k_strict": 52,
+      "op_error": 0.09375,
+      "skipped_lookup": 0.10416666666666667,
+      "parse_error": 0.010416666666666666,
+      "max_steps": 0.010416666666666666,
+      "median_latency_s": 3.7835,
+      "accuracy": 0.5416666666666666,
+      "accuracy_strict": 0.5416666666666666,
+      "ci95": [
+        0.4423137449970821,
+        0.6378131760458498
+      ]
+    },
+    {
+      "model": "qwen2.5:3b",
+      "method": "react_ru_shot",
+      "form": "ru_var",
+      "n": 96,
+      "k": 43,
+      "k_strict": 43,
+      "op_error": 0.15625,
+      "skipped_lookup": 0.10416666666666667,
+      "parse_error": 0.010416666666666666,
+      "max_steps": 0.010416666666666666,
+      "median_latency_s": 3.9524999999999997,
+      "accuracy": 0.4479166666666667,
+      "accuracy_strict": 0.4479166666666667,
+      "ci95": [
+        0.35235593933641585,
+        0.5474854093599193
+      ]
+    },
+    {
+      "model": "qwen2.5:3b",
+      "method": "translate_react",
+      "form": "ru",
+      "n": 96,
+      "k": 54,
+      "k_strict": 54,
+      "op_error": 0.08333333333333333,
+      "skipped_lookup": 0.10416666666666667,
+      "parse_error": 0.020833333333333332,
+      "max_steps": 0.020833333333333332,
+      "median_latency_s": 3.7245,
+      "accuracy": 0.5625,
+      "accuracy_strict": 0.5625,
+      "ci95": [
+        0.46275702045593164,
+        0.6574333611084665
+      ]
+    },
+    {
+      "model": "qwen2.5:3b",
+      "method": "translate_react",
+      "form": "ru_var",
+      "n": 96,
+      "k": 42,
+      "k_strict": 42,
+      "op_error": 0.052083333333333336,
+      "skipped_lookup": 0.0625,
+      "parse_error": 0.041666666666666664,
+      "max_steps": 0.052083333333333336,
+      "median_latency_s": 3.968,
+      "accuracy": 0.4375,
+      "accuracy_strict": 0.4375,
+      "ci95": [
+        0.34256663889153366,
+        0.5372429795440685
+      ]
+    },
+    {
+      "model": "qwen2.5:7b",
+      "method": "direct",
+      "form": "en",
+      "n": 96,
+      "k": 85,
+      "k_strict": 85,
+      "op_error": 0.0,
+      "skipped_lookup": 0.0,
+      "parse_error": 0.0,
+      "max_steps": 0.0,
+      "median_latency_s": 0.43,
+      "accuracy": 0.8854166666666666,
+      "accuracy_strict": 0.8854166666666666,
+      "ci95": [
+        0.8063720685325512,
+        0.9348019511145699
+      ]
+    },
+    {
+      "model": "qwen2.5:7b",
+      "method": "direct",
+      "form": "ru",
+      "n": 96,
+      "k": 82,
+      "k_strict": 82,
+      "op_error": 0.0,
+      "skipped_lookup": 0.0,
+      "parse_error": 0.0,
+      "max_steps": 0.0,
+      "median_latency_s": 0.4235,
+      "accuracy": 0.8541666666666666,
+      "accuracy_strict": 0.8541666666666666,
+      "ci95": [
+        0.7699800750432338,
+        0.9110987538216883
+      ]
+    },
+    {
+      "model": "qwen2.5:7b",
+      "method": "direct",
+      "form": "ru_var",
+      "n": 96,
+      "k": 77,
+      "k_strict": 77,
+      "op_error": 0.0,
+      "skipped_lookup": 0.0,
+      "parse_error": 0.0,
+      "max_steps": 0.0,
+      "median_latency_s": 0.363,
+      "accuracy": 0.8020833333333334,
+      "accuracy_strict": 0.8020833333333334,
+      "ci95": [
+        0.7114464935801418,
+        0.8694736839811154
+      ]
+    },
+    {
+      "model": "qwen2.5:7b",
+      "method": "react_en_shot",
+      "form": "en",
+      "n": 96,
+      "k": 84,
+      "k_strict": 82,
+      "op_error": 0.0,
+      "skipped_lookup": 0.0,
+      "parse_error": 0.0,
+      "max_steps": 0.0,
+      "median_latency_s": 6.3645,
+      "accuracy": 0.875,
+      "accuracy_strict": 0.8541666666666666,
+      "ci95": [
+        0.7941135793103388,
+        0.9270287100760494
+      ]
+    },
+    {
+      "model": "qwen2.5:7b",
+      "method": "react_en_shot",
+      "form": "ru",
+      "n": 96,
+      "k": 85,
+      "k_strict": 84,
+      "op_error": 0.0,
+      "skipped_lookup": 0.03125,
+      "parse_error": 0.010416666666666666,
+      "max_steps": 0.0,
+      "median_latency_s": 6.779,
+      "accuracy": 0.8854166666666666,
+      "accuracy_strict": 0.875,
+      "ci95": [
+        0.8063720685325512,
+        0.9348019511145699
+      ]
+    },
+    {
+      "model": "qwen2.5:7b",
+      "method": "react_en_shot",
+      "form": "ru_var",
+      "n": 96,
+      "k": 78,
+      "k_strict": 78,
+      "op_error": 0.010416666666666666,
+      "skipped_lookup": 0.020833333333333332,
+      "parse_error": 0.0,
+      "max_steps": 0.0,
+      "median_latency_s": 6.269,
+      "accuracy": 0.8125,
+      "accuracy_strict": 0.8125,
+      "ci95": [
+        0.7229756303456031,
+        0.877976277476387
+      ]
+    },
+    {
+      "model": "qwen2.5:7b",
+      "method": "react_ru_shot",
+      "form": "ru",
+      "n": 96,
+      "k": 81,
+      "k_strict": 81,
+      "op_error": 0.07291666666666667,
+      "skipped_lookup": 0.010416666666666666,
+      "parse_error": 0.0,
+      "max_steps": 0.0,
+      "median_latency_s": 7.364000000000001,
+      "accuracy": 0.84375,
+      "accuracy_strict": 0.84375,
+      "ci95": [
+        0.7580833433259717,
+        0.9029637552782173
+      ]
+    },
+    {
+      "model": "qwen2.5:7b",
+      "method": "react_ru_shot",
+      "form": "ru_var",
+      "n": 96,
+      "k": 73,
+      "k_strict": 73,
+      "op_error": 0.10416666666666667,
+      "skipped_lookup": 0.010416666666666666,
+      "parse_error": 0.03125,
+      "max_steps": 0.0,
+      "median_latency_s": 6.6605,
+      "accuracy": 0.7604166666666666,
+      "accuracy_strict": 0.7604166666666666,
+      "ci95": [
+        0.6660743118836168,
+        0.8347189446347083
+      ]
+    },
+    {
+      "model": "qwen2.5:7b",
+      "method": "translate_react",
+      "form": "ru",
+      "n": 96,
+      "k": 83,
+      "k_strict": 80,
+      "op_error": 0.0,
+      "skipped_lookup": 0.020833333333333332,
+      "parse_error": 0.0,
+      "max_steps": 0.0,
+      "median_latency_s": 7.1965,
+      "accuracy": 0.8645833333333334,
+      "accuracy_strict": 0.8333333333333334,
+      "ci95": [
+        0.7819868570932831,
+        0.9191237020323721
+      ]
+    },
+    {
+      "model": "qwen2.5:7b",
+      "method": "translate_react",
+      "form": "ru_var",
+      "n": 96,
+      "k": 80,
+      "k_strict": 80,
+      "op_error": 0.03125,
+      "skipped_lookup": 0.0,
+      "parse_error": 0.0,
+      "max_steps": 0.0,
+      "median_latency_s": 7.135999999999999,
+      "accuracy": 0.8333333333333334,
+      "accuracy_strict": 0.8333333333333334,
+      "ci95": [
+        0.7462882947885028,
+        0.8947270735549533
+      ]
+    }
+  ],
+  "contrasts": {
+    "llama3.1:8b": {
+      "react_en_shot: Roman Urdu minus English": {
+        "diff": -0.21875,
+        "ci95": [
+          -0.3229166666666667,
+          -0.11458333333333333
+        ],
+        "n": 96
+      },
+      "react_en_shot: chat spelling minus English": {
+        "diff": -0.25,
+        "ci95": [
+          -0.3541666666666667,
+          -0.13541666666666666
+        ],
+        "n": 96
+      },
+      "react_en_shot: chat spelling minus Roman Urdu": {
+        "diff": -0.03125,
+        "ci95": [
+          -0.14583333333333334,
+          0.08333333333333333
+        ],
+        "n": 96
+      },
+      "direct: Roman Urdu minus English": {
+        "diff": 0.052083333333333336,
+        "ci95": [
+          -0.07291666666666667,
+          0.16666666666666666
+        ],
+        "n": 96
+      },
+      "English: ReAct minus direct": {
+        "diff": 0.4375,
+        "ci95": [
+          0.3229166666666667,
+          0.5520833333333334
+        ],
+        "n": 96
+      },
+      "Roman Urdu: ReAct minus direct": {
+        "diff": 0.16666666666666666,
+        "ci95": [
+          0.020833333333333332,
+          0.3125
+        ],
+        "n": 96
+      },
+      "Roman Urdu: Roman Urdu example minus English example": {
+        "diff": 0.11578947368421053,
+        "ci95": [
+          0.0,
+          0.24210526315789474
+        ],
+        "n": 95
+      },
+      "Roman Urdu: translate-then-ReAct minus ReAct": {
+        "diff": 0.10416666666666667,
+        "ci95": [
+          -0.020833333333333332,
+          0.22916666666666666
+        ],
+        "n": 96
+      },
+      "Chat spelling: translate-then-ReAct minus ReAct": {
+        "diff": 0.125,
+        "ci95": [
+          -0.010416666666666666,
+          0.2604166666666667
+        ],
+        "n": 96
+      },
+      "name set B minus A (English)": {
+        "diff": 0.041666666666666664,
+        "ci95": [
+          -0.0625,
+          0.14583333333333334
+        ],
+        "n": 48
+      },
+      "name set B minus A (Roman Urdu)": {
+        "diff": -0.1875,
+        "ci95": [
+          -0.375,
+          0.020833333333333332
+        ],
+        "n": 48
+      },
+      "name set B minus A (Roman Urdu (chat spelling))": {
+        "diff": -0.08333333333333333,
+        "ci95": [
+          -0.22916666666666666,
+          0.0625
+        ],
+        "n": 48
+      }
+    },
+    "llama3.2:3b": {
+      "react_en_shot: Roman Urdu minus English": {
+        "diff": -0.3125,
+        "ci95": [
+          -0.4166666666666667,
+          -0.19791666666666666
+        ],
+        "n": 96
+      },
+      "react_en_shot: chat spelling minus English": {
+        "diff": -0.3645833333333333,
+        "ci95": [
+          -0.46875,
+          -0.2604166666666667
+        ],
+        "n": 96
+      },
+      "react_en_shot: chat spelling minus Roman Urdu": {
+        "diff": -0.052083333333333336,
+        "ci95": [
+          -0.13541666666666666,
+          0.03125
+        ],
+        "n": 96
+      },
+      "direct: Roman Urdu minus English": {
+        "diff": 0.010416666666666666,
+        "ci95": [
+          -0.09375,
+          0.11458333333333333
+        ],
+        "n": 96
+      },
+      "English: ReAct minus direct": {
+        "diff": 0.08333333333333333,
+        "ci95": [
+          -0.041666666666666664,
+          0.21875
+        ],
+        "n": 96
+      },
+      "Roman Urdu: ReAct minus direct": {
+        "diff": -0.23958333333333334,
+        "ci95": [
+          -0.375,
+          -0.10416666666666667
+        ],
+        "n": 96
+      },
+      "Roman Urdu: Roman Urdu example minus English example": {
+        "diff": 0.16666666666666666,
+        "ci95": [
+          0.052083333333333336,
+          0.2916666666666667
+        ],
+        "n": 96
+      },
+      "Roman Urdu: translate-then-ReAct minus ReAct": {
+        "diff": 0.20833333333333334,
+        "ci95": [
+          0.09375,
+          0.3125
+        ],
+        "n": 96
+      },
+      "Chat spelling: translate-then-ReAct minus ReAct": {
+        "diff": 0.15625,
+        "ci95": [
+          0.041666666666666664,
+          0.2708333333333333
+        ],
+        "n": 96
+      },
+      "name set B minus A (English)": {
+        "diff": 0.020833333333333332,
+        "ci95": [
+          -0.0625,
+          0.10416666666666667
+        ],
+        "n": 48
+      },
+      "name set B minus A (Roman Urdu)": {
+        "diff": -0.020833333333333332,
+        "ci95": [
+          -0.16666666666666666,
+          0.10416666666666667
+        ],
+        "n": 48
+      },
+      "name set B minus A (Roman Urdu (chat spelling))": {
+        "diff": -0.08333333333333333,
+        "ci95": [
+          -0.22916666666666666,
+          0.0625
+        ],
+        "n": 48
+      }
+    },
+    "qwen2.5:3b": {
+      "react_en_shot: Roman Urdu minus English": {
+        "diff": -0.3473684210526316,
+        "ci95": [
+          -0.4421052631578947,
+          -0.25263157894736843
+        ],
+        "n": 95
+      },
+      "react_en_shot: chat spelling minus English": {
+        "diff": -0.5520833333333334,
+        "ci95": [
+          -0.65625,
+          -0.4479166666666667
+        ],
+        "n": 96
+      },
+      "react_en_shot: chat spelling minus Roman Urdu": {
+        "diff": -0.22105263157894736,
+        "ci95": [
+          -0.3157894736842105,
+          -0.1368421052631579
+        ],
+        "n": 95
+      },
+      "direct: Roman Urdu minus English": {
+        "diff": -0.23958333333333334,
+        "ci95": [
+          -0.3541666666666667,
+          -0.13541666666666666
+        ],
+        "n": 96
+      },
+      "English: ReAct minus direct": {
+        "diff": 0.3541666666666667,
+        "ci95": [
+          0.23958333333333334,
+          0.4583333333333333
+        ],
+        "n": 96
+      },
+      "Roman Urdu: ReAct minus direct": {
+        "diff": 0.2631578947368421,
+        "ci95": [
+          0.14736842105263157,
+          0.3894736842105263
+        ],
+        "n": 95
+      },
+      "Roman Urdu: Roman Urdu example minus English example": {
+        "diff": -0.031578947368421054,
+        "ci95": [
+          -0.1368421052631579,
+          0.06315789473684211
+        ],
+        "n": 95
+      },
+      "Roman Urdu: translate-then-ReAct minus ReAct": {
+        "diff": -0.010526315789473684,
+        "ci95": [
+          -0.10526315789473684,
+          0.08421052631578947
+        ],
+        "n": 95
+      },
+      "Chat spelling: translate-then-ReAct minus ReAct": {
+        "diff": 0.07291666666666667,
+        "ci95": [
+          -0.052083333333333336,
+          0.1875
+        ],
+        "n": 96
+      },
+      "name set B minus A (English)": {
+        "diff": 0.041666666666666664,
+        "ci95": [
+          -0.041666666666666664,
+          0.125
+        ],
+        "n": 48
+      },
+      "name set B minus A (Roman Urdu)": {
+        "diff": -0.02127659574468085,
+        "ci95": [
+          -0.1276595744680851,
+          0.0851063829787234
+        ],
+        "n": 47
+      },
+      "name set B minus A (Roman Urdu (chat spelling))": {
+        "diff": -0.020833333333333332,
+        "ci95": [
+          -0.125,
+          0.0625
+        ],
+        "n": 48
+      }
+    },
+    "qwen2.5:7b": {
+      "react_en_shot: Roman Urdu minus English": {
+        "diff": 0.010416666666666666,
+        "ci95": [
+          -0.0625,
+          0.07291666666666667
+        ],
+        "n": 96
+      },
+      "react_en_shot: chat spelling minus English": {
+        "diff": -0.0625,
+        "ci95": [
+          -0.14609375,
+          0.020833333333333332
+        ],
+        "n": 96
+      },
+      "react_en_shot: chat spelling minus Roman Urdu": {
+        "diff": -0.07291666666666667,
+        "ci95": [
+          -0.15625,
+          0.010416666666666666
+        ],
+        "n": 96
+      },
+      "direct: Roman Urdu minus English": {
+        "diff": -0.03125,
+        "ci95": [
+          -0.08333333333333333,
+          0.020833333333333332
+        ],
+        "n": 96
+      },
+      "English: ReAct minus direct": {
+        "diff": -0.010416666666666666,
+        "ci95": [
+          -0.09375,
+          0.07291666666666667
+        ],
+        "n": 96
+      },
+      "Roman Urdu: ReAct minus direct": {
+        "diff": 0.03125,
+        "ci95": [
+          -0.041666666666666664,
+          0.10416666666666667
+        ],
+        "n": 96
+      },
+      "Roman Urdu: Roman Urdu example minus English example": {
+        "diff": -0.041666666666666664,
+        "ci95": [
+          -0.13541666666666666,
+          0.041666666666666664
+        ],
+        "n": 96
+      },
+      "Roman Urdu: translate-then-ReAct minus ReAct": {
+        "diff": -0.020833333333333332,
+        "ci95": [
+          -0.08333333333333333,
+          0.041666666666666664
+        ],
+        "n": 96
+      },
+      "Chat spelling: translate-then-ReAct minus ReAct": {
+        "diff": 0.020833333333333332,
+        "ci95": [
+          -0.0625,
+          0.10416666666666667
+        ],
+        "n": 96
+      },
+      "name set B minus A (English)": {
+        "diff": 0.0,
+        "ci95": [
+          -0.08333333333333333,
+          0.08333333333333333
+        ],
+        "n": 48
+      },
+      "name set B minus A (Roman Urdu)": {
+        "diff": -0.020833333333333332,
+        "ci95": [
+          -0.125,
+          0.08333333333333333
+        ],
+        "n": 48
+      },
+      "name set B minus A (Roman Urdu (chat spelling))": {
+        "diff": 0.0,
+        "ci95": [
+          -0.10416666666666667,
+          0.10416666666666667
+        ],
+        "n": 48
+      }
+    }
+  },
+  "by_template": [
+    {
+      "model": "llama3.1:8b",
+      "template": "T01_remaining",
+      "en": 0.5,
+      "ru": 0.5,
+      "ru_var": 0.75
+    },
+    {
+      "model": "llama3.1:8b",
+      "template": "T02_pain_drop",
+      "en": 1.0,
+      "ru": 0.75,
+      "ru_var": 0.75
+    },
+    {
+      "model": "llama3.1:8b",
+      "template": "T03_age_after",
+      "en": 1.0,
+      "ru": 0.75,
+      "ru_var": 0.625
+    },
+    {
+      "model": "llama3.1:8b",
+      "template": "T04_age_before",
+      "en": 0.875,
+      "ru": 0.5,
+      "ru_var": 0.75
+    },
+    {
+      "model": "llama3.1:8b",
+      "template": "T05_combined_exp",
+      "en": 1.0,
+      "ru": 0.625,
+      "ru_var": 0.5
+    },
+    {
+      "model": "llama3.1:8b",
+      "template": "T06_exp_difference",
+      "en": 1.0,
+      "ru": 1.0,
+      "ru_var": 1.0
+    },
+    {
+      "model": "llama3.1:8b",
+      "template": "T07_therapist_total",
+      "en": 0.875,
+      "ru": 0.625,
+      "ru_var": 0.625
+    },
+    {
+      "model": "llama3.1:8b",
+      "template": "T08_specialty",
+      "en": 0.75,
+      "ru": 0.375,
+      "ru_var": 0.25
+    },
+    {
+      "model": "llama3.1:8b",
+      "template": "T09_clinic_days",
+      "en": 1.0,
+      "ru": 0.75,
+      "ru_var": 0.875
+    },
+    {
+      "model": "llama3.1:8b",
+      "template": "T10_percent",
+      "en": 1.0,
+      "ru": 0.875,
+      "ru_var": 0.625
+    },
+    {
+      "model": "llama3.1:8b",
+      "template": "T11_left_after_two",
+      "en": 0.5,
+      "ru": 0.5,
+      "ru_var": 0.5
+    },
+    {
+      "model": "llama3.1:8b",
+      "template": "T12_who_more",
+      "en": 1.0,
+      "ru": 0.625,
+      "ru_var": 0.25
+    },
+    {
+      "model": "llama3.2:3b",
+      "template": "T01_remaining",
+      "en": 1.0,
+      "ru": 0.75,
+      "ru_var": 0.625
+    },
+    {
+      "model": "llama3.2:3b",
+      "template": "T02_pain_drop",
+      "en": 1.0,
+      "ru": 1.0,
+      "ru_var": 1.0
+    },
+    {
+      "model": "llama3.2:3b",
+      "template": "T03_age_after",
+      "en": 0.875,
+      "ru": 0.0,
+      "ru_var": 0.0
+    },
+    {
+      "model": "llama3.2:3b",
+      "template": "T04_age_before",
+      "en": 0.875,
+      "ru": 0.625,
+      "ru_var": 0.125
+    },
+    {
+      "model": "llama3.2:3b",
+      "template": "T05_combined_exp",
+      "en": 1.0,
+      "ru": 0.125,
+      "ru_var": 0.375
+    },
+    {
+      "model": "llama3.2:3b",
+      "template": "T06_exp_difference",
+      "en": 1.0,
+      "ru": 1.0,
+      "ru_var": 1.0
+    },
+    {
+      "model": "llama3.2:3b",
+      "template": "T07_therapist_total",
+      "en": 0.875,
+      "ru": 0.625,
+      "ru_var": 0.375
+    },
+    {
+      "model": "llama3.2:3b",
+      "template": "T08_specialty",
+      "en": 0.25,
+      "ru": 0.125,
+      "ru_var": 0.25
+    },
+    {
+      "model": "llama3.2:3b",
+      "template": "T09_clinic_days",
+      "en": 0.75,
+      "ru": 0.0,
+      "ru_var": 0.0
+    },
+    {
+      "model": "llama3.2:3b",
+      "template": "T10_percent",
+      "en": 1.0,
+      "ru": 1.0,
+      "ru_var": 1.0
+    },
+    {
+      "model": "llama3.2:3b",
+      "template": "T11_left_after_two",
+      "en": 0.75,
+      "ru": 0.375,
+      "ru_var": 0.125
+    },
+    {
+      "model": "llama3.2:3b",
+      "template": "T12_who_more",
+      "en": 0.0,
+      "ru": 0.0,
+      "ru_var": 0.125
+    },
+    {
+      "model": "qwen2.5:3b",
+      "template": "T01_remaining",
+      "en": 1.0,
+      "ru": 1.0,
+      "ru_var": 1.0
+    },
+    {
+      "model": "qwen2.5:3b",
+      "template": "T02_pain_drop",
+      "en": 1.0,
+      "ru": 1.0,
+      "ru_var": 1.0
+    },
+    {
+      "model": "qwen2.5:3b",
+      "template": "T03_age_after",
+      "en": 1.0,
+      "ru": 0.5,
+      "ru_var": 0.0
+    },
+    {
+      "model": "qwen2.5:3b",
+      "template": "T04_age_before",
+      "en": 1.0,
+      "ru": 0.5,
+      "ru_var": 0.25
+    },
+    {
+      "model": "qwen2.5:3b",
+      "template": "T05_combined_exp",
+      "en": 1.0,
+      "ru": 0.5,
+      "ru_var": 0.0
+    },
+    {
+      "model": "qwen2.5:3b",
+      "template": "T06_exp_difference",
+      "en": 1.0,
+      "ru": 1.0,
+      "ru_var": 0.125
+    },
+    {
+      "model": "qwen2.5:3b",
+      "template": "T07_therapist_total",
+      "en": 1.0,
+      "ru": 0.75,
+      "ru_var": 0.75
+    },
+    {
+      "model": "qwen2.5:3b",
+      "template": "T08_specialty",
+      "en": 0.5,
+      "ru": 0.42857142857142855,
+      "ru_var": 0.125
+    },
+    {
+      "model": "qwen2.5:3b",
+      "template": "T09_clinic_days",
+      "en": 0.875,
+      "ru": 0.0,
+      "ru_var": 0.0
+    },
+    {
+      "model": "qwen2.5:3b",
+      "template": "T10_percent",
+      "en": 1.0,
+      "ru": 1.0,
+      "ru_var": 1.0
+    },
+    {
+      "model": "qwen2.5:3b",
+      "template": "T11_left_after_two",
+      "en": 0.625,
+      "ru": 0.25,
+      "ru_var": 0.125
+    },
+    {
+      "model": "qwen2.5:3b",
+      "template": "T12_who_more",
+      "en": 1.0,
+      "ru": 0.0,
+      "ru_var": 0.0
+    },
+    {
+      "model": "qwen2.5:7b",
+      "template": "T01_remaining",
+      "en": 1.0,
+      "ru": 1.0,
+      "ru_var": 1.0
+    },
+    {
+      "model": "qwen2.5:7b",
+      "template": "T02_pain_drop",
+      "en": 1.0,
+      "ru": 1.0,
+      "ru_var": 1.0
+    },
+    {
+      "model": "qwen2.5:7b",
+      "template": "T03_age_after",
+      "en": 1.0,
+      "ru": 0.75,
+      "ru_var": 0.75
+    },
+    {
+      "model": "qwen2.5:7b",
+      "template": "T04_age_before",
+      "en": 1.0,
+      "ru": 1.0,
+      "ru_var": 0.125
+    },
+    {
+      "model": "qwen2.5:7b",
+      "template": "T05_combined_exp",
+      "en": 1.0,
+      "ru": 1.0,
+      "ru_var": 1.0
+    },
+    {
+      "model": "qwen2.5:7b",
+      "template": "T06_exp_difference",
+      "en": 1.0,
+      "ru": 1.0,
+      "ru_var": 1.0
+    },
+    {
+      "model": "qwen2.5:7b",
+      "template": "T07_therapist_total",
+      "en": 1.0,
+      "ru": 1.0,
+      "ru_var": 0.875
+    },
+    {
+      "model": "qwen2.5:7b",
+      "template": "T08_specialty",
+      "en": 0.75,
+      "ru": 1.0,
+      "ru_var": 0.875
+    },
+    {
+      "model": "qwen2.5:7b",
+      "template": "T09_clinic_days",
+      "en": 1.0,
+      "ru": 0.875,
+      "ru_var": 0.875
+    },
+    {
+      "model": "qwen2.5:7b",
+      "template": "T10_percent",
+      "en": 1.0,
+      "ru": 1.0,
+      "ru_var": 1.0
+    },
+    {
+      "model": "qwen2.5:7b",
+      "template": "T11_left_after_two",
+      "en": 0.375,
+      "ru": 0.25,
+      "ru_var": 0.375
+    },
+    {
+      "model": "qwen2.5:7b",
+      "template": "T12_who_more",
+      "en": 0.375,
+      "ru": 0.75,
+      "ru_var": 0.875
+    }
+  ],
+  "error_types": [
+    {
+      "model": "llama3.1:8b",
+      "form": "en",
+      "wrong": 12,
+      "op_error": 0,
+      "skipped_lookup": 0,
+      "max_steps": 5
+    },
+    {
+      "model": "llama3.1:8b",
+      "form": "ru",
+      "wrong": 78,
+      "op_error": 5,
+      "skipped_lookup": 7,
+      "max_steps": 15
+    },
+    {
+      "model": "llama3.1:8b",
+      "form": "ru_var",
+      "wrong": 73,
+      "op_error": 2,
+      "skipped_lookup": 6,
+      "max_steps": 14
+    },
+    {
+      "model": "llama3.2:3b",
+      "form": "en",
+      "wrong": 21,
+      "op_error": 0,
+      "skipped_lookup": 0,
+      "max_steps": 2
+    },
+    {
+      "model": "llama3.2:3b",
+      "form": "ru",
+      "wrong": 117,
+      "op_error": 18,
+      "skipped_lookup": 6,
+      "max_steps": 12
+    },
+    {
+      "model": "llama3.2:3b",
+      "form": "ru_var",
+      "wrong": 150,
+      "op_error": 20,
+      "skipped_lookup": 7,
+      "max_steps": 8
+    },
+    {
+      "model": "qwen2.5:3b",
+      "form": "en",
+      "wrong": 8,
+      "op_error": 0,
+      "skipped_lookup": 4,
+      "max_steps": 0
+    },
+    {
+      "model": "qwen2.5:3b",
+      "form": "ru",
+      "wrong": 126,
+      "op_error": 25,
+      "skipped_lookup": 28,
+      "max_steps": 3
+    },
+    {
+      "model": "qwen2.5:3b",
+      "form": "ru_var",
+      "wrong": 168,
+      "op_error": 30,
+      "skipped_lookup": 23,
+      "max_steps": 9
+    },
+    {
+      "model": "qwen2.5:7b",
+      "form": "en",
+      "wrong": 12,
+      "op_error": 0,
+      "skipped_lookup": 0,
+      "max_steps": 0
+    },
+    {
+      "model": "qwen2.5:7b",
+      "form": "ru",
+      "wrong": 39,
+      "op_error": 7,
+      "skipped_lookup": 4,
+      "max_steps": 0
+    },
+    {
+      "model": "qwen2.5:7b",
+      "form": "ru_var",
+      "wrong": 57,
+      "op_error": 14,
+      "skipped_lookup": 3,
+      "max_steps": 0
+    }
+  ]
+}
