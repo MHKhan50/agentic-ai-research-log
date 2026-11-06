@@ -59,7 +59,34 @@ python analysis.py                       # tables and figures, no model needed
 - `results/fig_accuracy.png`, `results/fig_template_gap.png`.
 
 ## Results
-To be filled in from the run.
+Full run on 5-6 Nov 2026: 3,838 calls over four models. All tables are in
+[`results/tables.md`](results/tables.md) and the numbers in [`results/results.json`](results/results.json).
+The paper draft is in [`../roman-urdu-react-paper/`](../roman-urdu-react-paper/).
+
+ReAct with the English example, Roman Urdu (common spelling) against English on the same items
+(percentage points, bootstrap 95% CI over items):
+
+| Model | English | Roman Urdu | Difference | 95% CI |
+|---|---|---|---|---|
+| qwen2.5:3b | 91.7% | 57.9% | -34.7 | [-44.2, -25.3] |
+| llama3.2:3b | 78.1% | 46.9% | -31.2 | [-41.7, -19.8] |
+| llama3.1:8b | 87.5% | 65.6% | -21.9 | [-32.3, -11.5] |
+| qwen2.5:7b | 87.5% | 88.5% | +1.0 | [-6.2, +7.3] |
+
+- Three of the four models lost 22 to 35 points in Roman Urdu with ReAct; qwen2.5:7b showed no gap.
+- With the database in the prompt (direct), the two Llama models showed no Roman Urdu gap
+  (llama3.1:8b +5.2 [-7.3, +16.7], llama3.2:3b +1.0 [-9.4, +11.5]); qwen2.5:3b lost 24.0 points [-35.4, -13.5].
+- Chat spelling hurt qwen2.5:3b most: -22.1 points [-31.6, -13.7] against common spelling.
+- In the ReAct runs, Roman Urdu brought more wrong arithmetic operators (llama3.2:3b 0% to 12.5%) and more
+  skipped lookups (qwen2.5:3b 4.2% to 8.4%).
+- Fixes helped llama3.2:3b: translate-then-ReAct +20.8 [+9.4, +31.2], Roman Urdu example +16.7 [+5.2, +29.2].
+  For llama3.1:8b the gains were smaller (+10.4 and +11.6) with intervals reaching zero; for qwen2.5:3b neither helped.
+- Swapping names with the same numbers gave no clear effect; every interval includes zero.
+
+![Accuracy by model, method and form](results/fig_accuracy.png)
+![Roman Urdu gap by question type](results/fig_template_gap.png)
+
+My notes on the run are in [`NOTES.md`](NOTES.md).
 
 ## Limitations
 - One fictional domain and 12 question types written by one person; real users spell Roman Urdu in more ways.
