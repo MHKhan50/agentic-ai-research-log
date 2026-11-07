@@ -7,8 +7,8 @@
 \usepackage{natbib}
 
 \title{Saal Baad, Mila Kar: Small Local ReAct Agents Lose Up to a Third of Their Accuracy on Roman Urdu Clinic Questions}
-\author{Muzammal Hussain\\Masmatix Innovations, Glasgow, United Kingdom\\\texttt{muzammal@masmatixinnovations.co.uk}}
-\date{Draft, November 2026}
+\author{Muzammal Hussain\\Independent researcher, Glasgow, United Kingdom\\ORCID: \href{https://orcid.org/0009-0001-2570-5686}{0009-0001-2570-5686}\\\texttt{muzammal@masmatixinnovations.co.uk}}
+\date{November 2026}
 
 \begin{document}
 \maketitle
@@ -28,6 +28,8 @@ We ask four questions. (1) Do small local agents answer clinic questions less ac
 \paragraph{Tool-using agents.} ReAct \citep{yao2023react} interleaves reasoning traces with actions and observations and is the basis of many agent frameworks. We use its loop unchanged, with three tools, and vary only the input language, the worked example and the model.
 
 \paragraph{Multilingual and code-switched reasoning.} \citet{shi2023mgsm} translated grade-school maths problems into ten languages and found that chain-of-thought reasoning works across languages for large models, with lower accuracy in less represented languages. Code-switched benchmarks such as GLUECoS \citep{khanuja2020gluecos} show accuracy losses on text that mixes two languages. Roman Urdu combines both difficulties: it mixes Urdu and English and has no standard spelling.
+
+\paragraph{Roman Urdu.} Work on Roman Urdu has focused on its relation to Urdu script and on retrieval: \citet{butt2025transliteration} fine-tune a multilingual translation model to transliterate between Urdu and Roman Urdu, and \citet{butt2025romanir} build a Roman Urdu retrieval dataset by translating and transliterating MS MARCO. We did not find an evaluation of tool-using agents on Roman Urdu input.
 
 \paragraph{Translating first.} Translate-test, translating the input into English and running an English system, can be strong when translation is good \citep{artetxe2023revisiting}. We test the cheap version available on a laptop: the same small model translates the question before running the English agent.
 
@@ -92,7 +94,7 @@ T11 left after two more & agar \dots baqi & 56 & 34 & 28 \\
 T12 who did more & kis ne zyada & 59 & 34 & 31 \\
 \bottomrule
 \end{tabular}
-\caption{ReAct (English example) accuracy (\%) by question type, pooled over the four models (32 answers per cell).}
+\caption{ReAct (English example) accuracy (\%) by question type, pooled over the four models (32 answers per cell; 31 for T08 in Roman Urdu after one excluded call).}
 \label{tab:templates}
 \end{table}
 
