@@ -57,8 +57,8 @@ def plot(table: List[Dict[str, Any]], path: Path) -> None:
     x = range(len(table))
     w = 0.38
     fig, ax = plt.subplots(figsize=(2.6 + 1.9 * len(table), 4.6))
-    b1 = ax.bar([i - w / 2 - 0.01 for i in x], first, w, color="#2a78d6", label="First try")
-    b2 = ax.bar([i + w / 2 + 0.01 for i in x], after, w, color="#eb6834", label="After validator feedback")
+    b1 = ax.bar([i - w / 2 - 0.01 for i in x], first, w, color="#1F4E9C", label="First try")
+    b2 = ax.bar([i + w / 2 + 0.01 for i in x], after, w, color="#E3A800", label="After validator feedback")
     for bars in (b1, b2):
         ax.bar_label(bars, fmt="%.0f%%", padding=2, fontsize=9, color="#52514e")
     ax.set_xticks(list(x))
