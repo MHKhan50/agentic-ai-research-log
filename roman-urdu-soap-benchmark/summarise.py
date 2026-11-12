@@ -106,7 +106,7 @@ def chart(table: List[Dict[str, object]], path: Path) -> None:
     models = sorted({str(r["model"]) for r in table})
     fig, ax = plt.subplots(figsize=(7, 4))
     width = 0.36
-    for i, (lang, colour) in enumerate((("English", "#0E6E6E"), ("Roman Urdu", "#B8893B"))):
+    for i, (lang, colour) in enumerate((("English", "#1F4E9C"), ("Roman Urdu", "#E3A800"))):
         rows = {str(r["model"]): r for r in table if r["language"] == lang}
         xs = [m + (i - 0.5) * width for m in range(len(models))]
         ys = [float(rows[m]["missing_pct"]) for m in models]

@@ -171,8 +171,8 @@ def chart(summary: List[Dict[str, Any]], path: Path) -> None:
     import matplotlib.pyplot as plt
     fig, ax = plt.subplots(figsize=(7.5, 4))
     width = 0.38
-    for j, (name, col, colour) in enumerate([("Soft anatomy score", "soft_caught", "#1f6f8b"),
-                                              ("Code check", "code_caught", "#d9822b")]):
+    for j, (name, col, colour) in enumerate([("Soft anatomy score", "soft_caught", "#1F4E9C"),
+                                              ("Code check", "code_caught", "#E3A800")]):
         xs = [i + (j - 0.5) * width for i in range(len(summary))]
         vals = [100 * r[col] / r["n"] if r["n"] else 0 for r in summary]
         ax.bar(xs, vals, width, label=name, color=colour)

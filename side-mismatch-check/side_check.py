@@ -213,8 +213,8 @@ def chart(summary: List[Dict[str, Any]], path: Path) -> None:
     import matplotlib.pyplot as plt
     rows = [r for r in summary if r["group"] == "all"]
     labels = [r["check"] for r in rows]
-    bars = [("Unsafe notes caught", "unsafe_caught", "unsafe", "#1f6f8b"),
-            ("Safe notes flagged", "safe_flagged", "safe", "#d9822b")]
+    bars = [("Unsafe notes caught", "unsafe_caught", "unsafe", "#1F4E9C"),
+            ("Safe notes flagged", "safe_flagged", "safe", "#E3A800")]
     fig, ax = plt.subplots(figsize=(7, 4))
     width = 0.38
     for j, (name, num, den, colour) in enumerate(bars):

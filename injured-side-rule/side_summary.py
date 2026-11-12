@@ -89,7 +89,7 @@ def chart(tab: List[Dict[str, object]], path: Path) -> None:
     conds = [c for c in ORDER if any(r["condition"] == c for r in tab)]
     fig, ax = plt.subplots(figsize=(8, 4.2))
     width = 0.8 / max(1, len(models))
-    colours = ["#1f6f8b", "#e07a1f", "#6a8d2f"]
+    colours = ["#1F4E9C", "#E3A800", "#5FA65A"]
     for i, m in enumerate(models):
         vals = []
         for c in conds:

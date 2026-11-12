@@ -53,7 +53,7 @@ def summarise(omissions: List[Dict[str, str]], review: List[Dict[str, str]]) -> 
 
 def plot(table: List[Dict[str, object]], path: Path) -> None:
     fig, axes = plt.subplots(1, 2, figsize=(9, 3.8))
-    colors = ["#2a78d6", "#eb6834"]
+    colors = ["#1F4E9C", "#E3A800"]
     panels = (("facts_missing", "Listed facts left out", "facts_listed"),
               ("hallucinated_sentences", "Unsupported sentences (labelled)", None))
     for ax, (key, title, denom) in zip(axes, panels):

@@ -219,8 +219,8 @@ def plot(summary: List[Dict[str, float]], path: Path) -> None:
     width = 0.36
     wer = [s["wer"] * 100 for s in summary]
     cer = [s["cer"] * 100 for s in summary]
-    b1 = ax1.bar([i - width / 2 - 0.01 for i in x], wer, width, color="#2a78d6", label="WER (words)")
-    b2 = ax1.bar([i + width / 2 + 0.01 for i in x], cer, width, color="#eb6834", label="CER (characters)")
+    b1 = ax1.bar([i - width / 2 - 0.01 for i in x], wer, width, color="#1F4E9C", label="WER (words)")
+    b2 = ax1.bar([i + width / 2 + 0.01 for i in x], cer, width, color="#E3A800", label="CER (characters)")
     ax1.bar_label(b1, fmt="%.0f%%", color=ink, fontsize=9, padding=2)
     ax1.bar_label(b2, fmt="%.0f%%", color=ink, fontsize=9, padding=2)
     ax1.set_title("Error rate (lower is better)", color=ink, loc="left", fontsize=11)
@@ -229,7 +229,7 @@ def plot(summary: List[Dict[str, float]], path: Path) -> None:
     ax1.legend(frameon=False, labelcolor=ink)
 
     recall = [s["term_recall"] * 100 for s in summary]
-    b3 = ax2.bar(x, recall, 0.5, color="#1baf7a")
+    b3 = ax2.bar(x, recall, 0.5, color="#5FA65A")
     ax2.bar_label(b3, fmt="%.0f%%", color=ink, fontsize=9, padding=2)
     ax2.set_ylim(0, 105)
     ax2.set_title("Clinical key terms recovered (higher is better)", color=ink, loc="left", fontsize=11)

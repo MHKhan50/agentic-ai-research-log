@@ -102,7 +102,7 @@ def chart(agr: List[Dict[str, object]], path: Path) -> None:
         vals = [next((float(a["kappa"]) for a in agr if a["judge"] == j and a["lang"] == lang and a["kappa"] != ""), 0.0)
                 for j in judges]
         ax.bar([x + i * 0.38 for x in range(len(judges))], vals, 0.38,
-               label="English notes" if lang == "en" else "Roman Urdu notes", color=("#1f4e79", "#e07b39")[i])
+               label="English notes" if lang == "en" else "Roman Urdu notes", color=("#1F4E9C", "#E3A800")[i])
     ax.set_xticks([x + 0.19 for x in range(len(judges))])
     ax.set_xticklabels(judges)
     ax.set_ylabel("Cohen's kappa vs keyword checker")

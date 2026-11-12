@@ -46,7 +46,7 @@ def summarise(om: List[Dict[str, str]], body: List[Dict[str, str]],
 
 def plot(table: List[Dict[str, object]], path: Path) -> None:
     models = sorted({str(r["model"]) for r in table})
-    colors = {"en-direct": "#2a78d6", "ru-direct": "#eb6834", "ru-translate": "#1f9e75"}
+    colors = {"en-direct": "#1F4E9C", "ru-direct": "#E3A800", "ru-translate": "#5FA65A"}
     fig, ax = plt.subplots(figsize=(8, 3.8))
     width = 0.26
     for i, cond in enumerate(CONDITIONS):
