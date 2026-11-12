@@ -32,7 +32,8 @@ MIN_DAYS = 300  # days with at least one valid sensor
 
 INK, MUTED, GRID, ORANGE_LINE = "#0b0b0b", "#52514e", "#e6e5e0", "#52514e"
 # Validated categorical slots 1-6, assigned in the fixed CITIES order
-COLORS: Dict[str, str] = dict(zip(CITIES, ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#008300"]))
+# House palette (blue, yellow, red, light green) plus grey and navy for the two remaining cities
+COLORS: Dict[str, str] = dict(zip(CITIES, ["#1F4E9C", "#8a94a8", "#5FA65A", "#C8102E", "#E3A800", "#0f1932"]))
 
 
 def clean(raw: pd.DataFrame) -> pd.DataFrame:

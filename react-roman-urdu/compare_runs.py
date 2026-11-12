@@ -20,7 +20,7 @@ RUNS = {
     "Run A: original names": HERE / "results/run-a-original-names/qwen2.5_3b/summary.csv",
     "Run B: renamed": HERE / "results/qwen2.5_3b/summary.csv",
 }
-COLORS = {"Run A: original names": "#2a78d6", "Run B: renamed": "#eb6834"}
+COLORS = {"Run A: original names": "#1F4E9C", "Run B: renamed": "#E3A800"}
 CONDITIONS = [
     ("ReAct", "English"),
     ("ReAct", "Roman Urdu"),

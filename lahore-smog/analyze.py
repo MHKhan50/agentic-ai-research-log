@@ -25,7 +25,7 @@ MIN_COVERAGE = 75.0  # % of hours in the day with data
 MAX_PLAUSIBLE = 1000.0  # µg/m³, above this treat as sensor error
 
 INK, MUTED, GRID = "#0b0b0b", "#52514e", "#e6e5e0"
-BLUE, ORANGE = "#2a78d6", "#eb6834"
+BLUE, ORANGE = "#1F4E9C", "#C8102E"  # house blue; house red for the WHO guideline line
 
 
 def clean(raw: pd.DataFrame) -> pd.DataFrame:

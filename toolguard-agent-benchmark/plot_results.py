@@ -45,7 +45,7 @@ def make_chart(rows, metric, title, y_label, output_path, y_min=0.0, y_max=1.0):
     pieces.append('<text x="{}" y="{}" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#222">Transient tool failure rate</text>'.format(left + plot_w/2, height-25))
     pieces.append('<text x="24" y="{}" transform="rotate(-90 24 {})" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#222">{}</text>'.format(top+plot_h/2, top+plot_h/2, html.escape(y_label)))
     # Colours are fixed only for chart readability; this script does not alter data.
-    colours = {"baseline": "#444444", "retry_only": "#2474b5", "guard_only": "#d17a00", "guard_retry": "#2a8a55"}
+    colours = {"baseline": "#64748b", "retry_only": "#E3A800", "guard_only": "#1F4E9C", "guard_retry": "#5FA65A"}
     for index, policy in enumerate(policies):
         selected = [row for row in rows if row["policy"] == policy]
         selected.sort(key=lambda row: float(row["tool_failure_rate"]))
