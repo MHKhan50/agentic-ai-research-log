@@ -1,0 +1,83 @@
+{
+  "_note": "Four extra wordings per request. The original wording from ../tool-call-self-correction/data/tasks.json is phrasing p0; these are p1 to p4. Every wording keeps the same ground truth.",
+  "T01": {
+    "en": ["Please schedule patient 4417 for 2:30 pm on 3 November 2026, non-urgent.",
+           "Patient 4417 needs a booking on the 3rd of November 2026 at 14:30. Not urgent.",
+           "Can you book 4417 in for 3 Nov 2026, half two in the afternoon? No urgency.",
+           "Non-urgent appointment please: patient 4417, 3 November 2026, 2.30 pm."],
+    "ru": ["4417 number patient ka appointment 3 Nov 2026 ko 2:30 baje dopehar ka laga do, urgent nahi.",
+           "Patient 4417 ko 3 November 2026 dopahar dhaai bajay ka time de do. Urgent nai hai.",
+           "3 November 2026 ko patient no 4417 ki appointment book kr do, dhai baje dopehr. Jaldi wala case nahi.",
+           "Patient 4417 ki booking karni hai, 3 Nov 2026, 2:30 PM. Urgent nahin."]
+  },
+  "T02": {
+    "en": ["Patient 2093 vitals: BP 128/84, pulse 72.",
+           "Record a blood pressure of 128 over 84 and a pulse of 72 for patient 2093.",
+           "For patient 2093, systolic one hundred and twenty-eight, diastolic eighty-four, heart rate seventy-two.",
+           "Please save these for patient 2093: pressure 128/84, pulse 72 beats per minute."],
+    "ru": ["Patient 2093 ka BP 128 by 84 aur pulse 72 save kar do.",
+           "2093 wale patient ke vitals likho: blood pressure 128/84, nabz 72.",
+           "Patient 2093: BP ek sau athais over chaurasi, pulse bahattar.",
+           "Patient no 2093 ke vitals save kro, BP 128/84 aur pulse 72 hai."]
+  },
+  "T03": {
+    "en": ["Pain score for patient 3150: 7/10, lower back.",
+           "Patient 3150 rates lower back pain at 7 out of 10.",
+           "Record a pain score of seven for patient 3150, lower back.",
+           "Patient 3150's low back pain is 7 on a 0 to 10 scale."],
+    "ru": ["Patient 3150 ki kamar ke neeche wale hisse mein dard 7/10 hai.",
+           "3150 number patient: lower back pain saat out of das.",
+           "Patient 3150 ka kamar dard (nichla hissa) das mein se 7 hai.",
+           "Patient 3150 keh raha hai ke lower back mein dard saat hai, 10 mein se."]
+  },
+  "T04": {
+    "en": ["Send patient 812 an SMS every 2 days saying: Do the knee exercises",
+           "Set an SMS reminder for patient 812, every second day, message: Do the knee exercises",
+           "Patient 812 should get this text message every two days: Do the knee exercises",
+           "Create a reminder for 812, by SMS, repeating every 2 days: Do the knee exercises"],
+    "ru": ["Patient 812 ko har 2 din baad SMS karo: Do the knee exercises",
+           "812 wale patient ke liye reminder lagao, har doosre din SMS, message: Do the knee exercises",
+           "Patient 812 ko SMS pe har do din mein ye bhejte raho: Do the knee exercises",
+           "Patient 812 ka SMS reminder set kro, har 2 din, message ye ho: Do the knee exercises"]
+  },
+  "T05": {
+    "en": ["Refund £45.50 on invoice INV-1029.",
+           "Please return 45.50 GBP for invoice INV-1029.",
+           "Invoice INV-1029 needs a refund of forty-five pounds and fifty pence.",
+           "Give back £45.50 to the customer on INV-1029."],
+    "ru": ["Invoice INV-1029 ka £45.50 refund kar do.",
+           "INV-1029 wali invoice ke 45.50 pound wapis karo.",
+           "Invoice INV-1029 par paintaalis pound aur pachas pence refund karna hai.",
+           "INV-1029 ke customer ko 45 pound 50 pence lota do."]
+  },
+  "T06": {
+    "en": ["Appointment 55821 must be cancelled, the physiotherapist is unwell. Notify the patient.",
+           "Cancel 55821, clinician unavailable, and send the patient a notification.",
+           "The physio is sick, so please cancel appointment 55821 and tell the patient.",
+           "Please call off appointment 55821 since the physio can't come in today, and inform the patient."],
+    "ru": ["Appointment 55821 cancel kar do, physio ki tabiyat kharab hai, patient ko inform karo.",
+           "55821 wali appointment khatam karo kyun ke physio sick hai, patient ko bata dena.",
+           "Physio beemar hai is liye appointment 55821 cancel kr do aur patient ko message kar do.",
+           "Appointment no 55821 cancel karni hai, physio aaj nahi aa sakta, patient ko bhi batao."]
+  },
+  "T07": {
+    "en": ["Search Glasgow for patients named Akhtar, max 5 results.",
+           "Look up patients with last name Akhtar living in Glasgow, no more than five.",
+           "Show me at most 5 Akhtar patients from Glasgow.",
+           "Find patients whose surname is Akhtar, city Glasgow, limit five."],
+    "ru": ["Glasgow ke Akhtar naam wale patients dhoondo, maximum 5.",
+           "Akhtar last name wale patients Glasgow mein search karo, paanch se zyada nahi.",
+           "Glasgow se Akhtar surname ke 5 patients tak dikhao.",
+           "Patients search karo: surname Akhtar, shehar Glasgow, zyada se zyada 5."]
+  },
+  "T08": {
+    "en": ["Patient 1288 did 3 sets of 12 bridges, please log it.",
+           "Log 3x12 bridge for patient 1288.",
+           "Record bridges for patient 1288: 3 sets, 12 reps each.",
+           "Patient 1288 completed three sets of bridges, twelve repetitions per set."],
+    "ru": ["Patient 1288 ne bridge ke 3 sets kiye, har set mein 12 reps, log kar do.",
+           "1288 ke liye bridge 3x12 likh do.",
+           "Patient 1288 ka exercise likho: bridge, teen set, barah barah reps.",
+           "Patient 1288 ke bridges log karo, 3 sets aur har ek mein 12."]
+  }
+}
