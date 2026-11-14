@@ -1,0 +1,65 @@
+model,language,condition,task_id,passed_of_5,distinct_outputs,wrong_keys,failed_trials
+llama3.1:8b,English,sampling,T01,5,1,,
+llama3.1:8b,English,sampling,T02,5,1,,
+llama3.1:8b,English,sampling,T03,4,2,body_partx1;patient_idx1;scorex1,0
+llama3.1:8b,English,sampling,T04,5,1,,
+llama3.1:8b,English,sampling,T05,5,1,,
+llama3.1:8b,English,sampling,T06,5,1,,
+llama3.1:8b,English,sampling,T07,5,1,,
+llama3.1:8b,English,sampling,T08,5,1,,
+llama3.1:8b,English,wording,T01,4,2,timex1,3
+llama3.1:8b,English,wording,T02,5,1,,
+llama3.1:8b,English,wording,T03,5,1,,
+llama3.1:8b,English,wording,T04,5,1,,
+llama3.1:8b,English,wording,T05,5,1,,
+llama3.1:8b,English,wording,T06,5,1,,
+llama3.1:8b,English,wording,T07,5,1,,
+llama3.1:8b,English,wording,T08,5,1,,
+llama3.1:8b,Roman Urdu,sampling,T01,0,2,timex5,0;1;2;3;4
+llama3.1:8b,Roman Urdu,sampling,T02,0,3,pulsex5,0;1;2;3;4
+llama3.1:8b,Roman Urdu,sampling,T03,4,2,body_partx1;patient_idx1;scorex1,0
+llama3.1:8b,Roman Urdu,sampling,T04,5,1,,
+llama3.1:8b,Roman Urdu,sampling,T05,0,2,amountx5,0;1;2;3;4
+llama3.1:8b,Roman Urdu,sampling,T06,0,1,reasonx5,0;1;2;3;4
+llama3.1:8b,Roman Urdu,sampling,T07,5,1,,
+llama3.1:8b,Roman Urdu,sampling,T08,5,1,,
+llama3.1:8b,Roman Urdu,wording,T01,3,2,timex2,0;3
+llama3.1:8b,Roman Urdu,wording,T02,3,3,diastolicx1;pulsex2;systolicx1,0;3
+llama3.1:8b,Roman Urdu,wording,T03,4,2,scorex1,2
+llama3.1:8b,Roman Urdu,wording,T04,5,1,,
+llama3.1:8b,Roman Urdu,wording,T05,3,3,amountx2,0;3
+llama3.1:8b,Roman Urdu,wording,T06,4,2,reasonx1,0
+llama3.1:8b,Roman Urdu,wording,T07,5,1,,
+llama3.1:8b,Roman Urdu,wording,T08,5,1,,
+qwen2.5:3b,English,sampling,T01,5,1,,
+qwen2.5:3b,English,sampling,T02,5,1,,
+qwen2.5:3b,English,sampling,T03,4,2,body_partx1;patient_idx1;scorex1,0
+qwen2.5:3b,English,sampling,T04,5,1,,
+qwen2.5:3b,English,sampling,T05,0,1,amountx5,0;1;2;3;4
+qwen2.5:3b,English,sampling,T06,5,1,,
+qwen2.5:3b,English,sampling,T07,5,1,,
+qwen2.5:3b,English,sampling,T08,5,1,,
+qwen2.5:3b,English,wording,T01,4,2,timex1,3
+qwen2.5:3b,English,wording,T02,5,1,,
+qwen2.5:3b,English,wording,T03,5,1,,
+qwen2.5:3b,English,wording,T04,5,1,,
+qwen2.5:3b,English,wording,T05,4,2,amountx1,0
+qwen2.5:3b,English,wording,T06,5,1,,
+qwen2.5:3b,English,wording,T07,5,1,,
+qwen2.5:3b,English,wording,T08,5,1,,
+qwen2.5:3b,Roman Urdu,sampling,T01,0,1,timex5,0;1;2;3;4
+qwen2.5:3b,Roman Urdu,sampling,T02,4,2,pulsex1,4
+qwen2.5:3b,Roman Urdu,sampling,T03,3,2,scorex2,2;4
+qwen2.5:3b,Roman Urdu,sampling,T04,5,1,,
+qwen2.5:3b,Roman Urdu,sampling,T05,0,3,amountx5,0;1;2;3;4
+qwen2.5:3b,Roman Urdu,sampling,T06,4,2,reasonx1,0
+qwen2.5:3b,Roman Urdu,sampling,T07,0,1,cityx5,0;1;2;3;4
+qwen2.5:3b,Roman Urdu,sampling,T08,5,1,,
+qwen2.5:3b,Roman Urdu,wording,T01,2,3,timex3,0;2;3
+qwen2.5:3b,Roman Urdu,wording,T02,4,2,diastolicx1;pulsex1;systolicx1,3
+qwen2.5:3b,Roman Urdu,wording,T03,2,4,body_partx1;scorex2,2;3;4
+qwen2.5:3b,Roman Urdu,wording,T04,4,2,every_daysx1,2
+qwen2.5:3b,Roman Urdu,wording,T05,3,3,amountx2,0;3
+qwen2.5:3b,Roman Urdu,wording,T06,3,2,reasonx2,2;3
+qwen2.5:3b,Roman Urdu,wording,T07,2,3,cityx3;last_namex1,0;1;3
+qwen2.5:3b,Roman Urdu,wording,T08,5,1,,

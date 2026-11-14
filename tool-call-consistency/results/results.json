@@ -1,0 +1,910 @@
+{
+  "summary": [
+    {
+      "model": "llama3.1:8b",
+      "language": "English",
+      "condition": "sampling",
+      "tasks": 8,
+      "trials_per_task": 5,
+      "pass^1": 0.975,
+      "pass^1_ci": [
+        0.925,
+        1.0
+      ],
+      "pass^3": 0.925,
+      "pass^3_ci": [
+        0.775,
+        1.0
+      ],
+      "pass^5": 0.875,
+      "pass^5_ci": [
+        0.625,
+        1.0
+      ],
+      "always_pass": 7,
+      "never_pass": 0,
+      "mixed": 1,
+      "mean_distinct_outputs": 1.12,
+      "curve": [
+        0.975,
+        0.95,
+        0.925,
+        0.9,
+        0.875
+      ]
+    },
+    {
+      "model": "llama3.1:8b",
+      "language": "English",
+      "condition": "wording",
+      "tasks": 8,
+      "trials_per_task": 5,
+      "pass^1": 0.975,
+      "pass^1_ci": [
+        0.925,
+        1.0
+      ],
+      "pass^3": 0.925,
+      "pass^3_ci": [
+        0.775,
+        1.0
+      ],
+      "pass^5": 0.875,
+      "pass^5_ci": [
+        0.625,
+        1.0
+      ],
+      "always_pass": 7,
+      "never_pass": 0,
+      "mixed": 1,
+      "mean_distinct_outputs": 1.12,
+      "curve": [
+        0.975,
+        0.95,
+        0.925,
+        0.9,
+        0.875
+      ]
+    },
+    {
+      "model": "llama3.1:8b",
+      "language": "Roman Urdu",
+      "condition": "sampling",
+      "tasks": 8,
+      "trials_per_task": 5,
+      "pass^1": 0.475,
+      "pass^1_ci": [
+        0.125,
+        0.825
+      ],
+      "pass^3": 0.425,
+      "pass^3_ci": [
+        0.125,
+        0.75
+      ],
+      "pass^5": 0.375,
+      "pass^5_ci": [
+        0.125,
+        0.75
+      ],
+      "always_pass": 3,
+      "never_pass": 4,
+      "mixed": 1,
+      "mean_distinct_outputs": 1.62,
+      "curve": [
+        0.475,
+        0.45,
+        0.425,
+        0.4,
+        0.375
+      ]
+    },
+    {
+      "model": "llama3.1:8b",
+      "language": "Roman Urdu",
+      "condition": "wording",
+      "tasks": 8,
+      "trials_per_task": 5,
+      "pass^1": 0.8,
+      "pass^1_ci": [
+        0.675,
+        0.925
+      ],
+      "pass^3": 0.512,
+      "pass^3_ci": [
+        0.25,
+        0.812
+      ],
+      "pass^5": 0.375,
+      "pass^5_ci": [
+        0.0,
+        0.75
+      ],
+      "always_pass": 3,
+      "never_pass": 0,
+      "mixed": 5,
+      "mean_distinct_outputs": 1.88,
+      "curve": [
+        0.8,
+        0.637,
+        0.512,
+        0.425,
+        0.375
+      ]
+    },
+    {
+      "model": "qwen2.5:3b",
+      "language": "English",
+      "condition": "sampling",
+      "tasks": 8,
+      "trials_per_task": 5,
+      "pass^1": 0.85,
+      "pass^1_ci": [
+        0.6,
+        1.0
+      ],
+      "pass^3": 0.8,
+      "pass^3_ci": [
+        0.5,
+        1.0
+      ],
+      "pass^5": 0.75,
+      "pass^5_ci": [
+        0.375,
+        1.0
+      ],
+      "always_pass": 6,
+      "never_pass": 1,
+      "mixed": 1,
+      "mean_distinct_outputs": 1.12,
+      "curve": [
+        0.85,
+        0.825,
+        0.8,
+        0.775,
+        0.75
+      ]
+    },
+    {
+      "model": "qwen2.5:3b",
+      "language": "English",
+      "condition": "wording",
+      "tasks": 8,
+      "trials_per_task": 5,
+      "pass^1": 0.95,
+      "pass^1_ci": [
+        0.875,
+        1.0
+      ],
+      "pass^3": 0.85,
+      "pass^3_ci": [
+        0.7,
+        1.0
+      ],
+      "pass^5": 0.75,
+      "pass^5_ci": [
+        0.375,
+        1.0
+      ],
+      "always_pass": 6,
+      "never_pass": 0,
+      "mixed": 2,
+      "mean_distinct_outputs": 1.25,
+      "curve": [
+        0.95,
+        0.9,
+        0.85,
+        0.8,
+        0.75
+      ]
+    },
+    {
+      "model": "qwen2.5:3b",
+      "language": "Roman Urdu",
+      "condition": "sampling",
+      "tasks": 8,
+      "trials_per_task": 5,
+      "pass^1": 0.525,
+      "pass^1_ci": [
+        0.225,
+        0.8
+      ],
+      "pass^3": 0.362,
+      "pass^3_ci": [
+        0.1,
+        0.663
+      ],
+      "pass^5": 0.25,
+      "pass^5_ci": [
+        0.0,
+        0.625
+      ],
+      "always_pass": 2,
+      "never_pass": 3,
+      "mixed": 3,
+      "mean_distinct_outputs": 1.62,
+      "curve": [
+        0.525,
+        0.438,
+        0.362,
+        0.3,
+        0.25
+      ]
+    },
+    {
+      "model": "qwen2.5:3b",
+      "language": "Roman Urdu",
+      "condition": "wording",
+      "tasks": 8,
+      "trials_per_task": 5,
+      "pass^1": 0.625,
+      "pass^1_ci": [
+        0.475,
+        0.775
+      ],
+      "pass^3": 0.25,
+      "pass^3_ci": [
+        0.062,
+        0.5
+      ],
+      "pass^5": 0.125,
+      "pass^5_ci": [
+        0.0,
+        0.375
+      ],
+      "always_pass": 1,
+      "never_pass": 0,
+      "mixed": 7,
+      "mean_distinct_outputs": 2.5,
+      "curve": [
+        0.625,
+        0.388,
+        0.25,
+        0.175,
+        0.125
+      ]
+    }
+  ],
+  "task_outcomes": [
+    {
+      "model": "llama3.1:8b",
+      "language": "English",
+      "condition": "sampling",
+      "task_id": "T01",
+      "passed_of_5": 5,
+      "distinct_outputs": 1,
+      "wrong_keys": "",
+      "failed_trials": ""
+    },
+    {
+      "model": "llama3.1:8b",
+      "language": "English",
+      "condition": "sampling",
+      "task_id": "T02",
+      "passed_of_5": 5,
+      "distinct_outputs": 1,
+      "wrong_keys": "",
+      "failed_trials": ""
+    },
+    {
+      "model": "llama3.1:8b",
+      "language": "English",
+      "condition": "sampling",
+      "task_id": "T03",
+      "passed_of_5": 4,
+      "distinct_outputs": 2,
+      "wrong_keys": "body_partx1;patient_idx1;scorex1",
+      "failed_trials": "0"
+    },
+    {
+      "model": "llama3.1:8b",
+      "language": "English",
+      "condition": "sampling",
+      "task_id": "T04",
+      "passed_of_5": 5,
+      "distinct_outputs": 1,
+      "wrong_keys": "",
+      "failed_trials": ""
+    },
+    {
+      "model": "llama3.1:8b",
+      "language": "English",
+      "condition": "sampling",
+      "task_id": "T05",
+      "passed_of_5": 5,
+      "distinct_outputs": 1,
+      "wrong_keys": "",
+      "failed_trials": ""
+    },
+    {
+      "model": "llama3.1:8b",
+      "language": "English",
+      "condition": "sampling",
+      "task_id": "T06",
+      "passed_of_5": 5,
+      "distinct_outputs": 1,
+      "wrong_keys": "",
+      "failed_trials": ""
+    },
+    {
+      "model": "llama3.1:8b",
+      "language": "English",
+      "condition": "sampling",
+      "task_id": "T07",
+      "passed_of_5": 5,
+      "distinct_outputs": 1,
+      "wrong_keys": "",
+      "failed_trials": ""
+    },
+    {
+      "model": "llama3.1:8b",
+      "language": "English",
+      "condition": "sampling",
+      "task_id": "T08",
+      "passed_of_5": 5,
+      "distinct_outputs": 1,
+      "wrong_keys": "",
+      "failed_trials": ""
+    },
+    {
+      "model": "llama3.1:8b",
+      "language": "English",
+      "condition": "wording",
+      "task_id": "T01",
+      "passed_of_5": 4,
+      "distinct_outputs": 2,
+      "wrong_keys": "timex1",
+      "failed_trials": "3"
+    },
+    {
+      "model": "llama3.1:8b",
+      "language": "English",
+      "condition": "wording",
+      "task_id": "T02",
+      "passed_of_5": 5,
+      "distinct_outputs": 1,
+      "wrong_keys": "",
+      "failed_trials": ""
+    },
+    {
+      "model": "llama3.1:8b",
+      "language": "English",
+      "condition": "wording",
+      "task_id": "T03",
+      "passed_of_5": 5,
+      "distinct_outputs": 1,
+      "wrong_keys": "",
+      "failed_trials": ""
+    },
+    {
+      "model": "llama3.1:8b",
+      "language": "English",
+      "condition": "wording",
+      "task_id": "T04",
+      "passed_of_5": 5,
+      "distinct_outputs": 1,
+      "wrong_keys": "",
+      "failed_trials": ""
+    },
+    {
+      "model": "llama3.1:8b",
+      "language": "English",
+      "condition": "wording",
+      "task_id": "T05",
+      "passed_of_5": 5,
+      "distinct_outputs": 1,
+      "wrong_keys": "",
+      "failed_trials": ""
+    },
+    {
+      "model": "llama3.1:8b",
+      "language": "English",
+      "condition": "wording",
+      "task_id": "T06",
+      "passed_of_5": 5,
+      "distinct_outputs": 1,
+      "wrong_keys": "",
+      "failed_trials": ""
+    },
+    {
+      "model": "llama3.1:8b",
+      "language": "English",
+      "condition": "wording",
+      "task_id": "T07",
+      "passed_of_5": 5,
+      "distinct_outputs": 1,
+      "wrong_keys": "",
+      "failed_trials": ""
+    },
+    {
+      "model": "llama3.1:8b",
+      "language": "English",
+      "condition": "wording",
+      "task_id": "T08",
+      "passed_of_5": 5,
+      "distinct_outputs": 1,
+      "wrong_keys": "",
+      "failed_trials": ""
+    },
+    {
+      "model": "llama3.1:8b",
+      "language": "Roman Urdu",
+      "condition": "sampling",
+      "task_id": "T01",
+      "passed_of_5": 0,
+      "distinct_outputs": 2,
+      "wrong_keys": "timex5",
+      "failed_trials": "0;1;2;3;4"
+    },
+    {
+      "model": "llama3.1:8b",
+      "language": "Roman Urdu",
+      "condition": "sampling",
+      "task_id": "T02",
+      "passed_of_5": 0,
+      "distinct_outputs": 3,
+      "wrong_keys": "pulsex5",
+      "failed_trials": "0;1;2;3;4"
+    },
+    {
+      "model": "llama3.1:8b",
+      "language": "Roman Urdu",
+      "condition": "sampling",
+      "task_id": "T03",
+      "passed_of_5": 4,
+      "distinct_outputs": 2,
+      "wrong_keys": "body_partx1;patient_idx1;scorex1",
+      "failed_trials": "0"
+    },
+    {
+      "model": "llama3.1:8b",
+      "language": "Roman Urdu",
+      "condition": "sampling",
+      "task_id": "T04",
+      "passed_of_5": 5,
+      "distinct_outputs": 1,
+      "wrong_keys": "",
+      "failed_trials": ""
+    },
+    {
+      "model": "llama3.1:8b",
+      "language": "Roman Urdu",
+      "condition": "sampling",
+      "task_id": "T05",
+      "passed_of_5": 0,
+      "distinct_outputs": 2,
+      "wrong_keys": "amountx5",
+      "failed_trials": "0;1;2;3;4"
+    },
+    {
+      "model": "llama3.1:8b",
+      "language": "Roman Urdu",
+      "condition": "sampling",
+      "task_id": "T06",
+      "passed_of_5": 0,
+      "distinct_outputs": 1,
+      "wrong_keys": "reasonx5",
+      "failed_trials": "0;1;2;3;4"
+    },
+    {
+      "model": "llama3.1:8b",
+      "language": "Roman Urdu",
+      "condition": "sampling",
+      "task_id": "T07",
+      "passed_of_5": 5,
+      "distinct_outputs": 1,
+      "wrong_keys": "",
+      "failed_trials": ""
+    },
+    {
+      "model": "llama3.1:8b",
+      "language": "Roman Urdu",
+      "condition": "sampling",
+      "task_id": "T08",
+      "passed_of_5": 5,
+      "distinct_outputs": 1,
+      "wrong_keys": "",
+      "failed_trials": ""
+    },
+    {
+      "model": "llama3.1:8b",
+      "language": "Roman Urdu",
+      "condition": "wording",
+      "task_id": "T01",
+      "passed_of_5": 3,
+      "distinct_outputs": 2,
+      "wrong_keys": "timex2",
+      "failed_trials": "0;3"
+    },
+    {
+      "model": "llama3.1:8b",
+      "language": "Roman Urdu",
+      "condition": "wording",
+      "task_id": "T02",
+      "passed_of_5": 3,
+      "distinct_outputs": 3,
+      "wrong_keys": "diastolicx1;pulsex2;systolicx1",
+      "failed_trials": "0;3"
+    },
+    {
+      "model": "llama3.1:8b",
+      "language": "Roman Urdu",
+      "condition": "wording",
+      "task_id": "T03",
+      "passed_of_5": 4,
+      "distinct_outputs": 2,
+      "wrong_keys": "scorex1",
+      "failed_trials": "2"
+    },
+    {
+      "model": "llama3.1:8b",
+      "language": "Roman Urdu",
+      "condition": "wording",
+      "task_id": "T04",
+      "passed_of_5": 5,
+      "distinct_outputs": 1,
+      "wrong_keys": "",
+      "failed_trials": ""
+    },
+    {
+      "model": "llama3.1:8b",
+      "language": "Roman Urdu",
+      "condition": "wording",
+      "task_id": "T05",
+      "passed_of_5": 3,
+      "distinct_outputs": 3,
+      "wrong_keys": "amountx2",
+      "failed_trials": "0;3"
+    },
+    {
+      "model": "llama3.1:8b",
+      "language": "Roman Urdu",
+      "condition": "wording",
+      "task_id": "T06",
+      "passed_of_5": 4,
+      "distinct_outputs": 2,
+      "wrong_keys": "reasonx1",
+      "failed_trials": "0"
+    },
+    {
+      "model": "llama3.1:8b",
+      "language": "Roman Urdu",
+      "condition": "wording",
+      "task_id": "T07",
+      "passed_of_5": 5,
+      "distinct_outputs": 1,
+      "wrong_keys": "",
+      "failed_trials": ""
+    },
+    {
+      "model": "llama3.1:8b",
+      "language": "Roman Urdu",
+      "condition": "wording",
+      "task_id": "T08",
+      "passed_of_5": 5,
+      "distinct_outputs": 1,
+      "wrong_keys": "",
+      "failed_trials": ""
+    },
+    {
+      "model": "qwen2.5:3b",
+      "language": "English",
+      "condition": "sampling",
+      "task_id": "T01",
+      "passed_of_5": 5,
+      "distinct_outputs": 1,
+      "wrong_keys": "",
+      "failed_trials": ""
+    },
+    {
+      "model": "qwen2.5:3b",
+      "language": "English",
+      "condition": "sampling",
+      "task_id": "T02",
+      "passed_of_5": 5,
+      "distinct_outputs": 1,
+      "wrong_keys": "",
+      "failed_trials": ""
+    },
+    {
+      "model": "qwen2.5:3b",
+      "language": "English",
+      "condition": "sampling",
+      "task_id": "T03",
+      "passed_of_5": 4,
+      "distinct_outputs": 2,
+      "wrong_keys": "body_partx1;patient_idx1;scorex1",
+      "failed_trials": "0"
+    },
+    {
+      "model": "qwen2.5:3b",
+      "language": "English",
+      "condition": "sampling",
+      "task_id": "T04",
+      "passed_of_5": 5,
+      "distinct_outputs": 1,
+      "wrong_keys": "",
+      "failed_trials": ""
+    },
+    {
+      "model": "qwen2.5:3b",
+      "language": "English",
+      "condition": "sampling",
+      "task_id": "T05",
+      "passed_of_5": 0,
+      "distinct_outputs": 1,
+      "wrong_keys": "amountx5",
+      "failed_trials": "0;1;2;3;4"
+    },
+    {
+      "model": "qwen2.5:3b",
+      "language": "English",
+      "condition": "sampling",
+      "task_id": "T06",
+      "passed_of_5": 5,
+      "distinct_outputs": 1,
+      "wrong_keys": "",
+      "failed_trials": ""
+    },
+    {
+      "model": "qwen2.5:3b",
+      "language": "English",
+      "condition": "sampling",
+      "task_id": "T07",
+      "passed_of_5": 5,
+      "distinct_outputs": 1,
+      "wrong_keys": "",
+      "failed_trials": ""
+    },
+    {
+      "model": "qwen2.5:3b",
+      "language": "English",
+      "condition": "sampling",
+      "task_id": "T08",
+      "passed_of_5": 5,
+      "distinct_outputs": 1,
+      "wrong_keys": "",
+      "failed_trials": ""
+    },
+    {
+      "model": "qwen2.5:3b",
+      "language": "English",
+      "condition": "wording",
+      "task_id": "T01",
+      "passed_of_5": 4,
+      "distinct_outputs": 2,
+      "wrong_keys": "timex1",
+      "failed_trials": "3"
+    },
+    {
+      "model": "qwen2.5:3b",
+      "language": "English",
+      "condition": "wording",
+      "task_id": "T02",
+      "passed_of_5": 5,
+      "distinct_outputs": 1,
+      "wrong_keys": "",
+      "failed_trials": ""
+    },
+    {
+      "model": "qwen2.5:3b",
+      "language": "English",
+      "condition": "wording",
+      "task_id": "T03",
+      "passed_of_5": 5,
+      "distinct_outputs": 1,
+      "wrong_keys": "",
+      "failed_trials": ""
+    },
+    {
+      "model": "qwen2.5:3b",
+      "language": "English",
+      "condition": "wording",
+      "task_id": "T04",
+      "passed_of_5": 5,
+      "distinct_outputs": 1,
+      "wrong_keys": "",
+      "failed_trials": ""
+    },
+    {
+      "model": "qwen2.5:3b",
+      "language": "English",
+      "condition": "wording",
+      "task_id": "T05",
+      "passed_of_5": 4,
+      "distinct_outputs": 2,
+      "wrong_keys": "amountx1",
+      "failed_trials": "0"
+    },
+    {
+      "model": "qwen2.5:3b",
+      "language": "English",
+      "condition": "wording",
+      "task_id": "T06",
+      "passed_of_5": 5,
+      "distinct_outputs": 1,
+      "wrong_keys": "",
+      "failed_trials": ""
+    },
+    {
+      "model": "qwen2.5:3b",
+      "language": "English",
+      "condition": "wording",
+      "task_id": "T07",
+      "passed_of_5": 5,
+      "distinct_outputs": 1,
+      "wrong_keys": "",
+      "failed_trials": ""
+    },
+    {
+      "model": "qwen2.5:3b",
+      "language": "English",
+      "condition": "wording",
+      "task_id": "T08",
+      "passed_of_5": 5,
+      "distinct_outputs": 1,
+      "wrong_keys": "",
+      "failed_trials": ""
+    },
+    {
+      "model": "qwen2.5:3b",
+      "language": "Roman Urdu",
+      "condition": "sampling",
+      "task_id": "T01",
+      "passed_of_5": 0,
+      "distinct_outputs": 1,
+      "wrong_keys": "timex5",
+      "failed_trials": "0;1;2;3;4"
+    },
+    {
+      "model": "qwen2.5:3b",
+      "language": "Roman Urdu",
+      "condition": "sampling",
+      "task_id": "T02",
+      "passed_of_5": 4,
+      "distinct_outputs": 2,
+      "wrong_keys": "pulsex1",
+      "failed_trials": "4"
+    },
+    {
+      "model": "qwen2.5:3b",
+      "language": "Roman Urdu",
+      "condition": "sampling",
+      "task_id": "T03",
+      "passed_of_5": 3,
+      "distinct_outputs": 2,
+      "wrong_keys": "scorex2",
+      "failed_trials": "2;4"
+    },
+    {
+      "model": "qwen2.5:3b",
+      "language": "Roman Urdu",
+      "condition": "sampling",
+      "task_id": "T04",
+      "passed_of_5": 5,
+      "distinct_outputs": 1,
+      "wrong_keys": "",
+      "failed_trials": ""
+    },
+    {
+      "model": "qwen2.5:3b",
+      "language": "Roman Urdu",
+      "condition": "sampling",
+      "task_id": "T05",
+      "passed_of_5": 0,
+      "distinct_outputs": 3,
+      "wrong_keys": "amountx5",
+      "failed_trials": "0;1;2;3;4"
+    },
+    {
+      "model": "qwen2.5:3b",
+      "language": "Roman Urdu",
+      "condition": "sampling",
+      "task_id": "T06",
+      "passed_of_5": 4,
+      "distinct_outputs": 2,
+      "wrong_keys": "reasonx1",
+      "failed_trials": "0"
+    },
+    {
+      "model": "qwen2.5:3b",
+      "language": "Roman Urdu",
+      "condition": "sampling",
+      "task_id": "T07",
+      "passed_of_5": 0,
+      "distinct_outputs": 1,
+      "wrong_keys": "cityx5",
+      "failed_trials": "0;1;2;3;4"
+    },
+    {
+      "model": "qwen2.5:3b",
+      "language": "Roman Urdu",
+      "condition": "sampling",
+      "task_id": "T08",
+      "passed_of_5": 5,
+      "distinct_outputs": 1,
+      "wrong_keys": "",
+      "failed_trials": ""
+    },
+    {
+      "model": "qwen2.5:3b",
+      "language": "Roman Urdu",
+      "condition": "wording",
+      "task_id": "T01",
+      "passed_of_5": 2,
+      "distinct_outputs": 3,
+      "wrong_keys": "timex3",
+      "failed_trials": "0;2;3"
+    },
+    {
+      "model": "qwen2.5:3b",
+      "language": "Roman Urdu",
+      "condition": "wording",
+      "task_id": "T02",
+      "passed_of_5": 4,
+      "distinct_outputs": 2,
+      "wrong_keys": "diastolicx1;pulsex1;systolicx1",
+      "failed_trials": "3"
+    },
+    {
+      "model": "qwen2.5:3b",
+      "language": "Roman Urdu",
+      "condition": "wording",
+      "task_id": "T03",
+      "passed_of_5": 2,
+      "distinct_outputs": 4,
+      "wrong_keys": "body_partx1;scorex2",
+      "failed_trials": "2;3;4"
+    },
+    {
+      "model": "qwen2.5:3b",
+      "language": "Roman Urdu",
+      "condition": "wording",
+      "task_id": "T04",
+      "passed_of_5": 4,
+      "distinct_outputs": 2,
+      "wrong_keys": "every_daysx1",
+      "failed_trials": "2"
+    },
+    {
+      "model": "qwen2.5:3b",
+      "language": "Roman Urdu",
+      "condition": "wording",
+      "task_id": "T05",
+      "passed_of_5": 3,
+      "distinct_outputs": 3,
+      "wrong_keys": "amountx2",
+      "failed_trials": "0;3"
+    },
+    {
+      "model": "qwen2.5:3b",
+      "language": "Roman Urdu",
+      "condition": "wording",
+      "task_id": "T06",
+      "passed_of_5": 3,
+      "distinct_outputs": 2,
+      "wrong_keys": "reasonx2",
+      "failed_trials": "2;3"
+    },
+    {
+      "model": "qwen2.5:3b",
+      "language": "Roman Urdu",
+      "condition": "wording",
+      "task_id": "T07",
+      "passed_of_5": 2,
+      "distinct_outputs": 3,
+      "wrong_keys": "cityx3;last_namex1",
+      "failed_trials": "0;1;3"
+    },
+    {
+      "model": "qwen2.5:3b",
+      "language": "Roman Urdu",
+      "condition": "wording",
+      "task_id": "T08",
+      "passed_of_5": 5,
+      "distinct_outputs": 1,
+      "wrong_keys": "",
+      "failed_trials": ""
+    }
+  ]
+}
