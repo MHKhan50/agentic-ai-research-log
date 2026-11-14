@@ -83,3 +83,21 @@ def test_half_written_line_is_ignored(tmp_path: Path):
     out = tmp_path / "runs.jsonl"
     out.write_text('{"key": "a"}\n{"key": "b', encoding="utf-8")
     assert done_keys(out) == {"a"}
+
+
+def test_timeout_is_retried_once_then_recorded_as_failed(tmp_path: Path):
+    import requests
+    calls = {"n": 0}
+
+    def slow_chat(model, messages, temperature, seed):
+        calls["n"] += 1
+        raise requests.Timeout()
+
+    out = tmp_path / "runs.jsonl"
+    guarded = run.with_timeout_guard(slow_chat)
+    assert guarded("m", [], 0.0, 42) == run.TIMEOUT_REPLY and calls["n"] == 2
+    rows_before = calls["n"]
+    run.main(["--models", "fake:1b"], chat=slow_chat, out=out)
+    rows = [json.loads(line) for line in out.read_text().splitlines()]
+    assert len(rows) == 8 * 2 * 2 * N_TRIALS and not any(r["passed"] for r in rows)
+    assert calls["n"] - rows_before == 2 * len(rows)
