@@ -21,7 +21,7 @@ from consistency import HERE, N_TRIALS, canonical_output, pass_hat_k  # noqa: E4
 
 LANG = {"en": "English", "ru": "Roman Urdu"}
 COND = {"wording": "Five wordings, temperature 0", "sampling": "Same wording, temperature 0.7, 5 seeds"}
-COLOURS = {("en", 0): "#1F4E9C", ("ru", 0): "#C8102E", ("en", 1): "#E3A800", ("ru", 1): "#7CB342"}
+COLOURS = {("en", 0): "#1F4E9C", ("ru", 0): "#C8102E", ("en", 1): "#E3A800", ("ru", 1): "#5FA65A"}
 N_BOOT = 2000
 
 Group = Tuple[str, str, str]  # model, lang, condition

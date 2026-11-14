@@ -26,7 +26,30 @@ python analysis.py             # writes results/summary.csv, task_outcomes.csv, 
 `run.py` appends one line per call to `results/runs.jsonl` and skips finished calls, so it can be stopped and restarted.
 
 ## Results
-_To be filled from my own run._
+320 calls on a MacBook M4, all completed (no timeouts in the final run). 95% intervals resample the 8 tasks.
+
+| Model | Language | Condition | pass^1 | pass^5 [95% CI] | Tasks always / sometimes / never right | Distinct outputs per task |
+|---|---|---|---|---|---|---|
+| llama3.1:8b | English | wording | 97.5% | 87.5% [62.5, 100] | 7 / 1 / 0 | 1.12 |
+| llama3.1:8b | English | sampling | 97.5% | 87.5% [62.5, 100] | 7 / 1 / 0 | 1.12 |
+| llama3.1:8b | Roman Urdu | wording | 80.0% | 37.5% [0, 75.0] | 3 / 5 / 0 | 1.88 |
+| llama3.1:8b | Roman Urdu | sampling | 47.5% | 37.5% [12.5, 75.0] | 3 / 1 / 4 | 1.62 |
+| qwen2.5:3b | English | wording | 95.0% | 75.0% [37.5, 100] | 6 / 2 / 0 | 1.25 |
+| qwen2.5:3b | English | sampling | 85.0% | 75.0% [37.5, 100] | 6 / 1 / 1 | 1.12 |
+| qwen2.5:3b | Roman Urdu | wording | 62.5% | 12.5% [0, 37.5] | 1 / 7 / 0 | 2.50 |
+| qwen2.5:3b | Roman Urdu | sampling | 52.5% | 25.0% [0, 62.5] | 2 / 3 / 3 | 1.62 |
+
+![pass^k curves](results/pass_k.png)
+
+**What I found**
+
+- **English calls were mostly repeatable.** pass^5 was 87.5% for llama3.1:8b and 75% for qwen2.5:3b in both conditions.
+- **Roman Urdu calls were not.** pass^5 fell to 12.5-37.5%. One try hides this: with five wordings, qwen2.5:3b got 62.5% of single tries right but only 12.5% of tasks right all five times; llama3.1:8b went from 80% to 37.5%.
+- **The two sources of variation fail differently in Roman Urdu.** Rewording made most tasks *sometimes* right (5 of 8 tasks for llama3.1:8b, 7 of 8 for qwen2.5:3b). Sampling the original wording made failures *systematic*: llama3.1:8b got 4 of 8 Roman Urdu tasks wrong in all five samples (time, pulse, amount and reason), so a retry with a new seed would not have fixed them.
+- **The fields that broke** were the ones that need interpretation rather than copying: the appointment time (T01), pulse (T02), pain score (T03), refund amount (T05), cancellation reason (T06) and city (T07), and once the reminder interval (T04). The exercise log (T08) was right in every try for both models and languages.
+- 150 of 320 replies wrapped the JSON in code fences despite the instruction not to; it could still be parsed. 6 replies were not schema valid.
+
+Eight tasks give wide intervals, so the English-versus-Roman-Urdu gap is clear but the differences between models and conditions are not.
 
 ## Limitations
 - 8 tasks only, so the bootstrap intervals are wide; this is a pilot for a larger task set.
