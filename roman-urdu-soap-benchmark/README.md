@@ -63,7 +63,7 @@ Paired test, English vs Roman Urdu (same 168 facts, exact McNemar):
 - The most dangerous error was C14 from llama3.1:8b: the left knee replacement became a hip replacement and the swollen calf disappeared. After knee surgery a swollen calf is the main warning sign of a DVT, and a missed clot can travel to the lungs. The note still said DVT and hospital, but a physiotherapist reading it would examine the wrong joint and could not see why a clot was suspected.
 - The side was dropped from almost every Roman Urdu note. A model cannot be trusted to keep it, so the pipeline should check it: if the transcript says daayan, baayan, left or right, the note must state the side; if not, ask the model once more, and if it is still missing mark the note incomplete for the physiotherapist. This is a proposal and needs its own test.
 - The gate sent 17 of 20 llama3.1:8b Roman Urdu notes for review. That is a lot, but every flagged note failed a real check, 5 of them only for the missing side. I have not read all 17 by hand, and the 3 notes that passed were not checked either, so how many errors the gate misses is still unknown.
-- For MeetPhysio, correcting a flagged draft should still be quicker than writing the note from scratch, but I have not measured this.
+- For a note-drafting tool, correcting a flagged draft should still be quicker than writing the note from scratch, but I have not measured this.
 
 ## Article
 [In 20 clinic consultations, local AI lost red flags and the injured side when patients spoke Roman Urdu](https://masmatixinnovations.co.uk/insights/roman-urdu-soap-benchmark.html)

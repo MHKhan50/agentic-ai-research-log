@@ -51,7 +51,7 @@ Files: [`results/summary.csv`](results/summary.csv), [`results/omissions.csv`](r
 ## My notes
 - The most dangerous result was the wrong body part in the Roman Urdu notes: lower back became knees, knee became groin, and neck became shoulder. In a live clinic this would lead to the wrong examination and the wrong physiotherapy treatment.
 - The checker missed "10 PM / 5 hours" because it only checks whether numbers and words appear in the transcript, not what they mean. A better check would read the whole note, including Subjective and Assessment, for example an LLM-as-a-judge with clinician review, as the paper suggests. A judge model can also hallucinate, so it would need its own test.
-- For a small local model, reading Roman Urdu directly was unreliable here. One option for MeetPhysio is to translate the Roman Urdu transcript into English first and then draft the note. This is a hypothesis: the translation step could make the same mistakes ("chakkar" as "circular motion"), so it needs its own measurement.
+- For a small local model, reading Roman Urdu directly was unreliable here. One option for a note-drafting tool is to translate the Roman Urdu transcript into English first and then draft the note. This is a hypothesis: the translation step could make the same mistakes ("chakkar" as "circular motion"), so it needs its own measurement.
 
 ## Limitations
 - 8 notes from 4 consultations I wrote and one model at temperature 0. A pilot, not a benchmark.

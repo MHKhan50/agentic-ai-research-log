@@ -64,7 +64,7 @@ The five unsafe notes in my labels that `side_set` passed all had the side right
 - A side that appears only inside copied Roman Urdu, like "lower back pain (baayan koolha)" in C6 or the full sentence in brackets in C19, is unsafe to me. A physiotherapist who does not read Roman Urdu cannot use it. The side check counts these words as a side and passes the note.
 - In C15, C16 and C20 the glossary made llama3.1:8b add a side to consultations that have none ("daayan pelvis", "daayan kamar"). The side check flagged all three, but the automatic reference missed them because it reads only English words. Here the check was right and the reference was wrong.
 - The side check cannot see a wrong body part. C5 turned a right ankle into a right knee and C4 replaced neck pain with hand and shoulder pain; both passed every side check.
-- For MeetPhysio I would use `side_set` as the side gate, add a body-part check built the same way (transcript vs note), and send any note with untranslated Roman Urdu to review. `side_part` is not worth it on these notes.
+- For a note-drafting tool I would use `side_set` as the side gate, add a body-part check built the same way (transcript vs note), and send any note with untranslated Roman Urdu to review. `side_part` is not worth it on these notes.
 
 ## Article
 [Checking the injured side with code, not the AI, caught all 43 wrong sides in Roman Urdu notes](https://masmatixinnovations.co.uk/insights/side-mismatch-check-roman-urdu.html)

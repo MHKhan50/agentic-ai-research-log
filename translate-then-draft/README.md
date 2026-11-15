@@ -57,7 +57,7 @@ Files: [`results/notes.jsonl`](results/notes.jsonl) (notes and translations), [`
 ## My notes
 - The most dangerous errors were the changes of side and body part that `llama3.1:8b` made while translating: in C4 the neck's left side became the right, and in C3 the shoulder became the lower back. A note like this would lead to treatment and exercises for the wrong area, so it has to be caught before anyone acts on it.
 - `qwen2.5:3b` skipped the translation step and returned the Roman Urdu input unchanged, and the pipeline carried on as if it had worked. A pipeline should check every step, for example stop when the translation is the same as (or almost the same as) the input, and pass the case to a person.
-- For MeetPhysio, the safer route from this data is direct drafting with the 8B model plus a required physiotherapist review before sign-off. Translate-then-draft raised critical missing facts from 3 to 5 and swapped side and anatomy. Direct 8B missed 4 of 42 facts against 13 for the 3B model, but it still wrote "ankle" for a knee, so it cannot be used without review.
+- For a note-drafting tool, the safer route from this data is direct drafting with the 8B model plus a required physiotherapist review before sign-off. Translate-then-draft raised critical missing facts from 3 to 5 and swapped side and anatomy. Direct 8B missed 4 of 42 facts against 13 for the 3B model, but it still wrote "ankle" for a knee, so it cannot be used without review.
 - "Vertigo" for "dizziness" is a fair translation; my keyword check counted it as missing. That is a limit of the checker, not a model error.
 
 ## Article

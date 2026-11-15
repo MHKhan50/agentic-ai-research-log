@@ -55,7 +55,7 @@ Per-clip numbers: [`results/results.csv`](results/results.csv). Raw transcripts:
 
 ## My observations
 - Moving from tiny to small cut WER by more than half, yet clinical key terms stayed around 50%. Clinical words and English terms spoken inside Urdu are rare in general training data, so the model often hears the sound but writes an unfamiliar spelling.
-- For MeetPhysio I would choose **small**. Base recovered fewer key terms than tiny (46% vs 50%), while small was best on every measure and, at a real-time factor of 0.13, is still fast enough for live use. Even small missed every X-ray and MRI, so model choice alone will not fix English medical terms.
+- For a local note-drafting tool I would choose **small**. Base recovered fewer key terms than tiny (46% vs 50%), while small was best on every measure and, at a real-time factor of 0.13, is still fast enough for live use. Even small missed every X-ray and MRI, so model choice alone will not fix English medical terms.
 - I listened back to clip 3 and confirmed that I said "مشکل" where the script had "تکلیف". The model was right there, so part of the measured error comes from my reading, not from Whisper.
 
 ## Limitations
