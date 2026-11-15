@@ -77,6 +77,25 @@ of single tool calls:
   \item Which arguments fail, and would a schema validator catch them?
 \end{enumerate}
 
+\section{Related work}
+
+\paragraph{Tool-use benchmarks.} ToolLLM built ToolBench, an instruction-tuning dataset over more than 16,000 real REST
+APIs, together with an automatic evaluator~\cite{qin2024toolllm}. The Berkeley Function Calling Leaderboard (BFCL)
+scores function calls by comparing their abstract syntax tree with the expected call, across serial, parallel and
+multi-turn settings, and reports that state-of-the-art models do well on single-turn calls while memory and long-horizon
+reasoning remain open~\cite{patil2025bfcl}. Both score whether a call is right on one attempt and work in English. We
+use the same notion of a correct call (every argument value must match) but ask how often it stays correct over repeated
+attempts and across languages.
+
+\paragraph{Repeated-trial reliability.} $\tau$-bench introduced \passk{k} for tool-agent-user conversations under domain
+policies and showed that success falls sharply as $k$ grows~\cite{yao2024tau}. We apply the same estimator to single
+tool calls, separate rewording from sampling as sources of variation, and add a code-mixed language.
+
+\paragraph{Roman Urdu and code-mixed input.} Code-mixed text lowers accuracy for models trained mainly on one
+language~\cite{khanuja2020gluecos}, and Roman Urdu has few resources and no standard spelling~\cite{butt2025romanir,butt2025transliteration}.
+Our earlier benchmark found that Roman Urdu input reduced the accuracy of small local ReAct agents on clinic questions by
+up to 35 points~\cite{hussain2026romanurdu}; this paper isolates the tool-call step.
+
 \section{Method}
 
 \paragraph{Tasks.} Eight clinic tools, each with a JSON schema and a ground-truth argument list: book an
@@ -114,7 +133,10 @@ ran through Ollama on a MacBook (Apple M4, 16\,GB) with at most 256 output token
 was retried once (none did in the final run). An attempt passes if the reply is valid against the tool schema and
 every value matches the ground truth after normalising case and punctuation. We report \passk{k} with the unbiased
 estimator of $\tau$-bench, $\binom{c}{k}/\binom{n}{k}$ averaged over tasks, with $n=5$ attempts and $c$ passes, and
-95\% percentile bootstrap intervals over the eight tasks (2,000 resamples)~\cite{efron1993bootstrap}. We also count
+95\% percentile bootstrap intervals over the eight tasks (2,000 resamples)~\cite{efron1993bootstrap}. The estimator
+assumes exchangeable attempts, which holds for the sampling condition; in the wording condition the five attempts are
+different requests, so \passk{k} there summarises robustness to rewording rather than estimating a probability over
+random draws. We also count
 tasks that always, sometimes or never pass, and the number of distinct outputs per task.
 
 \paragraph{Validator pilot.} Before this study we ran each of the eight tasks once per language with
