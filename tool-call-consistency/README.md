@@ -1,5 +1,7 @@
 # Tool-call consistency (pass^k) with small local models
 
+> This work now has its own repository: [MHKhan50/tool-call-reliability-bench](https://github.com/MHKhan50/tool-call-reliability-bench). This folder is kept as the original snapshot.
+
 **Research question:** When a small local model makes the same clinic tool call five times, how often is it fully correct every time, in English and in Roman Urdu, and is the variation caused by the wording of the request or by random sampling?
 
 ## Why it matters

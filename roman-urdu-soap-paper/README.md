@@ -1,5 +1,7 @@
 # Paper draft: Roman Urdu vs English SOAP notes from small local models
 
+> This work now has its own repository: [MHKhan50/roman-urdu-soap-notes-benchmark](https://github.com/MHKhan50/roman-urdu-soap-notes-benchmark). This folder is kept as the original snapshot.
+
 **Status:** working draft, not yet submitted.
 
 `main.tex` and `refs.bib` build the paper from the results in [`../roman-urdu-soap-benchmark/`](../roman-urdu-soap-benchmark/), [`../translate-then-draft/`](../translate-then-draft/) and [`../clinical-note-hallucination/`](../clinical-note-hallucination/). Every number in the paper comes from those folders.

@@ -1,5 +1,7 @@
 # Roman Urdu vs English SOAP notes: a 20-consultation benchmark
 
+> This work now has its own repository: [MHKhan50/roman-urdu-soap-notes-benchmark](https://github.com/MHKhan50/roman-urdu-soap-notes-benchmark). This folder is kept as the original snapshot.
+
 **Research question:** Across 20 physiotherapy consultations, do two small local models (`qwen2.5:3b`, `llama3.1:8b`) leave out more facts, more critical facts and name the wrong body part or side more often when the consultation is in Roman Urdu instead of English? And how many notes would a simple safety gate send to a clinician?
 
 This extends [`clinical-note-hallucination/`](../clinical-note-hallucination/) (4 consultations) and [`translate-then-draft/`](../translate-then-draft/). Both pilots found wrong body parts and lost red-flag answers in Roman Urdu notes, but 4 cases are too few to tell a real difference from chance.
