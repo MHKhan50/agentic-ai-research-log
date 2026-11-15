@@ -53,6 +53,10 @@ python analysis.py             # writes results/summary.csv, task_outcomes.csv, 
 
 Eight tasks give wide intervals, so the English-versus-Roman-Urdu gap is clear but the differences between models and conditions are not.
 
+## Clinician review
+
+A physiotherapist checked the 8 requests and the 32 Roman Urdu rewordings after the runs and marked every one realistic, natural and correct in meaning and values. Details and the filled sheet: [`clinician-review/`](clinician-review/).
+
 ## Limitations
 - 8 tasks only, so the bootstrap intervals are wide; this is a pilot for a larger task set.
 - The 4 extra wordings per request were written by me; they are not a sample of real clinic staff messages.
