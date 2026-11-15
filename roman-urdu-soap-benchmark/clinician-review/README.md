@@ -17,9 +17,18 @@ python -m pytest -q tests                    # offline tests with a fake reviewe
 `score.py` needs `openpyxl` for .xlsx files; a .csv exported from the Review tab also works.
 
 ## Results
-Not yet available: waiting for the review.
+Review completed in November 2026. A panel of five physiotherapists led by Maryam Khalid (DPT; MSc Advanced Physiotherapy, Glasgow Caledonian University) labelled the 50 blinded notes together on one sheet; she then re-read every note on her own three to four times, revised labels where needed and wrote a comment per note. Labels are in `review_filled.csv`; `python score.py review_filled.csv` writes `labels.csv` and `agreement.csv`.
+
+| Check | Both yes | Check only | Panel only | Both no | Agreement | Kappa | Precision / recall |
+|---|---|---|---|---|---|---|---|
+| Side wrong or missing | 27 | 0 | 3 | 20 | 0.94 | 0.88 | 1.00 / 0.90 |
+| Body region wrong or missing | 16 | 3 | 3 | 28 | 0.88 | 0.75 | 0.84 / 0.84 |
+| Critical fact missing | 8 | 17 | 5 | 20 | 0.56 | 0.12 | 0.32 / 0.62 |
+| Gate vs any error | 38 | 1 | 4 | 7 | 0.90 | 0.68 | 0.97 / 0.90 |
+
+The panel marked an invented or wrong detail in 35 of 40 Roman Urdu notes and 2 of 10 English notes. The side and body-region checks agree well with the clinicians; the keyword check for critical facts does not.
 
 ## Limitations
-- One reviewer, so no agreement between clinicians can be measured.
-- The reviewer is a member of the author's family.
+- One consensus label per item, so agreement between individual clinicians cannot be measured.
+- The lead reviewer is a co-author of the paper and a member of the author's family.
 - "Critical fact" in the automatic check also covers medicines, referrals and urgent actions, so the reviewer's column uses the same wider definition.

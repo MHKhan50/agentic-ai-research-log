@@ -1,0 +1,11 @@
+check,subset,n,both_yes,auto_only,reviewer_only,both_no,agreement,kappa,precision,recall
+wrong_region,all,50,16,3,3,28,0.88,0.745,0.842,0.842
+side_problem,all,50,27,0,3,20,0.94,0.878,1.0,0.9
+missing_critical,all,50,8,17,5,20,0.56,0.12,0.32,0.615
+gate,all,50,38,1,4,7,0.9,0.677,0.974,0.905
+reviewer_other_error,all,50,37,,,,,,,
+wrong_region,roman_urdu,40,15,2,3,20,0.875,0.746,0.882,0.833
+side_problem,roman_urdu,40,27,0,3,10,0.925,0.818,1.0,0.9
+missing_critical,roman_urdu,40,8,17,4,11,0.475,0.045,0.32,0.667
+gate,roman_urdu,40,37,0,2,1,0.95,0.481,1.0,0.949
+reviewer_other_error,roman_urdu,40,35,,,,,,,

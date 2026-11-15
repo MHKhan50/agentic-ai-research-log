@@ -3,19 +3,25 @@
 \usepackage[T1]{fontenc}
 \usepackage{booktabs}
 \usepackage{graphicx}
-\usepackage{hyperref}
+\usepackage{mathptmx}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
 \usepackage{natbib}
 \usepackage{tabularx}
 
-\title{Lost in Roman Urdu: Small Local Language Models Drop Red Flags,\\ Body Parts and Laterality When Drafting Physiotherapy Notes}
-\author{Muzammal Hussain\\Masmatix Innovations, Glasgow, United Kingdom\\\texttt{muzammal@masmatixinnovations.co.uk}}
-\date{Draft, October 2026}
+\title{\textbf{Lost in Roman Urdu: Small Local Language Models Drop\\Red Flags, Body Parts and Laterality\\When Drafting Physiotherapy Notes}}
+\author{Muzammal Hussain$^{1}$ \and Maryam Khalid$^{2}$\\[4pt]
+\small $^{1}$Independent researcher, Glasgow, United Kingdom\\
+\small $^{2}$Physiobeats, Scotland, United Kingdom\\
+\small Correspondence: \href{mailto:muzammal@masmatixinnovations.co.uk}{muzammal@masmatixinnovations.co.uk}\\
+\small ORCID (M.\ Hussain): \href{https://orcid.org/0009-0001-2570-5686}{0009-0001-2570-5686}}
+\date{November 2026}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-Small language models that run on a clinic's own computer are attractive for drafting clinical notes, because patient speech never leaves the building. In Pakistan and in UK clinics serving Pakistani communities, many consultations are held in Roman Urdu: Urdu written in Latin script and mixed with English clinical terms. We ask whether two small local models, Qwen2.5 3B and Llama 3.1 8B, write English SOAP notes from Roman Urdu consultations as safely as from English ones. We wrote 20 fictional physiotherapy consultations, each in English and Roman Urdu with identical facts, listed 168 facts (68 critical) and checked every note automatically for omissions, wrong body regions and the injured side. From Roman Urdu, Llama 3.1 8B omitted 16 of 168 facts against 1 from English (exact McNemar $p=0.0003$) and Qwen2.5 3B omitted 50 against 6 ($p<0.0001$). Critical facts were lost only in Roman Urdu (8 and 26). The injured side was missing from 13 and 14 of the 14 Roman Urdu notes where a side applied, and reading the notes showed a knee replacement rewritten as a hip replacement, a hip as the lower back, and left as right. In a four-case pilot, translating into English before drafting did not help. A simple rule-based gate flagged 17 of 20 Llama 3.1 8B Roman Urdu notes and none of its English notes. All consultations, notes and code are public.
+Small language models that run on a clinic's own computer are attractive for drafting clinical notes, because patient speech never leaves the building. In Pakistan and in UK clinics serving Pakistani communities, many consultations are held in Roman Urdu: Urdu written in Latin script and mixed with English clinical terms. We ask whether two small local models, Qwen2.5 3B and Llama 3.1 8B, write English SOAP notes from Roman Urdu consultations as safely as from English ones. We wrote 20 fictional physiotherapy consultations, each in English and Roman Urdu with identical facts, listed 168 facts (68 critical) and checked every note automatically for omissions, wrong body regions and the injured side. From Roman Urdu, Llama 3.1 8B omitted 16 of 168 facts against 1 from English (exact McNemar $p=0.0003$) and Qwen2.5 3B omitted 50 against 6 ($p<0.0001$). Critical facts were lost only in Roman Urdu (8 and 26). The injured side was missing from 13 and 14 of the 14 Roman Urdu notes where a side applied, and reading the notes showed a knee replacement rewritten as a hip replacement, a hip as the lower back, and left as right. In a four-case pilot, translating into English before drafting did not help. A simple rule-based gate flagged 17 of 20 Llama 3.1 8B Roman Urdu notes and none of its English notes. A blinded review of 50 notes by a panel of five physiotherapists agreed with the automatic side check (Cohen's $\kappa=0.88$) and body-region check ($\kappa=0.75$) and with the gate on 90\% of notes, but not with the keyword check for critical facts ($\kappa=0.12$, 17 false alarms); the panel also found invented or wrong details in 35 of the 40 Roman Urdu notes. All consultations, notes and code are public.
 \end{abstract}
 
 \section{Introduction}
@@ -28,7 +34,8 @@ This paper reports a controlled comparison: the same consultations, the same fac
   \item a public set of 20 paired English and Roman Urdu physiotherapy consultations with 168 listed facts, 68 marked critical, including deliberate red flags;
   \item a paired comparison showing that both models lose significantly more facts, and only lose critical facts, in Roman Urdu;
   \item an analysis of anatomy and laterality errors, showing that the injured side is almost never carried into the English note;
-  \item a negative result for translating first, and a simple rule-based gate that routes notes to a clinician.
+  \item a negative result for translating first, and a simple rule-based gate that routes notes to a clinician;
+  \item a blinded clinical review of 50 notes that validates the side and body-region checks and shows where keyword checks fail.
 \end{itemize}
 
 \section{Related work}
@@ -47,10 +54,9 @@ This paper reports a controlled comparison: the same consultations, the same fac
 
 \paragraph{Checks.} For each note we record (i) listed facts whose pattern is absent, (ii) whether the main body region is named, (iii) body regions named in the note but absent from the English transcript, (iv) whether the injured side is named, and (v) whether the opposite side is named without support. A note is \emph{flagged} for clinician review if any of (ii) to (v) fails or a critical fact is missing.
 
-\paragraph{Clinician review.} To test the automatic checks, a registered physiotherapist read all 40 Roman Urdu notes and 10 English notes (5 per model, chosen at random), shuffled and coded so that the model, the input language and the automatic results were hidden. The English transcript was shown as the reference. For each note she marked a wrong or missing body region, a wrong or missing side, a missing red flag or other critical fact, and any other error. We report raw agreement and Cohen's kappa \citep{cohen1960kappa} between her labels and each check, and the precision and recall of the safety gate with her labels as the reference.
-% Clinician review results go in the Results section once the review is complete.
+\paragraph{Clinician review.} To test the automatic checks, we reviewed all 40 Roman Urdu notes and 10 English notes (5 per model, chosen at random with a fixed seed), shuffled and coded R01 to R50 so that the model, the input language and the automatic results were hidden. The English transcript was shown as the reference. A panel of five physiotherapists, led by M.K.\ (Doctor of Physical Therapy; MSc in Advanced Physiotherapy, Glasgow Caledonian University; about five years of clinical practice), read each note together and agreed one label per item: a wrong or missing body region, a wrong or missing side, a missing red flag or other critical fact, and any other error, such as an invented detail or a wrong number. M.K.\ then re-read every note on her own three to four times, revised labels where needed and wrote a comment for each note. The labels are therefore a single consensus judgement; agreement between individual clinicians was not measured. We report raw agreement and Cohen's kappa \citep{cohen1960kappa} between the panel's labels and each automatic check, and the precision and recall of each check with the panel's labels as the reference. The safety gate is compared with the panel's \emph{any error} label.
 
-\paragraph{Statistics.} We report the facts-missing rate with a 95\% bootstrap interval that resamples whole consultations \citep{efron1979bootstrap}, and an exact two-sided McNemar test \citep{mcnemar1947} on each fact paired across languages.
+\paragraph{Statistics.} We report the facts-missing rate with a 95\% bootstrap interval that resamples whole consultations \citep{efron1979bootstrap}, and an exact two-sided McNemar test \citep{mcnemar1947} on each fact paired across languages. Because facts from the same consultation are not independent, we also report an exact two-sided sign test at the consultation level, comparing the number of missing facts in the English and Roman Urdu note of each consultation. For Cohen's kappa we give 95\% bootstrap intervals over the 50 reviewed notes (2,000 resamples).
 
 \section{Results}
 \begin{table}[t]
@@ -77,7 +83,7 @@ Llama 3.1 8B & Roman Urdu & 16 & 9.5 (5.6--13.9) & 8 & 13 & 17\\
 \label{fig:main}
 \end{figure}
 
-\paragraph{Omissions.} Table~\ref{tab:main} and Figure~\ref{fig:main} show the main result. For Llama 3.1 8B, 16 facts were missing only in Roman Urdu and 1 only in English ($p=0.0003$); for critical facts the split was 8 to 0 ($p=0.0078$). For Qwen2.5 3B the splits were 47 to 3 and 26 to 0 (both $p<0.0001$). The larger model narrows the gap but does not close it.
+\paragraph{Omissions.} Table~\ref{tab:main} and Figure~\ref{fig:main} show the main result. For Llama 3.1 8B, 16 facts were missing only in Roman Urdu and 1 only in English ($p=0.0003$); for critical facts the split was 8 to 0 ($p=0.0078$). For Qwen2.5 3B the splits were 47 to 3 and 26 to 0 (both $p<0.0001$). The larger model narrows the gap but does not close it. The result holds at the consultation level: the Roman Urdu note missed more facts than the English note in 11 of 20 consultations for Llama 3.1 8B and 18 of 20 for Qwen2.5 3B, and never fewer (sign test $p=0.001$ and $p<0.0001$).
 
 \paragraph{Anatomy and laterality.} The main body region was wrong or missing in 6 Llama 3.1 8B and 11 Qwen2.5 3B Roman Urdu notes. The injured side was dropped almost always: \emph{daayan} (right) and \emph{baayan} (left) were not translated, and Llama 3.1 8B turned left into right twice. Table~\ref{tab:errors} lists errors found by reading the notes.
 
@@ -107,14 +113,45 @@ The knee replacement case shows why this matters. After knee surgery a swollen c
 
 \paragraph{The gate.} The rule-based gate flagged 17 of 20 Llama 3.1 8B Roman Urdu notes and none of its English notes; 5 of the 17 were flagged only for a missing side. Two of the three Qwen2.5 3B English flags were fair wording rather than errors (``calf exercises'' for an ankle sprain, ``right leg'' for a right knee).
 
+\paragraph{Clinician review.} Table~\ref{tab:review} compares the automatic checks with the panel's labels. The side check agreed on 47 of 50 notes ($\kappa=0.88$, 95\% CI 0.72--1.00) and raised no false alarm; the panel found three further side problems that the check missed. The body-region check agreed on 44 of 50 ($\kappa=0.75$, 0.53--0.92). The keyword check for critical facts did not agree with the panel ($\kappa=0.12$, $-0.12$--0.36): it flagged 25 notes, of which the panel confirmed 8, and missed 5 notes in which the panel found a missing critical fact. A keyword check counts a fact as missing whenever its pattern is absent, so a fact written in other words is flagged; we did not classify the 17 false alarms by cause. The gate, which combines all checks, agreed with the panel's \emph{any error} label on 45 of 50 notes ($\kappa=0.68$, 0.37--0.91); it flagged 39 notes, 38 of them correctly, and missed 4 of the 42 notes the panel judged wrong. The panel marked an invented or wrong detail (\emph{other error}) in 35 of the 40 Roman Urdu notes and in 2 of the 10 English notes; its comments describe invented ages and sexes, examination findings that were never performed, and changed numbers, such as a pain score of 5/10 read as pain lasting five hours.
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lrrrrrrr}
+\toprule
+Check & Both yes & Check only & Panel only & Both no & Agreement & $\kappa$ & Precision / recall\\
+\midrule
+Side wrong or missing & 27 & 0 & 3 & 20 & 0.94 & 0.88 & 1.00 / 0.90\\
+Body region wrong or missing & 16 & 3 & 3 & 28 & 0.88 & 0.75 & 0.84 / 0.84\\
+Critical fact missing & 8 & 17 & 5 & 20 & 0.56 & 0.12 & 0.32 / 0.62\\
+Gate vs.\ any error & 38 & 1 & 4 & 7 & 0.90 & 0.68 & 0.97 / 0.90\\
+\bottomrule
+\end{tabular}
+\caption{Automatic checks against the clinician panel's consensus labels on 50 blinded notes (40 Roman Urdu, 10 English).}
+\label{tab:review}
+\end{table}
+
 \section{Discussion}
-For a clinic using these models, the results point to three design rules. First, Roman Urdu notes from small local models cannot be used without a clinician reading the whole note. Second, the side and body region should be checked in code: if the transcript names a side, a note without one should be rejected or marked incomplete. Third, every step of a pipeline needs its own check, as the silent no-op translation shows.
+For a clinic using these models, the results point to three design rules. First, Roman Urdu notes from small local models cannot be used without a clinician reading the whole note. Second, the side and body region should be checked in code: if the transcript names a side, a note without one should be rejected or marked incomplete. Third, every step of a pipeline needs its own check, as the silent no-op translation shows. The clinical review supports the first two rules and qualifies the third: checks for side and body region agree well with clinicians and are suitable for routing notes to a clinician, although the gate still missed 4 of the 42 notes the panel judged wrong, but a keyword list of critical facts produces too many false alarms to stand alone, and none of the automatic checks looks for invented details, which the panel found in almost every Roman Urdu note.
 
 \section{Limitations}
-The consultations are fictional, written by one person, and short; real consultations are longer, noisier and come through speech recognition, which adds its own errors \citep{radford2023whisper}. Each model ran once at temperature 0. The checks are keyword based: a fact in unexpected words counts as missing, and a fact stated wrongly can still count as present. Sentence-level hallucinations were not labelled in this study, and the automatic checks have not yet been validated against a physiotherapist's reading of every note. Roman Urdu spelling varies between speakers.
+The consultations are fictional, written by one person, and short; real consultations are longer, noisier and come through speech recognition, which adds its own errors \citep{radford2023whisper}. Each model ran once at temperature 0. The checks are keyword based: a fact in unexpected words counts as missing, and a fact stated wrongly can still count as present. The clinical review covered 50 of the 80 notes and gives one consensus label per item, so agreement between clinicians was not measured, and the lead reviewer is a co-author and a member of the first author's family. Invented details were labelled only as a yes/no per note, not sentence by sentence. Roman Urdu spelling varies between speakers.
+
+\section*{Author contributions}
+M.H.: conceptualisation, methodology, software, investigation, formal analysis, writing (original draft). M.K.: validation (led the clinical review panel and finalised all labels), data curation (review labels and comments), writing (review). Both authors approved the final version.
+
+\section*{Acknowledgements}
+We thank the four physiotherapist colleagues who reviewed the notes with M.K.
+
+\section*{Ethics}
+All consultations are fictional and no patient data were used. The physiotherapists took part voluntarily and reviewed only the fictional consultations and model-written notes.
+
+\section*{Competing interests}
+The authors are married. M.K.\ works as a physiotherapist; neither author has a financial interest in the models or software studied.
 
 \section{Data and code availability}
-All consultations, fact lists, notes, checks and analysis scripts are available at \url{https://github.com/MHKhan50/agentic-ai-research-log} (folders \texttt{clinical-note-hallucination}, \texttt{translate-then-draft} and \texttt{roman-urdu-soap-benchmark}).
+All consultations, fact lists, notes, checks and analysis scripts are available at \url{https://github.com/MHKhan50/agentic-ai-research-log} (folders \texttt{clinical-note-hallucination}, \texttt{translate-then-draft} and \texttt{roman-urdu-soap-benchmark}; the review sheet, labels and agreement script are in \texttt{roman-urdu-soap-benchmark/clinician-review}), archived at \url{https://doi.org/10.5281/zenodo.24230498}.
 
 \bibliographystyle{plainnat}
 \bibliography{refs}
