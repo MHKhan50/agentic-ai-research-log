@@ -54,6 +54,7 @@ Plain-language write-ups of each experiment:
 - [A planted memory fooled a simple AI agent 74% of the time. A trust filter cut it to 9%.](https://masmatixinnovations.co.uk/insights/memtrust-agent-memory-security.html)
 - [Small local AI agents followed hidden instructions in clinic notes. Checking the tool's arguments stopped them.](https://masmatixinnovations.co.uk/insights/agent-tool-policy-clinic.html)
 - [A third label helped a local AI name wrong body parts. Elsewhere, "contradicted" was right 8 times in 40](https://masmatixinnovations.co.uk/insights/contradiction-label-judge.html)
+- [A small local AI lost facts anywhere but the last visit of a Roman Urdu record](https://masmatixinnovations.co.uk/insights/lost-in-the-middle-clinic-records.html)
 
 ## Reproduce an experiment
 ```bash

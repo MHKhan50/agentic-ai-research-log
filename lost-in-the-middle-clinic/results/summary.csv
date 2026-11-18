@@ -1,0 +1,29 @@
+model,language,condition,correct,n,accuracy,ci95_low,ci95_high
+llama3.1:8b,English,closed_book,8,20,0.4,0.2,0.6
+llama3.1:8b,English,oracle,20,20,1.0,1.0,1.0
+llama3.1:8b,English,pos01,19,20,0.95,0.85,1.0
+llama3.1:8b,English,pos08,20,20,1.0,1.0,1.0
+llama3.1:8b,English,pos15,20,20,1.0,1.0,1.0
+llama3.1:8b,English,pos23,20,20,1.0,1.0,1.0
+llama3.1:8b,English,pos30,18,20,0.9,0.75,1.0
+llama3.1:8b,Roman Urdu,closed_book,1,20,0.05,0.0,0.15
+llama3.1:8b,Roman Urdu,oracle,20,20,1.0,1.0,1.0
+llama3.1:8b,Roman Urdu,pos01,20,20,1.0,1.0,1.0
+llama3.1:8b,Roman Urdu,pos08,19,20,0.95,0.85,1.0
+llama3.1:8b,Roman Urdu,pos15,19,20,0.95,0.85,1.0
+llama3.1:8b,Roman Urdu,pos23,19,20,0.95,0.85,1.0
+llama3.1:8b,Roman Urdu,pos30,19,20,0.95,0.85,1.0
+qwen2.5:3b,English,closed_book,2,20,0.1,0.0,0.25
+qwen2.5:3b,English,oracle,19,20,0.95,0.85,1.0
+qwen2.5:3b,English,pos01,19,20,0.95,0.85,1.0
+qwen2.5:3b,English,pos08,20,20,1.0,1.0,1.0
+qwen2.5:3b,English,pos15,19,20,0.95,0.85,1.0
+qwen2.5:3b,English,pos23,20,20,1.0,1.0,1.0
+qwen2.5:3b,English,pos30,20,20,1.0,1.0,1.0
+qwen2.5:3b,Roman Urdu,closed_book,1,20,0.05,0.0,0.15
+qwen2.5:3b,Roman Urdu,oracle,20,20,1.0,1.0,1.0
+qwen2.5:3b,Roman Urdu,pos01,15,20,0.75,0.55,0.95
+qwen2.5:3b,Roman Urdu,pos08,14,20,0.7,0.5,0.9
+qwen2.5:3b,Roman Urdu,pos15,15,20,0.75,0.55,0.95
+qwen2.5:3b,Roman Urdu,pos23,14,20,0.7,0.5,0.9
+qwen2.5:3b,Roman Urdu,pos30,20,20,1.0,1.0,1.0

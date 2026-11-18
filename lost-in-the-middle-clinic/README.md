@@ -45,7 +45,32 @@ python analysis.py
 ```
 
 ## Results
-Results will be added after the run on my MacBook M4.
+One run on my MacBook M4 (16 GB), Ollama, temperature 0, seed 42, 560 answers. No prompt was cut by the context limit.
+
+| Model | Language | Closed book | Oracle | Note 1 | Note 8 | Note 15 | Note 23 | Note 30 | Best - worst |
+|---|---|---|---|---|---|---|---|---|---|
+| llama3.1:8b | English | 8/20 | 20/20 | 19/20 | 20/20 | 20/20 | 20/20 | 18/20 | 10 pts |
+| llama3.1:8b | Roman Urdu | 1/20 | 20/20 | 20/20 | 19/20 | 19/20 | 19/20 | 19/20 | 5 pts |
+| qwen2.5:3b | English | 2/20 | 19/20 | 19/20 | 20/20 | 19/20 | 20/20 | 20/20 | 5 pts |
+| qwen2.5:3b | Roman Urdu | 1/20 | 20/20 | 15/20 | 14/20 | 15/20 | 14/20 | 20/20 | 30 pts |
+
+![Correct answers by position of the key note](results/position_curve.png)
+
+- **No U-shape.** llama3.1:8b found the fact at every position in both languages (18 to 20 of 20), and so did qwen2.5:3b in English. No first-versus-middle test was significant.
+- **qwen2.5:3b in Roman Urdu was right 20 of 20 times only when the fact was in the last note**, and 14 or 15 of 20 at notes 1 to 23. With the key note alone (oracle) it was 20 of 20, so it can read the note; it loses the fact in the long Roman Urdu record. Against note 30, note 1 gives p = 0.06 and note 8 p = 0.03 (exact McNemar, 20 facts).
+- **English against Roman Urdu, qwen2.5:3b:** 6 facts right only in English at notes 8 and 23 (p = 0.03 each), 5 against 1 at notes 1 and 15 (p = 0.22), none at note 30. After Holm correction for the five positions none is below 0.05.
+- **Closed book:** llama3.1:8b answered 8 of 20 English questions with no notes at all (F02 pacemaker, F03 warfarin, F08 insulin, F10 ankle, F13 epilepsy, F14 hearing aid, F15 breast, F19 L4), so these questions can be guessed from the question alone.
+- **The 22 qwen2.5:3b Roman Urdu misses were not random.** F03 (warfarin) and F11 (stairs) failed at 4 of 5 positions, F10 and F17 at 3. In 9 misses the reply was a routine sentence, or part of one, copied from another visit. For F03 it answered that the patient takes no medicine ("No dawa nahi batai gayi", "No dawa leta hai") at every position except the last.
+- **Scoring check:** at F18 note 23 qwen2.5:3b replied in Chinese, naming Lahore (拉合尔) but the wrong date (23 March instead of 3 March). The keyword scorer counted it wrong; read by hand, qwen2.5:3b Roman Urdu at note 23 is 15 of 20.
+
+## My notes
+1. qwen2.5:3b on 30-visit Roman Urdu records did not show the U-shape reported on English Wikipedia. It looked like recency: 20/20 only when the fact was in the last visit, 14 to 15/20 at all earlier positions. With 20 facts this is not yet significant at every position.
+2. The failures were systematic. F03 (warfarin) and F11 (stairs) failed at 4 of 5 positions, often because the model copied a routine sentence from another visit, such as "Subah taqreeban ek ghanta kamar akri rehti hai".
+3. The most dangerous failure was F03: the model answered "No dawa nahi batai gayi" or "No dawa leta hai" at four positions, which turns a patient on warfarin into a patient on no medicine.
+4. qwen2.5:3b also made up words ("Kafreen ka bimarani") and once answered in Chinese, naming Lahore correctly but with the wrong date; the keyword scorer missed that one.
+5. llama3.1:8b guessed 8 of 20 English answers with no notes (pacemaker, warfarin, insulin and others), which is a limit of this benchmark. qwen2.5:3b still missed warfarin when the record was in Roman Urdu.
+
+Article: [A small local AI lost facts anywhere but the last visit of a Roman Urdu record](https://masmatixinnovations.co.uk/insights/lost-in-the-middle-clinic-records.html)
 
 ## Limitations
 - 20 facts, so one fact is 5 percentage points; intervals will be wide.
@@ -54,6 +79,8 @@ Results will be added after the run on my MacBook M4.
 - Keyword scoring can count a reply as correct if it lists several guesses, and can miss a correct
   paraphrase; replies are saved so they can be read.
 - One run at temperature 0; one prompt wording.
+- Several questions can be guessed without notes (8 of 20 for llama3.1:8b in English), which lifts its English scores.
+- Each position was tested separately; with 20 facts, differences of 5 or 6 facts are at the edge of significance.
 
 ## Reference
 Nelson F. Liu, Kevin Lin, John Hewitt, Ashwin Paranjape, Michele Bevilacqua, Fabio Petroni, Percy Liang.

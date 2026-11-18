@@ -1,0 +1,402 @@
+{
+  "models": {
+    "llama3.1:8b": {
+      "en": {
+        "conditions": {
+          "closed_book": {
+            "correct": 8,
+            "n": 20,
+            "accuracy": 0.4,
+            "ci95": [
+              0.2,
+              0.6
+            ]
+          },
+          "oracle": {
+            "correct": 20,
+            "n": 20,
+            "accuracy": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "pos01": {
+            "correct": 19,
+            "n": 20,
+            "accuracy": 0.95,
+            "ci95": [
+              0.85,
+              1.0
+            ]
+          },
+          "pos08": {
+            "correct": 20,
+            "n": 20,
+            "accuracy": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "pos15": {
+            "correct": 20,
+            "n": 20,
+            "accuracy": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "pos23": {
+            "correct": 20,
+            "n": 20,
+            "accuracy": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "pos30": {
+            "correct": 18,
+            "n": 20,
+            "accuracy": 0.9,
+            "ci95": [
+              0.75,
+              1.0
+            ]
+          }
+        },
+        "best_minus_worst": 0.1,
+        "first_vs_middle": {
+          "n_pairs": 20,
+          "only_first_correct": 0,
+          "only_second_correct": 1,
+          "p_value": 1.0
+        }
+      },
+      "ru": {
+        "conditions": {
+          "closed_book": {
+            "correct": 1,
+            "n": 20,
+            "accuracy": 0.05,
+            "ci95": [
+              0.0,
+              0.15
+            ]
+          },
+          "oracle": {
+            "correct": 20,
+            "n": 20,
+            "accuracy": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "pos01": {
+            "correct": 20,
+            "n": 20,
+            "accuracy": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "pos08": {
+            "correct": 19,
+            "n": 20,
+            "accuracy": 0.95,
+            "ci95": [
+              0.85,
+              1.0
+            ]
+          },
+          "pos15": {
+            "correct": 19,
+            "n": 20,
+            "accuracy": 0.95,
+            "ci95": [
+              0.85,
+              1.0
+            ]
+          },
+          "pos23": {
+            "correct": 19,
+            "n": 20,
+            "accuracy": 0.95,
+            "ci95": [
+              0.85,
+              1.0
+            ]
+          },
+          "pos30": {
+            "correct": 19,
+            "n": 20,
+            "accuracy": 0.95,
+            "ci95": [
+              0.85,
+              1.0
+            ]
+          }
+        },
+        "best_minus_worst": 0.05,
+        "first_vs_middle": {
+          "n_pairs": 20,
+          "only_first_correct": 1,
+          "only_second_correct": 0,
+          "p_value": 1.0
+        }
+      },
+      "en_vs_ru": {
+        "closed_book": {
+          "n_pairs": 20,
+          "only_first_correct": 7,
+          "only_second_correct": 0,
+          "p_value": 0.0156
+        },
+        "oracle": {
+          "n_pairs": 20,
+          "only_first_correct": 0,
+          "only_second_correct": 0,
+          "p_value": 1.0
+        },
+        "pos01": {
+          "n_pairs": 20,
+          "only_first_correct": 0,
+          "only_second_correct": 1,
+          "p_value": 1.0
+        },
+        "pos08": {
+          "n_pairs": 20,
+          "only_first_correct": 1,
+          "only_second_correct": 0,
+          "p_value": 1.0
+        },
+        "pos15": {
+          "n_pairs": 20,
+          "only_first_correct": 1,
+          "only_second_correct": 0,
+          "p_value": 1.0
+        },
+        "pos23": {
+          "n_pairs": 20,
+          "only_first_correct": 1,
+          "only_second_correct": 0,
+          "p_value": 1.0
+        },
+        "pos30": {
+          "n_pairs": 20,
+          "only_first_correct": 1,
+          "only_second_correct": 2,
+          "p_value": 1.0
+        }
+      }
+    },
+    "qwen2.5:3b": {
+      "en": {
+        "conditions": {
+          "closed_book": {
+            "correct": 2,
+            "n": 20,
+            "accuracy": 0.1,
+            "ci95": [
+              0.0,
+              0.25
+            ]
+          },
+          "oracle": {
+            "correct": 19,
+            "n": 20,
+            "accuracy": 0.95,
+            "ci95": [
+              0.85,
+              1.0
+            ]
+          },
+          "pos01": {
+            "correct": 19,
+            "n": 20,
+            "accuracy": 0.95,
+            "ci95": [
+              0.85,
+              1.0
+            ]
+          },
+          "pos08": {
+            "correct": 20,
+            "n": 20,
+            "accuracy": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "pos15": {
+            "correct": 19,
+            "n": 20,
+            "accuracy": 0.95,
+            "ci95": [
+              0.85,
+              1.0
+            ]
+          },
+          "pos23": {
+            "correct": 20,
+            "n": 20,
+            "accuracy": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "pos30": {
+            "correct": 20,
+            "n": 20,
+            "accuracy": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "best_minus_worst": 0.05,
+        "first_vs_middle": {
+          "n_pairs": 20,
+          "only_first_correct": 0,
+          "only_second_correct": 0,
+          "p_value": 1.0
+        }
+      },
+      "ru": {
+        "conditions": {
+          "closed_book": {
+            "correct": 1,
+            "n": 20,
+            "accuracy": 0.05,
+            "ci95": [
+              0.0,
+              0.15
+            ]
+          },
+          "oracle": {
+            "correct": 20,
+            "n": 20,
+            "accuracy": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "pos01": {
+            "correct": 15,
+            "n": 20,
+            "accuracy": 0.75,
+            "ci95": [
+              0.55,
+              0.95
+            ]
+          },
+          "pos08": {
+            "correct": 14,
+            "n": 20,
+            "accuracy": 0.7,
+            "ci95": [
+              0.5,
+              0.9
+            ]
+          },
+          "pos15": {
+            "correct": 15,
+            "n": 20,
+            "accuracy": 0.75,
+            "ci95": [
+              0.55,
+              0.95
+            ]
+          },
+          "pos23": {
+            "correct": 14,
+            "n": 20,
+            "accuracy": 0.7,
+            "ci95": [
+              0.5,
+              0.9
+            ]
+          },
+          "pos30": {
+            "correct": 20,
+            "n": 20,
+            "accuracy": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "best_minus_worst": 0.3,
+        "first_vs_middle": {
+          "n_pairs": 20,
+          "only_first_correct": 2,
+          "only_second_correct": 2,
+          "p_value": 1.0
+        }
+      },
+      "en_vs_ru": {
+        "closed_book": {
+          "n_pairs": 20,
+          "only_first_correct": 2,
+          "only_second_correct": 1,
+          "p_value": 1.0
+        },
+        "oracle": {
+          "n_pairs": 20,
+          "only_first_correct": 0,
+          "only_second_correct": 1,
+          "p_value": 1.0
+        },
+        "pos01": {
+          "n_pairs": 20,
+          "only_first_correct": 5,
+          "only_second_correct": 1,
+          "p_value": 0.2188
+        },
+        "pos08": {
+          "n_pairs": 20,
+          "only_first_correct": 6,
+          "only_second_correct": 0,
+          "p_value": 0.0312
+        },
+        "pos15": {
+          "n_pairs": 20,
+          "only_first_correct": 5,
+          "only_second_correct": 1,
+          "p_value": 0.2188
+        },
+        "pos23": {
+          "n_pairs": 20,
+          "only_first_correct": 6,
+          "only_second_correct": 0,
+          "p_value": 0.0312
+        },
+        "pos30": {
+          "n_pairs": 20,
+          "only_first_correct": 0,
+          "only_second_correct": 0,
+          "p_value": 1.0
+        }
+      }
+    }
+  },
+  "n_facts": 20,
+  "positions": [
+    1,
+    8,
+    15,
+    23,
+    30
+  ],
+  "n_notes": 30,
+  "prompts_possibly_cut": 0
+}
