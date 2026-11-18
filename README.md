@@ -9,7 +9,7 @@ Each folder has its own research question, code, tests, results from my own run,
 | Date | Topic | Folder | Research question |
 |---|---|---|---|
 | Oct 2026 | ReAct paper follow-up | [`react-roman-urdu/`](react-roman-urdu/) | Does a ~3B local model keep ReAct tool-use accuracy on Roman Urdu vs English, and how stable is it? |
-| Nov 2026 | Roman Urdu ReAct benchmark | [`roman-urdu-react-bench/`](roman-urdu-react-bench/) | Across 96 clinic questions, 4 local models and 2 spellings, how much less accurate is a ReAct agent in Roman Urdu than in English, which words cause it, and do a Roman Urdu example or translate-first help? |
+| Nov 2026 | Roman Urdu ReAct benchmark | [`roman-urdu-react-bench`](https://github.com/MHKhan50/roman-urdu-react-bench) (own repo) | Across 96 clinic questions, 4 local models and 2 spellings, how much less accurate is a ReAct agent in Roman Urdu than in English, which words cause it, and do a Roman Urdu example or translate-first help? |
 | Oct 2026 | Urdu clinical speech-to-text | [`whisper-urdu-wer/`](whisper-urdu-wer/) | How many words does Whisper (tiny/base/small) get wrong on Urdu clinic conversations, and does it keep the clinical key terms? |
 | Oct 2026 | Tool-call self-correction | [`tool-call-self-correction/`](tool-call-self-correction/) | Does schema-validator feedback fix a 3B local model's clinic tool calls, in English and Roman Urdu, and which errors does it miss? |
 | Nov 2026 | Tool-call consistency (tau-bench follow-up) | [`tool-call-consistency/`](tool-call-consistency/) | When qwen2.5:3b or llama3.1:8b makes the same clinic tool call five times, how often is it right every time (pass^k) in English and Roman Urdu, and does wording or sampling cause the misses? |
@@ -25,6 +25,15 @@ Each folder has its own research question, code, tests, results from my own run,
 | Nov 2026 | Key fact position in long records (Lost in the Middle follow-up) | [`lost-in-the-middle-clinic/`](lost-in-the-middle-clinic/) | When one safety fact sits somewhere in a 30-visit physiotherapy record, do qwen2.5:3b and llama3.1:8b find it equally well at every position, in English and Roman Urdu? |
 | Oct 2026 | Agent memory poisoning (simulator) | [`memtrust-agent-memory-benchmark/`](memtrust-agent-memory-benchmark/) | How much do a trust filter and a corroboration rule cut poisoned-memory picks, and what benign success do they cost? |
 | Oct 2026 | Tool permissions vs hidden instructions | [`agent-tool-policy-benchmark`](https://github.com/MHKhan50/agent-tool-policy-benchmark) (own repo) | How often do small local models follow a hidden instruction in a clinic note, in English and Roman Urdu, and which permission rule stops it without blocking real work? |
+
+## Papers with their own repositories
+Experiments that became papers are maintained, with their paper and archived release, in their own repositories. The pilot folders above stay here because later experiments in this log reuse their data.
+
+| Paper | Repository | Pilot folders in this log |
+|---|---|---|
+| Roman Urdu ReAct benchmark | [roman-urdu-react-bench](https://github.com/MHKhan50/roman-urdu-react-bench) | `react-roman-urdu/` |
+| Roman Urdu vs English SOAP notes | [roman-urdu-soap-notes-benchmark](https://github.com/MHKhan50/roman-urdu-soap-notes-benchmark) | `clinical-note-hallucination/`, `translate-then-draft/`, `roman-urdu-soap-benchmark/` |
+| Tool-call reliability (self-correction and pass^k) | [tool-call-reliability-bench](https://github.com/MHKhan50/tool-call-reliability-bench) | `tool-call-self-correction/`, `tool-call-consistency/` |
 
 Research gaps I am tracking: [gap-bank.md](gap-bank.md)
 
