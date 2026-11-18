@@ -30,10 +30,56 @@ python analysis.py --score-labels
 Outputs in `results/`: `runs.jsonl` (every call, with the raw reply), `area_fact.csv`, `summary.csv` (with 95% Wilson intervals), `critical.csv`, `results.json`, `to_label.csv` and `area_fact.png`.
 
 ## Results
-To be filled in from my run.
+One run on a MacBook M4 (16 GB), temperature 0, seed 42. Full tables in `results/`.
+
+**Usable replies.** Both judges gave usable JSON for all 200 binary calls. With three labels, llama3.1:8b gave 200 of 200 but qwen2.5:3b only 141 of 200 (70.5%, 95% CI 64-76%). In the 17 failed replies I read, it sent a plain list such as `["present", "present", ...]` instead of the numbered object, often with the wrong number of labels. Calls are deterministic at temperature 0, so running them again gives the same reply. The qwen2.5:3b three-label rows below cover these 141 calls only.
+
+**Injured-area fact: how each judge labelled each kind of note**
+
+| Judge | Prompt | Reference | Notes | Present | Missing | Contradicted | Flagged (95% CI) |
+|---|---|---|---|---|---|---|---|
+| llama3.1:8b | binary | contradicted | 69 | 1 | 68 | - | 68 (92-100%) |
+| llama3.1:8b | three | contradicted | 69 | 0 | 0 | 69 | 69 (95-100%) |
+| llama3.1:8b | binary | missing | 30 | 7 | 23 | - | 23 (59-88%) |
+| llama3.1:8b | three | missing | 30 | 2 | 0 | 28 | 28 (79-98%) |
+| llama3.1:8b | binary | present | 101 | 65 | 36 | - | 36 (27-45%) |
+| llama3.1:8b | three | present | 101 | 43 | 2 | 56 | 58 (48-67%) |
+| qwen2.5:3b | binary | contradicted | 69 | 9 | 60 | - | 60 (77-93%) |
+| qwen2.5:3b | three | contradicted | 54 | 9 | 13 | 32 | 45 (71-91%) |
+| qwen2.5:3b | binary | missing | 30 | 15 | 15 | - | 15 (33-67%) |
+| qwen2.5:3b | three | missing | 20 | 10 | 3 | 7 | 10 (30-70%) |
+| qwen2.5:3b | binary | present | 101 | 81 | 20 | - | 20 (13-29%) |
+| qwen2.5:3b | three | present | 67 | 58 | 4 | 5 | 9 (7-24%) |
+
+"Flagged" means missing or contradicted. Paired on the same notes (exact McNemar), the third label did not change how many wrong notes llama3.1:8b flagged (68 vs 69, p = 1.0), but it flagged more correct notes (36 vs 58 of 101, p = 4.8e-7). llama3.1:8b also called 28 of 30 missing injured areas "contradicted". For qwen2.5:3b no difference was significant.
+
+![How each judge labelled the injured area in notes that got it wrong](results/area_fact.png)
+
+**Missing critical facts the judge called present (hidden)**
+
+| Judge | Critical facts missing by keywords | Hidden, binary | Hidden, three labels | McNemar p | Called contradicted |
+|---|---|---|---|---|---|
+| llama3.1:8b | 224 | 98 | 86 | 0.0005 | 122 |
+| qwen2.5:3b | 177 | 81 | 77 | 0.52 | 58 |
+
+**"Contradicted" on other facts: my labels.** The three-label judges called 363 other facts contradicted (llama3.1:8b 236, qwen2.5:3b 127). I labelled a random 40 of them (seed 7) against the note:
+
+| Judge | Labelled | Really contradicted | Really missing | Really present (false alarm) |
+|---|---|---|---|---|
+| llama3.1:8b | 23 | 5 | 11 | 7 |
+| qwen2.5:3b | 17 | 3 | 7 | 7 |
+| Both | 40 | 8 (20%, 95% CI 11-35%) | 18 (45%) | 14 (35%, 95% CI 22-51%) |
+
+So 26 of 40 "contradicted" calls pointed at a real problem in the note, but only 8 had the right label; most were omissions.
 
 ## My notes
-To be added after my run.
+1. With a third label, llama3.1:8b hid fewer missing critical facts (98 to 86 of 224, p = 0.0005) and named all 69 wrong injured areas as contradicted. The binary prompt had already flagged 68 of them, only as missing.
+2. The cost was more false alarms: correct notes flagged went from 36 to 58 of 101.
+3. qwen2.5:3b gave usable JSON for all 200 binary calls but only 141 of 200 three-label calls; in the failed replies I read, it sent a plain list instead of the numbered object.
+4. Of 40 "contradicted" calls on other facts that I checked, only 8 were really contradicted; 18 were missing and 14 were correct in the note.
+5. A local judge should not decide alone. I would use it as a flag next to code checks and a physiotherapist's review.
+
+Article: [A third label helped a local AI name wrong body parts. Elsewhere, "contradicted" was right 8 times in 40](https://masmatixinnovations.co.uk/insights/contradiction-label-judge.html)
 
 ## Limitations
 - 200 notes from the same 20 written consultations; one judge run at temperature 0.
@@ -41,3 +87,5 @@ To be added after my run.
 - The reference is a keyword check and can be wrong; contradictions in other facts have no automatic reference and rely on my labels of 40 calls.
 - All facts of a note go into one call, unlike MED-OMIT's one fact per call. The injured-area fact is added by me and is not part of MED-OMIT.
 - Each judge also judges notes written by the same model, which may favour it.
+- qwen2.5:3b three-label results cover only the 141 calls with usable JSON; the 59 failed calls may not be a random subset.
+- I labelled 40 of 363 "contradicted" calls, alone and without a second rater.
