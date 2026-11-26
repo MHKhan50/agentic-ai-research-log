@@ -1,5 +1,9 @@
-The generated synthetic task dataset in data/tasks.csv is dedicated to the public domain under CC0 1.0 Universal, to the extent permitted by law.
+Data licence: Creative Commons Attribution 4.0 International (CC BY 4.0)
+https://creativecommons.org/licenses/by/4.0/
 
-CC0 1.0 legal text: https://creativecommons.org/publicdomain/zero/1.0/
+The data files in this folder (data/tasks.csv and outputs/) were generated or recorded by Muzammal Hussain.
+You may share and adapt them for any purpose, including commercial use,
+as long as you give credit (Muzammal Hussain, with a link to this repository or its DOI).
+The code is licensed separately under the MIT License (see LICENSE).
 
-The dataset is synthetic and contains no real customer records. The code that generates and evaluates it is licensed separately under the MIT License in LICENSE.
+Versions published before November 2026 were CC0 1.0.

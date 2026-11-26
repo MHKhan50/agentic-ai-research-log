@@ -70,3 +70,7 @@ Per-clip numbers: [`results/results.csv`](results/results.csv). Raw transcripts:
 - Score terms per occurrence (not just presence) and add a sound-alike match (e.g. ignoring a missing ھ) to separate "heard but misspelled" from "not heard".
 - Add a second speaker and background noise (clinic fan, traffic); compare with `medium` and an Urdu fine-tuned Whisper.
 - Feed the transcripts into the local LLM note-drafting step and check whether transcript errors change the red-flag section of the note.
+
+## Data licence
+
+Data: CC BY 4.0 ([`DATA_LICENSE.txt`](DATA_LICENSE.txt)); the same licence is used on the Kaggle dataset. Code: MIT.

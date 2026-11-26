@@ -67,4 +67,4 @@ Files: [`outputs/ollama/`](outputs/ollama/). Eight tickets is a pilot: one ticke
 - Compare a gate that blocks with one that repairs, and use the clinic tool calls from [`tool-call-self-correction/`](../tool-call-self-correction/) as a second, more realistic workflow.
 
 ## Licence
-Code: MIT ([`LICENSE`](LICENSE)). Generated data: CC0 1.0 ([`DATA_LICENSE.txt`](DATA_LICENSE.txt)).
+Code: MIT ([`LICENSE`](LICENSE)). Generated data: CC BY 4.0 ([`DATA_LICENSE.txt`](DATA_LICENSE.txt)), as on the Kaggle dataset.

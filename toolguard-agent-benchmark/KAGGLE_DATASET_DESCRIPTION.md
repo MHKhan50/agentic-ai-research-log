@@ -21,7 +21,7 @@ This dataset is designed for teaching, dissertation prototypes, and reproducibil
 
 ## Licence and provenance
 
-The synthetic dataset is released under CC0 1.0. The code is licensed under MIT. Tasks are generated locally by the included script; no third-party data source is used. See `DATA_LICENSE.txt`, `LICENSE`, and `README.md`.
+The synthetic dataset is released under CC BY 4.0. The code is licensed under MIT. Tasks are generated locally by the included script; no third-party data source is used. See `DATA_LICENSE.txt`, `LICENSE`, and `README.md`.
 
 ## Suggested citation
 
